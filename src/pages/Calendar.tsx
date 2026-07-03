@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState, type FormEvent } from 'react';
 import {
   tripDays,
   tripDayEvents,
@@ -10,6 +10,7 @@ import {
   type TripDayEvent,
   type TripDayEventCategory,
 } from '../data/calendar';
+import { usePersonalTripEvents, type PersonalTripEventInput } from '../lib/sync/localState';
 
 const categoryMeta: Record<
   TripDayEventCategory,
@@ -22,6 +23,16 @@ const categoryMeta: Record<
   food: { icon: '🍜', chip: 'border-rose-200 bg-rose-50 text-rose-800', accentCard: false },
   event: { icon: '🎉', chip: 'border-fuchsia-200 bg-fuchsia-50 text-fuchsia-800', accentCard: false },
   note: { icon: '📝', chip: 'border-slate-200 bg-slate-50 text-slate-700', accentCard: false },
+};
+
+const categoryLabels: Record<TripDayEventCategory, string> = {
+  flight: 'Перелёт',
+  transport: 'Транспорт',
+  hotel: 'Жильё',
+  activity: 'Активность',
+  food: 'Еда',
+  event: 'Событие',
+  note: 'Заметка',
 };
 
 // Logical order of events within a single day: arrival/transfer first,
@@ -66,8 +77,40 @@ interface MonthGroup {
   days: string[];
 }
 
+type CalendarEvent = Omit<TripDayEvent, 'time' | 'detail' | 'city' | 'links'> & {
+  time?: string | null;
+  detail?: string | null;
+  city?: string | null;
+  links?: { label: string; url: string }[];
+  personal?: boolean;
+  position?: number;
+  updatedAt?: string;
+  deletedAt?: string | null;
+};
+
+interface EventFormState {
+  id?: string;
+  date: string;
+  title: string;
+  time: string;
+  detail: string;
+  city: string;
+  category: TripDayEventCategory;
+}
+
+const blankForm = (date: string): EventFormState => ({
+  date,
+  title: '',
+  time: '',
+  detail: '',
+  city: '',
+  category: 'note',
+});
+
 export default function Calendar() {
   const today = todayIso();
+  const personalEvents = usePersonalTripEvents();
+  const [form, setForm] = useState<EventFormState | null>(null);
 
   const months = useMemo<MonthGroup[]>(() => {
     const map = new Map<string, MonthGroup>();
@@ -80,9 +123,20 @@ export default function Calendar() {
     return [...map.values()];
   }, []);
 
+  const allEvents = useMemo<CalendarEvent[]>(
+    () => [
+      ...tripDayEvents,
+      ...personalEvents.activeEvents.map((event) => ({
+        ...event,
+        personal: true,
+      })),
+    ],
+    [personalEvents.activeEvents],
+  );
+
   const eventsByDay = useMemo(() => {
-    const map = new Map<string, TripDayEvent[]>();
-    tripDayEvents.forEach((event) => {
+    const map = new Map<string, CalendarEvent[]>();
+    allEvents.forEach((event) => {
       const list = map.get(event.date) ?? [];
       list.push(event);
       map.set(event.date, list);
@@ -94,11 +148,12 @@ export default function Calendar() {
         const byCategory = categoryRank[a.category] - categoryRank[b.category];
         if (byCategory !== 0) return byCategory;
         if (a.time && b.time) return a.time.localeCompare(b.time);
+        if ((a.position ?? 0) !== (b.position ?? 0)) return (a.position ?? 0) - (b.position ?? 0);
         return 0;
       }),
     );
     return map;
-  }, []);
+  }, [allEvents]);
 
   const countdown = useMemo(() => {
     if (today < tripStartDate) return `до старта ${daysBetween(today, tripStartDate)} дн.`;
@@ -106,7 +161,38 @@ export default function Calendar() {
     return `идёт · день ${daysBetween(tripStartDate, today) + 1} из ${tripDayCount}`;
   }, [today]);
 
-  const plannedCount = tripDayEvents.length;
+  const plannedCount = allEvents.length;
+
+  const startCreate = () => setForm(blankForm(today < tripStartDate || today > tripEndDate ? tripStartDate : today));
+
+  const startEdit = (event: CalendarEvent) => {
+    setForm({
+      id: event.id,
+      date: event.date,
+      title: event.title,
+      time: event.time ?? '',
+      detail: event.detail ?? '',
+      city: event.city ?? '',
+      category: event.category,
+    });
+  };
+
+  const submitForm = (event: FormEvent) => {
+    event.preventDefault();
+    if (!form?.title.trim()) return;
+    const input: PersonalTripEventInput & { id?: string } = {
+      id: form.id,
+      date: form.date,
+      title: form.title.trim(),
+      time: form.time.trim() || null,
+      detail: form.detail.trim() || null,
+      city: form.city.trim() || null,
+      category: form.category,
+      links: [],
+    };
+    personalEvents.upsert(input);
+    setForm(null);
+  };
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-4 px-3 py-4">
@@ -116,9 +202,18 @@ export default function Calendar() {
             <p className="text-xs font-bold uppercase tracking-wide text-slate-500">{tripRoute}</p>
             <h1 className="text-xl font-extrabold leading-tight text-slate-900">Календарь поездки</h1>
           </div>
-          <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-500">
-            {countdown}
-          </span>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              onClick={startCreate}
+              className="inline-flex min-h-[44px] items-center rounded-full bg-slate-900 px-4 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+            >
+              Добавить
+            </button>
+            <span className="rounded-full bg-slate-100 px-2.5 py-1 text-[11px] font-semibold text-slate-500">
+              {countdown}
+            </span>
+          </div>
         </div>
 
         <div className="grid grid-cols-3 gap-2">
@@ -133,6 +228,15 @@ export default function Calendar() {
           маршрутов по интересам.
         </p>
       </header>
+
+      {form && (
+        <EventForm
+          form={form}
+          onChange={setForm}
+          onCancel={() => setForm(null)}
+          onSubmit={submitForm}
+        />
+      )}
 
       <div className="flex flex-col gap-5">
         {months.map((month) => (
@@ -154,6 +258,8 @@ export default function Calendar() {
                     isToday={date === today}
                     tripDayIndex={daysBetween(tripStartDate, date) + 1}
                     showRail={!isLastOverall}
+                    onEdit={startEdit}
+                    onDelete={(id) => personalEvents.remove(id)}
                   />
                 );
               })}
@@ -167,13 +273,15 @@ export default function Calendar() {
 
 interface DayRowProps {
   date: string;
-  events: TripDayEvent[];
+  events: CalendarEvent[];
   isToday: boolean;
   tripDayIndex: number;
   showRail: boolean;
+  onEdit: (event: CalendarEvent) => void;
+  onDelete: (id: string) => void;
 }
 
-function DayRow({ date, events, isToday, tripDayIndex, showRail }: DayRowProps) {
+function DayRow({ date, events, isToday, tripDayIndex, showRail, onEdit, onDelete }: DayRowProps) {
   const hasEvents = events.length > 0;
   const accent = events.some((event) => categoryMeta[event.category].accentCard);
 
@@ -229,7 +337,12 @@ function DayRow({ date, events, isToday, tripDayIndex, showRail }: DayRowProps) 
         {hasEvents ? (
           <div className="mt-1.5 flex flex-col gap-2">
             {events.map((event) => (
-              <EventRow key={event.id} event={event} />
+              <EventRow
+                key={`${event.personal ? 'personal' : 'static'}-${event.id}`}
+                event={event}
+                onEdit={onEdit}
+                onDelete={onDelete}
+              />
             ))}
           </div>
         ) : (
@@ -243,10 +356,12 @@ function DayRow({ date, events, isToday, tripDayIndex, showRail }: DayRowProps) 
 }
 
 interface EventRowProps {
-  event: TripDayEvent;
+  event: CalendarEvent;
+  onEdit: (event: CalendarEvent) => void;
+  onDelete: (id: string) => void;
 }
 
-function EventRow({ event }: EventRowProps) {
+function EventRow({ event, onEdit, onDelete }: EventRowProps) {
   const meta = categoryMeta[event.category];
   return (
     <article
@@ -258,11 +373,33 @@ function EventRow({ event }: EventRowProps) {
         {meta.icon}
       </span>
       <div className="min-w-0 flex-1">
-        <div className="flex flex-wrap items-baseline gap-x-2 gap-y-0.5">
-          {event.time && (
-            <span className="text-sm font-extrabold tabular-nums text-slate-900">{event.time}</span>
+        <div className="flex items-start justify-between gap-2">
+          <div className="flex min-w-0 flex-wrap items-baseline gap-x-2 gap-y-0.5">
+            {event.time && (
+              <span className="text-sm font-extrabold tabular-nums text-slate-900">{event.time}</span>
+            )}
+            <span className="text-sm font-bold text-slate-900">{event.title}</span>
+          </div>
+          {event.personal && (
+            <div className="flex shrink-0 gap-1">
+              <button
+                type="button"
+                onClick={() => onEdit(event)}
+                aria-label="Редактировать событие"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-100 text-xs font-bold text-slate-600 transition hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+              >
+                ✎
+              </button>
+              <button
+                type="button"
+                onClick={() => onDelete(event.id)}
+                aria-label="Удалить событие"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-rose-50 text-xs font-bold text-rose-600 transition hover:bg-rose-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-300"
+              >
+                ✕
+              </button>
+            </div>
           )}
-          <span className="text-sm font-bold text-slate-900">{event.title}</span>
         </div>
         {event.detail && (
           <p className="mt-0.5 text-xs leading-snug text-slate-500">{event.detail}</p>
@@ -291,6 +428,104 @@ function EventRow({ event }: EventRowProps) {
         )}
       </div>
     </article>
+  );
+}
+
+interface EventFormProps {
+  form: EventFormState;
+  onChange: (form: EventFormState) => void;
+  onCancel: () => void;
+  onSubmit: (event: FormEvent) => void;
+}
+
+function EventForm({ form, onChange, onCancel, onSubmit }: EventFormProps) {
+  const update = <K extends keyof EventFormState>(key: K, value: EventFormState[K]) =>
+    onChange({ ...form, [key]: value });
+
+  return (
+    <form onSubmit={onSubmit} className="rounded-xl border border-slate-200 bg-white p-3 shadow-sm">
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700">
+          Дата
+          <input
+            type="date"
+            value={form.date}
+            min={tripStartDate}
+            max={tripEndDate}
+            onChange={(event) => update('date', event.target.value)}
+            required
+            className="h-11 rounded-xl border border-slate-300 px-3 text-sm text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+          />
+        </label>
+        <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700">
+          Тип
+          <select
+            value={form.category}
+            onChange={(event) => update('category', event.target.value as TripDayEventCategory)}
+            className="h-11 rounded-xl border border-slate-300 bg-white px-3 text-sm text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+          >
+            {(Object.keys(categoryLabels) as TripDayEventCategory[]).map((category) => (
+              <option key={category} value={category}>
+                {categoryLabels[category]}
+              </option>
+            ))}
+          </select>
+        </label>
+        <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700">
+          Время
+          <input
+            value={form.time}
+            onChange={(event) => update('time', event.target.value)}
+            placeholder="18:30"
+            className="h-11 rounded-xl border border-slate-300 px-3 text-sm text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+          />
+        </label>
+        <label className="flex flex-col gap-1 text-sm font-semibold text-slate-700">
+          Город
+          <input
+            value={form.city}
+            onChange={(event) => update('city', event.target.value)}
+            className="h-11 rounded-xl border border-slate-300 px-3 text-sm text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+          />
+        </label>
+      </div>
+
+      <label className="mt-3 flex flex-col gap-1 text-sm font-semibold text-slate-700">
+        Название
+        <input
+          value={form.title}
+          onChange={(event) => update('title', event.target.value)}
+          required
+          className="h-11 rounded-xl border border-slate-300 px-3 text-sm text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+        />
+      </label>
+
+      <label className="mt-3 flex flex-col gap-1 text-sm font-semibold text-slate-700">
+        Детали
+        <textarea
+          value={form.detail}
+          onChange={(event) => update('detail', event.target.value)}
+          rows={3}
+          className="rounded-xl border border-slate-300 px-3 py-2 text-sm text-slate-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+        />
+      </label>
+
+      <div className="mt-3 flex flex-wrap justify-end gap-2">
+        <button
+          type="button"
+          onClick={onCancel}
+          className="inline-flex min-h-[44px] items-center rounded-full bg-slate-100 px-4 text-sm font-bold text-slate-600 transition hover:bg-slate-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+        >
+          Отмена
+        </button>
+        <button
+          type="submit"
+          className="inline-flex min-h-[44px] items-center rounded-full bg-slate-900 px-4 text-sm font-bold text-white transition hover:bg-slate-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400"
+        >
+          Сохранить
+        </button>
+      </div>
+    </form>
   );
 }
 

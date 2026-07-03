@@ -2,6 +2,7 @@ import { lazy, Suspense, useMemo, useState } from 'react';
 import type { CityId, Place } from '../data/types';
 import type { AnimeRoute } from '../data/animeRoutes';
 import { mapsUrl } from '../lib/tags';
+import { useSavedRoutes } from '../lib/sync/localState';
 
 const CityMap = lazy(() => import('./CityMap'));
 
@@ -13,6 +14,7 @@ interface AnimeRoutesProps {
 }
 
 export default function AnimeRoutes({ city, routes, cityPlaces, onOpen }: AnimeRoutesProps) {
+  const savedRoutes = useSavedRoutes();
   const placeBySlug = useMemo(
     () => new Map(cityPlaces.map((p) => [p.slug, p])),
     [cityPlaces],
@@ -31,6 +33,10 @@ export default function AnimeRoutes({ city, routes, cityPlaces, onOpen }: AnimeR
           route={route}
           placeBySlug={placeBySlug}
           onOpen={onOpen}
+          saved={savedRoutes.isSaved(route.id)}
+          onToggleSaved={() =>
+            savedRoutes.toggleRoute(route.id, city, route.routeName, route)
+          }
         />
       ))}
     </section>
@@ -42,11 +48,15 @@ function AnimeRouteCard({
   route,
   placeBySlug,
   onOpen,
+  saved,
+  onToggleSaved,
 }: {
   city: CityId;
   route: AnimeRoute;
   placeBySlug: Map<string, Place>;
   onOpen: (slug: string) => void;
+  saved: boolean;
+  onToggleSaved: () => void;
 }) {
   const [showMap, setShowMap] = useState(false);
 
@@ -61,8 +71,25 @@ function AnimeRouteCard({
 
   return (
     <article className="rounded-2xl border-2 border-dashed border-fuchsia-300 bg-fuchsia-50/40 p-4">
-      <h3 className="text-base font-bold text-fuchsia-900">🎬 {route.routeName}</h3>
-      <p className="mt-0.5 text-sm font-semibold text-fuchsia-700">{route.animeTitle}</p>
+      <div className="flex items-start justify-between gap-3">
+        <div className="min-w-0">
+          <h3 className="text-base font-bold text-fuchsia-900">🎬 {route.routeName}</h3>
+          <p className="mt-0.5 text-sm font-semibold text-fuchsia-700">{route.animeTitle}</p>
+        </div>
+        <button
+          type="button"
+          onClick={onToggleSaved}
+          aria-pressed={saved}
+          aria-label={saved ? 'Убрать маршрут из сохранённых' : 'Сохранить маршрут'}
+          className={`inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-full border text-lg transition focus:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400 ${
+            saved
+              ? 'border-fuchsia-500 bg-fuchsia-600 text-white shadow'
+              : 'border-fuchsia-200 bg-white text-fuchsia-700 hover:bg-fuchsia-100'
+          }`}
+        >
+          {saved ? '★' : '☆'}
+        </button>
+      </div>
       <p className="mt-2 text-sm text-slate-600">{route.description}</p>
 
       <ol className="mt-3 flex flex-col gap-2">

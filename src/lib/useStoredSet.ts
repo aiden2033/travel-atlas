@@ -6,6 +6,14 @@ export const placeKey = (place: Pick<Place, 'city' | 'slug'>): string =>
 
 export const SCHEMA_VERSION = 1;
 const SCHEMA_KEY = 'jt:schema';
+export const STORED_SET_CHANGE_EVENT = 'jt:stored-set-change';
+
+export interface StoredSetChangeDetail {
+  storageKey: string;
+  key: string;
+  enabled: boolean;
+  updatedAt: string;
+}
 
 const markSchema = (): void => {
   try {
@@ -27,6 +35,8 @@ const read = (storageKey: string): Set<string> => {
     return new Set();
   }
 };
+
+export const readStoredKeys = (storageKey: string): Set<string> => read(storageKey);
 
 const persist = (storageKey: string, set: Set<string>): void => {
   try {
@@ -55,14 +65,21 @@ const getStore = (storageKey: string): Store => {
 
 const emit = (store: Store): void => store.listeners.forEach((l) => l());
 
+const emitStoredSetChange = (detail: StoredSetChangeDetail): void => {
+  if (typeof window === 'undefined') return;
+  window.dispatchEvent(new CustomEvent<StoredSetChangeDetail>(STORED_SET_CHANGE_EVENT, { detail }));
+};
+
 const toggleKey = (storageKey: string, key: string): void => {
   const store = getStore(storageKey);
   const next = new Set(store.snapshot);
-  if (next.has(key)) next.delete(key);
-  else next.add(key);
+  const enabled = !next.has(key);
+  if (enabled) next.add(key);
+  else next.delete(key);
   store.snapshot = next;
   persist(storageKey, next);
   emit(store);
+  emitStoredSetChange({ storageKey, key, enabled, updatedAt: new Date().toISOString() });
 };
 
 export interface StoredSet {
@@ -82,7 +99,18 @@ export interface StoredKeySet {
 
 const clearKeys = (storageKey: string): void => {
   const store = getStore(storageKey);
+  const previous = store.snapshot;
   store.snapshot = new Set();
+  persist(storageKey, store.snapshot);
+  emit(store);
+  previous.forEach((key) =>
+    emitStoredSetChange({ storageKey, key, enabled: false, updatedAt: new Date().toISOString() }),
+  );
+};
+
+export const replaceStoredKeys = (storageKey: string, keys: Iterable<string>): void => {
+  const store = getStore(storageKey);
+  store.snapshot = new Set(keys);
   persist(storageKey, store.snapshot);
   emit(store);
 };

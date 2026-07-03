@@ -21,6 +21,12 @@ const MORE_LINKS: MoreLink[] = [
     description: 'По дням: прилёт, вылет и планы поездки.',
   },
   {
+    to: '/account',
+    icon: '👤',
+    title: 'Аккаунт',
+    description: 'Вход и состояние синхронизации.',
+  },
+  {
     to: '/events',
     icon: '🎤',
     title: 'События',
