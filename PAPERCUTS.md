@@ -13,3 +13,7 @@ Staging the required `PAPERCUTS.md` log → a global gitignore rule ignored the 
 ## 2026-08-14 10:18 — Codex GPT-5
 
 Resolving exact lodging coordinates → direct Nominatim URLs were rejected by the web opener as unsafe and the source site's Google static-map image returned `403`, even though its URL exposed the coordinates. Fall back to the source page/PDF map links and inspect redirect or static-map URL parameters.
+
+## 2026-08-14 13:13 — Codex GPT-5
+
+Fast-forwarding the finished feature branch into the updated default branch → pull request #2 had already merged the branch up to its previous tip, so the new marker commit diverged from the merge commit and `--ff-only` correctly stopped. Cherry-pick only the unmerged commit onto the current `main`.
