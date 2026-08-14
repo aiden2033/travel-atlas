@@ -7,7 +7,7 @@ import type { FriendsMapPlace } from '../data/friendsMapPlaces';
 import type { CityId, Place } from '../data/types';
 import type { LatLng } from '../lib/geo';
 import { haversineKm } from '../lib/geo';
-import { formatHours } from '../lib/tags';
+import { formatHours, mapsUrl } from '../lib/tags';
 import { CITY_CENTER, friendsPlaceIcon, placeIcon, userIcon } from '../lib/mapIcons';
 import { googleMapsMultiDir, MAX_GOOGLE_MAPS_ROUTE_POINTS } from '../lib/nav';
 import { placeKey, useVisited } from '../lib/useStoredSet';
@@ -135,6 +135,10 @@ function EnableMapGestures() {
 }
 
 function MapPopupCard({ place, onOpen }: { place: Place; onOpen: (slug: string) => void }) {
+  const mapsHref = mapsUrl(
+    place.coords ? `${place.coords.lat},${place.coords.lng}` : place.mapsQuery,
+  );
+
   return (
     <div className="w-52 text-left">
       <div className="overflow-hidden rounded-lg">
@@ -160,6 +164,14 @@ function MapPopupCard({ place, onOpen }: { place: Place; onOpen: (slug: string) 
       >
         Подробнее →
       </button>
+      <a
+        href={mapsHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-2 inline-flex min-h-[44px] w-full items-center justify-center rounded-lg border border-sky-200 bg-sky-50 px-3 text-xs font-semibold !text-sky-800 hover:bg-sky-100 hover:!text-sky-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-sky-400"
+      >
+        📍 Открыть в Google Maps
+      </a>
     </div>
   );
 }
@@ -184,7 +196,7 @@ function FriendsPopupCard({ place }: { place: FriendsMapPlace }) {
         rel="noopener noreferrer"
         className="mt-3 inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-emerald-700 px-3 text-xs font-semibold !text-white hover:!text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-emerald-400"
       >
-        Открыть в Google Maps
+        📍 Открыть в Google Maps
       </a>
     </div>
   );

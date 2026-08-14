@@ -40,10 +40,18 @@ export const tripDayEvents: TripDayEvent[] = [
   {
     id: 'osaka-checkin',
     date: '2026-08-29',
-    title: 'Заселение в Осаке (4 ночи)',
-    detail: 'База до 2 сентября. После дороги оставляем только лёгкую вечернюю программу.',
+    time: '15:00',
+    title: 'Заселение: Home in Chuo Ward, Osaka (4 ночи)',
+    detail:
+      'Airbnb по адресу 3-chōme-8-24 Kōzu, Chuo Ward, Osaka 542-0072. Заезд после 15:00; выезд 2 сентября до 11:00. Инструкции по заселению и правила дома — в Airbnb.',
     city: 'Осака',
     category: 'hotel',
+    links: [
+      {
+        label: 'Google Maps',
+        url: 'https://www.google.com/maps/search/?api=1&query=3-chome-8-24+Kozu%2C+Chuo+Ward%2C+Osaka+542-0072%2C+Japan',
+      },
+    ],
   },
   {
     id: 'dotonbori-evening',
@@ -115,16 +123,15 @@ export const tripDayEvents: TripDayEvent[] = [
   {
     id: 'kyoto-checkin',
     date: '2026-09-02',
-    title: 'Заселение: Yadoya Hiraiwa private ryokan (4 ночи)',
-    time: '15:00',
+    title: 'Заселение: Miyagawacho Samurai Machiya (4 ночи)',
     detail:
-      'Дом в Shimogyo-ku, Hayaocho 314. База до 6 сентября; выезд ориентировочно до 10:00. Перед приездом сверить код/инструкции заезда в Booking.',
+      'Airbnb по адресу 527 Higashikawarachō, Higashiyama-ku, Kyoto 605-0839. Выезд 6 сентября до 10:00. Время и инструкции по заселению сверить в Airbnb.',
     city: 'Киото',
     category: 'hotel',
     links: [
       {
-        label: 'Booking',
-        url: 'https://www.booking.com/hotel/jp/yadoya-hiraiwa-private-ryokan.ru.html',
+        label: 'Google Maps',
+        url: 'https://www.google.com/maps/search/?api=1&query=527+Higashikawaracho%2C+Higashiyama-ku%2C+Kyoto+605-0839%2C+Japan',
       },
     ],
   },

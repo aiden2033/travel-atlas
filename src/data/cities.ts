@@ -8,6 +8,7 @@ export const cities: CityMeta[] = [
     nights: 4,
     intro: 'Осака — мягкий вход в Японию: еда, меньше музейной плотности, легко адаптироваться. Удобная база с двумя центрами — южным (Намба) и северным (Умэда).',
     stay: [
+      { area: 'Наша хата · Kōzu', why: '3-chōme-8-24 Kōzu, Chuo Ward, Osaka 542-0072.' },
       { area: 'Namba', why: 'Топ-1, южный центр, покрывает всё.' },
       { area: 'Umeda', why: 'Северный, деловой/торговый.' },
     ],
@@ -31,6 +32,7 @@ export const cities: CityMeta[] = [
     nights: 4,
     intro: 'Киото — храмы, сады и старые улочки; начало сентября жаркое и влажное, поэтому ранние старты обязательны.',
     stay: [
+      { area: 'Наша хата · Miyagawacho Samurai Machiya', why: '527 Higashikawarachō, Higashiyama-ku, Kyoto 605-0839.' },
       { area: 'Kawaramachi / Gion-Shijo', why: 'вечером красиво, еда, гулять' },
       { area: 'Karasuma / Shijo-Karasuma', why: 'исторический центр' },
       { area: 'Kyoto Station', why: 'у вокзала, для переездов' },
