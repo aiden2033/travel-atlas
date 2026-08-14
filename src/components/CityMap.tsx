@@ -4,11 +4,12 @@ import type { ReactNode } from 'react';
 import { MapContainer, Marker, Popup, TileLayer, useMap } from 'react-leaflet';
 import L from 'leaflet';
 import type { FriendsMapPlace } from '../data/friendsMapPlaces';
+import type { TripStay } from '../data/stays';
 import type { CityId, Place } from '../data/types';
 import type { LatLng } from '../lib/geo';
 import { haversineKm } from '../lib/geo';
 import { formatHours, mapsUrl } from '../lib/tags';
-import { CITY_CENTER, friendsPlaceIcon, placeIcon, userIcon } from '../lib/mapIcons';
+import { CITY_CENTER, friendsPlaceIcon, placeIcon, stayIcon, userIcon } from '../lib/mapIcons';
 import { googleMapsMultiDir, MAX_GOOGLE_MAPS_ROUTE_POINTS } from '../lib/nav';
 import { placeKey, useVisited } from '../lib/useStoredSet';
 import PlaceImage from './PlaceImage';
@@ -22,6 +23,7 @@ interface CityMapProps {
   activePlaceKey?: string;
   friendsPlaces?: FriendsMapPlace[];
   showFriendsPlaces?: boolean;
+  stays?: TripStay[];
   onOpen: (slug: string) => void;
   userPosition?: LatLng | null;
 }
@@ -202,6 +204,29 @@ function FriendsPopupCard({ place }: { place: FriendsMapPlace }) {
   );
 }
 
+function StayPopupCard({ stay }: { stay: TripStay }) {
+  const mapsHref = mapsUrl(`${stay.coords.lat},${stay.coords.lng}`);
+
+  return (
+    <div className="w-52 text-left">
+      <div className="inline-flex rounded-full bg-cyan-50 px-2 py-1 text-[11px] font-bold text-cyan-800">
+        🏠 Наша хата
+      </div>
+      <h3 className="mt-2 text-sm font-bold text-slate-900">{stay.name}</h3>
+      <p className="mt-1 text-xs text-slate-600">{stay.address}</p>
+      <p className="mt-1 text-xs font-semibold text-cyan-800">{stay.dates}</p>
+      <a
+        href={mapsHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-3 inline-flex min-h-[44px] w-full items-center justify-center rounded-lg bg-cyan-700 px-3 text-xs font-semibold !text-white hover:bg-cyan-800 hover:!text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400"
+      >
+        📍 Открыть в Google Maps
+      </a>
+    </div>
+  );
+}
+
 function TilesPlaceholder() {
   return (
     <div className="pointer-events-none absolute inset-x-0 top-0 z-[900] flex justify-center p-2">
@@ -244,6 +269,7 @@ export default function CityMap({
   activePlaceKey,
   friendsPlaces = [],
   showFriendsPlaces = false,
+  stays = [],
   onOpen,
   userPosition,
 }: CityMapProps) {
@@ -268,15 +294,16 @@ export default function CityMap({
     );
   }, [friendsPlaces, showFriendsPlaces, visiblePoints]);
   const mapFitPoints = useMemo(
-    () => [...visiblePoints, ...friendsVisiblePoints],
-    [friendsVisiblePoints, visiblePoints],
+    () => [...visiblePoints, ...friendsVisiblePoints, ...stays],
+    [friendsVisiblePoints, stays, visiblePoints],
   );
   const routeCoords = useMemo(
     () => [
+      ...stays.map((stay) => stay.coords),
       ...visiblePoints.map((point) => point.coords!),
       ...friendsVisiblePoints.map((point) => point.coords),
     ],
-    [friendsVisiblePoints, visiblePoints],
+    [friendsVisiblePoints, stays, visiblePoints],
   );
   const routePoints = useMemo(
     () => routeCoords.slice(0, MAX_GOOGLE_MAPS_ROUTE_POINTS),
@@ -341,6 +368,20 @@ export default function CityMap({
             </Popup>
           </AccessibleMarker>
         )}
+        {stays.map((stay) => (
+          <AccessibleMarker
+            key={stay.id}
+            position={[stay.coords.lat, stay.coords.lng]}
+            icon={stayIcon()}
+            label={`Наша хата: ${stay.name}`}
+            keyboard
+            zIndexOffset={1200}
+          >
+            <Popup minWidth={208} maxWidth={224}>
+              <StayPopupCard stay={stay} />
+            </Popup>
+          </AccessibleMarker>
+        ))}
         {visiblePoints.map((p) => {
           const isActive = placeKey(p) === activePlaceKey;
           return (

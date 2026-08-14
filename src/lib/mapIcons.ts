@@ -12,6 +12,8 @@ const ACTIVE_COLOR = '#ef4444';
 const ACTIVE_BORDER = '#991b1b';
 const VISITED_COLOR = '#22c55e';
 const VISITED_BORDER = '#15803d';
+const STAY_COLOR = '#06b6d4';
+const STAY_BORDER = '#0e7490';
 
 export const CITY_CENTER: Record<CityId, [number, number]> = {
   osaka: [34.6687, 135.5013],
@@ -86,4 +88,13 @@ export const friendsPlaceIcon = (emoji?: string): L.DivIcon =>
     iconSize: [22, 22],
     iconAnchor: [11, 22],
     popupAnchor: [0, -22],
+  });
+
+export const stayIcon = (): L.DivIcon =>
+  L.divIcon({
+    className: 'city-pin-wrapper',
+    html: pinHtml(STAY_COLOR, STAY_BORDER, false, '🏠'),
+    iconSize: [26, 26],
+    iconAnchor: [13, 26],
+    popupAnchor: [0, -26],
   });

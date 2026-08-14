@@ -4,6 +4,7 @@ import type { CityId, Place, Tag } from '../data/types';
 import { cities } from '../data/cities';
 import { friendsMapPlaces } from '../data/friendsMapPlaces';
 import { places } from '../data/places';
+import { tripStays } from '../data/stays';
 import { dayTripGroups } from '../data/trip';
 import { animeRoutesByCity } from '../data/animeRoutes';
 import { CITY_ACCENT } from '../lib/tags';
@@ -113,6 +114,11 @@ export default function CityPage() {
 
   const cityFriendsMapPlaces = useMemo(
     () => (isCityId(city) ? friendsMapPlaces.filter((p) => p.city === city) : []),
+    [city],
+  );
+
+  const cityStays = useMemo(
+    () => (isCityId(city) ? tripStays.filter((stay) => stay.city === city) : []),
     [city],
   );
 
@@ -324,6 +330,7 @@ export default function CityPage() {
             dayTripPlaces={dayTripPlaces}
             friendsPlaces={cityFriendsMapPlaces}
             showFriendsPlaces={showFriendsMapPlaces}
+            stays={cityStays}
             onOpen={openPlace}
             userPosition={position}
           />

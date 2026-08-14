@@ -9,3 +9,7 @@ Checking whether `PAPERCUTS.md` existed with `rtk test -f` → RTK forwarded the
 ## 2026-08-14 10:13 — Codex GPT-5
 
 Staging the required `PAPERCUTS.md` log → a global gitignore rule ignored the file even though the repository `.gitignore` did not. Stage this repository-required file explicitly with `git add -f PAPERCUTS.md`.
+
+## 2026-08-14 10:18 — Codex GPT-5
+
+Resolving exact lodging coordinates → direct Nominatim URLs were rejected by the web opener as unsafe and the source site's Google static-map image returned `403`, even though its URL exposed the coordinates. Fall back to the source page/PDF map links and inspect redirect or static-map URL parameters.
