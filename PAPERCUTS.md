@@ -17,3 +17,15 @@ Resolving exact lodging coordinates → direct Nominatim URLs were rejected by t
 ## 2026-08-14 13:13 — Codex GPT-5
 
 Fast-forwarding the finished feature branch into the updated default branch → pull request #2 had already merged the branch up to its previous tip, so the new marker commit diverged from the merge commit and `--ff-only` correctly stopped. Cherry-pick only the unmerged commit onto the current `main`.
+
+## 2026-08-28 12:45 — Codex GPT-5
+
+Reloading a previously delivered in-app-browser tab after restoring its SSH tunnel → the saved tab handle returned `Unknown tab` while both current and user tab lists were empty. Treat delivered browser handles as potentially stale across sessions and create a fresh tab when discovery returns no matching tab.
+
+## 2026-08-29 15:02 — Codex GPT-5
+
+Searching the codebase knowledge graph with the repository name `japan-trip` → the graph required the generated identifier `Users-dmitrijbyckov-repos-japan-trip`. Use the exact identifier from the tool's available-projects response.
+
+## 2026-08-29 15:02 — Codex GPT-5
+
+Restoring a generated file with one patch containing both delete and add operations → `apply_patch` rejected multiple operations for the same path. Use a single update hunk with the current and desired content instead.
