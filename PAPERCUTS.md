@@ -29,3 +29,7 @@ Searching the codebase knowledge graph with the repository name `japan-trip` →
 ## 2026-08-29 15:02 — Codex GPT-5
 
 Restoring a generated file with one patch containing both delete and add operations → `apply_patch` rejected multiple operations for the same path. Use a single update hunk with the current and desired content instead.
+
+## 2026-08-31 22:35 — Codex GPT-5
+
+Running the required production build after a calendar-only edit → TypeScript rewrote the tracked but ignored `tsconfig.tsbuildinfo` because its cached root list was stale. Keep generated build metadata out of the feature commit or stop tracking the file so routine verification leaves the worktree clean.

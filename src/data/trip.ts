@@ -84,9 +84,9 @@ const globalTips: TipCategory[] = [
 
 
 export const trip: TripMeta = {
-  route: 'Osaka → Kyoto → Tokyo',
+  route: 'Osaka → Kyoto → Kawaguchiko → Gotemba → Tokyo',
   dates: 'конец авг - середина сен 2026, вылет 13 сентября',
-  summary: 'Обычный маршрут Осака → Киото → Токио.',
+  summary: 'Маршрут Осака → Киото → Кавагутико → Готэмба → Токио.',
   globalTips,
   departure: [
     '',
