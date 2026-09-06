@@ -238,6 +238,14 @@ export const tripDayEvents: TripDayEvent[] = [
     category: 'event',
   },
   {
+    id: 'teamlab-planets',
+    date: '2026-09-09',
+    time: '13:30',
+    title: 'teamLab Planets',
+    city: 'Токио',
+    category: 'event',
+  },
+  {
     id: 'pack-day',
     date: '2026-09-12',
     title: 'Последние покупки и упаковка',
