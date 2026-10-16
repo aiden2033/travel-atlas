@@ -1,6 +1,7 @@
-import type { Catalog, GuideCity, GuidePlace } from './model';
+import type { Catalog, Country, GuideCity, GuidePlace } from './model';
 import { malaysiaDining } from './malaysia-dining';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
+import { australia } from './australia';
 
 const appendMissing = <T>(
   existing: T[],
@@ -36,34 +37,45 @@ const islandNames: Record<string, [string, string]> = {
   kalimantan: ['Калимантан', 'о. Калимантан'],
 };
 
+const updateIslandLabels = (city: GuideCity): GuideCity => {
+  const names = islandNames[city.id];
+  return {
+    ...city,
+    nameRu: names && city.nameRu === names[0] ? names[1] : city.nameRu,
+    places: city.places.map((place) =>
+      city.id === 'gili' &&
+      place.slug === 'gili-trawangan' &&
+      place.nameRu === 'Гили Траванган'
+        ? { ...place, nameRu: 'о. Гили Траванган' }
+        : place,
+    ),
+  };
+};
+
+const expandCountry = (country: Country): Country => {
+  if (country.id === 'malaysia')
+    return { ...country, cities: expandCities(country.cities, malaysiaDining) };
+  if (country.id === australia.id)
+    return {
+      ...country,
+      cities: expandCities(country.cities, {}, australia.cities),
+    };
+  if (country.id !== 'indonesia') return country;
+  return {
+    ...country,
+    cities: expandCities(
+      country.cities,
+      indonesiaAdditions,
+      indonesiaNewCities,
+    ).map(updateIslandLabels),
+  };
+};
+
 export const migrateCatalog = (catalog: Catalog): Catalog => ({
   ...catalog,
-  countries: catalog.countries.map((country) =>
-    country.id === 'malaysia'
-      ? { ...country, cities: expandCities(country.cities, malaysiaDining) }
-      : country.id !== 'indonesia'
-        ? country
-        : {
-            ...country,
-            cities: expandCities(
-              country.cities,
-              indonesiaAdditions,
-              indonesiaNewCities,
-            ).map((city) => {
-              const names = islandNames[city.id];
-              return {
-                ...city,
-                nameRu:
-                  names && city.nameRu === names[0] ? names[1] : city.nameRu,
-                places: city.places.map((place) =>
-                  city.id === 'gili' &&
-                  place.slug === 'gili-trawangan' &&
-                  place.nameRu === 'Гили Траванган'
-                    ? { ...place, nameRu: 'о. Гили Траванган' }
-                    : place,
-                ),
-              };
-            }),
-          },
-  ),
+  countries: appendMissing(
+    catalog.countries,
+    [australia],
+    (country) => country.id,
+  ).map(expandCountry),
 });

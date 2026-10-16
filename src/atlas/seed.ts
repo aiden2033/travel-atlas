@@ -6,6 +6,7 @@ import winter from './winter.json';
 import published from './published.json';
 import { malaysiaDining } from './malaysia-dining';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
+import { australia } from './australia';
 import { withLicensedPhotos } from './photos';
 import gardensCredit from './credits/singapore-gardens-credit.json';
 import merlionCredit from './credits/singapore-merlion-credit.json';
@@ -965,6 +966,7 @@ const baseSeed = catalogSchema.parse({
       ],
     },
     japan,
+    australia,
   ],
   tags: [
     ['food', 'Еда', 'sand'],

@@ -89,3 +89,11 @@ Separating pre-existing papercut changes from this task in the Git index → rev
 ## 2026-10-16 19:40 — GPT-6
 
 Verifying Indonesian source links → some indexed tourism PDFs were already HTTP404, while several official sites rate-limited direct checks with 403/406/429. Replace removed PDFs with live government HTML pages and distinguish blocked fetches from confirmed missing pages; Penida Colada uses its working .com domain.
+
+## 2026-10-16 19:42 — GPT-6
+
+Verifying a new deep link immediately after a successful Pages deployment → the browser initially served the previous service-worker shell and showed the missing-page screen. One reload loaded the new shell and the 20-card Bali section; deployment success and an initial cached render can differ.
+
+## 2026-10-16 19:45 — GPT-6
+
+Looking for a separate Malaysia data module while adding Australia → src/atlas/malaysia.ts does not exist; the original country definitions live in seed.ts. Use graph-discovered paths rather than assuming one file per country.

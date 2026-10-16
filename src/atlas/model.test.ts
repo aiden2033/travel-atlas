@@ -28,12 +28,13 @@ describe('source consolidation', () => {
       ).toBe(place.description);
   });
 
-  it('includes all four requested countries and the winter city catalog', () => {
+  it('includes all five requested countries and the winter city catalog', () => {
     expect(seed.countries.map((c) => c.id)).toEqual([
       'malaysia',
       'singapore',
       'indonesia',
       'japan',
+      'australia',
     ]);
     const malaysia = seed.countries[0];
     expect(malaysia.cities.map((c) => c.id)).toEqual([
@@ -63,6 +64,52 @@ describe('source consolidation', () => {
     expect(stateKey('malaysia', 'osaka', 'dotonbori')).not.toBe(
       stateKey('japan', 'osaka', 'dotonbori'),
     );
+  });
+
+  it('adds the Australia tab to old catalogs and preserves an existing custom guide', () => {
+    const catalog = structuredClone(seed);
+    catalog.countries = catalog.countries.filter(
+      (country) => country.id !== 'australia',
+    );
+    const migrated = migrateCatalog(catalog);
+    const australia = migrated.countries.find(
+      (country) => country.id === 'australia',
+    )!;
+    expect(australia.cities.length).toBeGreaterThan(1);
+    expect(
+      australia.cities
+        .flatMap((city) => city.places)
+        .some((place) => place.foodSpot),
+    ).toBe(true);
+    const custom = structuredClone(migrated);
+    const edited = custom.countries.find(
+      (country) => country.id === 'australia',
+    )!;
+    edited.nameRu = 'Моя Австралия';
+    edited.sections.push({
+      id: 'personal-plan',
+      title: 'Мой план',
+      body: 'Встреча с друзьями',
+    });
+    const original = edited.cities[0].places[0];
+    original.note = 'Личная заметка';
+    edited.cities[0].places = [original];
+    edited.cities = edited.cities.slice(0, 1);
+    const expanded = migrateCatalog(custom);
+    const actual = expanded.countries.find(
+      (country) => country.id === 'australia',
+    )!;
+    expect(actual.nameRu).toBe('Моя Австралия');
+    expect(actual.sections).toEqual(edited.sections);
+    expect(actual.cities[0].places[0]).toEqual(original);
+    expect(actual.cities.map((city) => city.id)).toEqual(
+      australia.cities.map((city) => city.id),
+    );
+    expect(actual.cities[0].places.length).toBeGreaterThan(1);
+    expect(migrateCatalog(expanded)).toEqual(expanded);
+    expect(
+      catalog.countries.some((country) => country.id === 'australia'),
+    ).toBe(false);
   });
 
   it('adds researched places to older catalogs while preserving personal edits', () => {
