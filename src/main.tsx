@@ -15,15 +15,6 @@ const queryClient = new QueryClient({
   },
 });
 
-const hadServiceWorkerController = Boolean(navigator.serviceWorker?.controller);
-let refreshingForServiceWorkerUpdate = false;
-
-navigator.serviceWorker?.addEventListener('controllerchange', () => {
-  if (!hadServiceWorkerController || refreshingForServiceWorkerUpdate) return;
-  refreshingForServiceWorkerUpdate = true;
-  window.location.reload();
-});
-
 const updateSW = registerSW({
   immediate: true,
   onNeedRefresh() {

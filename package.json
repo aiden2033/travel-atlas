@@ -1,15 +1,22 @@
 {
-  "name": "japan-trip-guide",
+  "name": "travel-atlas",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --config vite.config.ts",
     "sync:google-points": "node scripts/sync-google-map-points.mjs",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "build": "tsc -b && vite build --config vite.config.ts",
+    "preview": "vite preview --config vite.config.ts",
+    "test": "vitest run",
+    "migrate:winter": "python3 scripts/migrate-winter.py",
+    "catalog": "tsx scripts/catalog.ts",
+    "format": "prettier --write src/atlas src/App.tsx"
   },
   "dependencies": {
+    "@fontsource-variable/golos-text": "^5.3.0",
+    "@fontsource-variable/noto-serif": "^5.3.0",
+    "@phosphor-icons/react": "^2.1.10",
     "@tanstack/react-query": "^5.101.2",
     "@types/leaflet": "^1.9.21",
     "fuse.js": "^7.0.0",
@@ -17,17 +24,23 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-leaflet": "^4.2.1",
-    "react-router-dom": "^6.26.2"
+    "react-router-dom": "^7.18.4",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^22.20.5",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.0",
-    "@vitejs/plugin-react": "^4.3.2",
+    "@vitejs/plugin-react": "^5.2.0",
     "autoprefixer": "^10.4.20",
     "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.13",
+    "prettier": "^3.9.10",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
     "typescript": "^5.4.5",
-    "vite": "^5.4.8",
-    "vite-plugin-pwa": "^1.3.0"
+    "vite": "^8.3.4",
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^5.0.5"
   }
 }

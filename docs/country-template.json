@@ -1,0 +1,28 @@
+{
+  "id": "vietnam",
+  "nameRu": "Вьетнам",
+  "nameEn": "Vietnam",
+  "intro": "Опишите идею следующей поездки.",
+  "cover": "",
+  "sections": [
+    {
+      "id": "transport",
+      "title": "Транспорт",
+      "body": "Ваши заметки"
+    }
+  ],
+  "cities": [
+    {
+      "id": "hanoi",
+      "nameRu": "Ханой",
+      "nameEn": "Hanoi",
+      "intro": "Опишите город.",
+      "cover": "",
+      "nights": 0,
+      "stay": [],
+      "tips": [],
+      "sections": [],
+      "places": []
+    }
+  ]
+}

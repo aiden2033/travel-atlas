@@ -1,115 +1,104 @@
-# Japan Trip Guide / Гид по Японии 🇯🇵
+# Атлас — конструктор путешествий
 
-## What this is
+Общий путеводитель на основе [japan-trip](https://github.com/aiden2033/japan-trip) и [winter26](https://github.com/aiden2033/winter26). Четыре страны, единая структура и редактор для следующих поездок.
 
-A small, fast, offline-friendly single-page guide for one specific trip across Japan. It groups every place worth visiting by city, shows compact tags, time estimates and "best time to go" hints, marks day-trips and which of them cannot be combined on the same day, and offers a fuzzy search that works in both English and Russian. There are **no runtime API calls** — all content data is bundled at build time, so it loads instantly and works as a static site. User marks are saved in `localStorage` when available, with an in-memory fallback when storage is unavailable.
+![Интерфейс Атласа](docs/design/desktop-normalized.png)
 
-Небольшой быстрый офлайн-гид по конкретной поездке: места сгруппированы по городам, компактные теги, оценки времени, подсказки "когда идти", пометки дейтрипов и нечёткий поиск на русском и английском. Контент статический и не требует API: данные собраны в бандл при сборке. Пользовательские отметки сохраняются в `localStorage`, если он доступен, с fallback в память при недоступном хранилище.
+## Что внутри
 
-**Route / Маршрут:** `Osaka → Kyoto → Tokyo`
+| Страна | Города и регионы | Места |
+| --- | --- | ---: |
+| Малайзия | Лангкави, Куала-Лумпур, Пенанг | 49 |
+| Сингапур | Марина-Бэй, старые кварталы, острова и сады | 11 |
+| Индонезия | Ява, Ломбок, Гили, Флорес/Комодо, Калимантан | 9 |
+| Япония | Осака, Киото, Токио, другие точки | 190 |
 
-## User states / Пользовательские состояния
+Японский каталог включает все 136 исходных мест и 54 точки общего Google Maps списка. Перенесены 45 карточек winter26, три пляжные точки из примечания и добавлен геопарк Килим. Полный исходный HTML сохранён в `docs/archive/winter26.html`. Исходные брони, календарь, аниме-маршруты, подготовка, покупки, транспортные карты и другие материалы Японии доступны через «Маршрут и заметки».
 
-- **Favorites / Избранное** — places can be marked for quick access from the home page.
-- **Visited / Посещено** — visited places are tracked across city pages, maps and progress counters.
-- **Passport / Паспорт** — the passport page shows collected city stamps based on visited places.
-- **Booked / Забронировано** — the booking checklist tracks which advance tickets and restaurant reservations are done.
+Каталог поддерживает поиск на русском и английском, фильтрацию по тегам, карточки и карту, избранное, посещённые места и ссылки на Google Maps. Исторические цены, даты и правила из старых поездок помечены как исходные заметки; они не являются обновлённым справочником.
 
-These states are local to the browser. They use `localStorage` for persistence and fall back to in-memory state if browser storage is unavailable or blocked.
+## Запуск
 
-## Run locally / Локальный запуск
+Требуется Node.js 22.12+.
 
-```bash
-npm install      # install dependencies
-npm run dev      # start the dev server (http://localhost:5173)
-npm run build    # type-check + production build into dist/
-npm run preview  # serve the built dist/ locally to verify the production bundle
+```sh
+npm ci
+npm run dev
 ```
 
-## Add / edit a place / Добавить или изменить место
-
-Places live in **`src/data/places.ts`** as a single `Place[]` array. Each entry follows the `Place` shape defined in `src/data/types.ts`:
-
-```ts
-export interface Place {
-  slug: string;                    // unique URL id, e.g. 'fushimi-inari'
-  nameEn: string;                  // English name
-  nameRu: string;                  // Russian name
-  city: 'osaka' | 'kyoto' | 'tokyo';
-  tags: Tag[];                     // small chips shown on the card
-  timeEstimateHours: [number, number]; // [min, max]; equal values render as "~N ч"
-  bestTime?: string;               // optional "best time to go" hint
-  description: string;             // short blurb
-  mapsQuery: string;               // text used to build the Google Maps link
-  photo?: string;                  // optional 'photos/<city>/<file>' (see "Add real photos")
-  isDayTrip?: boolean;             // renders the amber day-trip frame + badge
-  dayTripGroup?: string;           // groups day-trips into a "pick one per day" block
-  incompatibleWith?: string[];     // slugs that cannot be combined on the same day
-  combinesWith?: string[];         // slugs that pair well on the same day
-  note?: string;                   // optional extra note (kanji, transport, etc.)
-  anime?: string[];                // related anime titles, shown in the expanded card
-}
+```sh
+npm test
+npm run build
+npm run preview
 ```
 
-Minimal example — just append a new object to the `places` array:
+Приложение статическое: React 18, TypeScript, Vite 8, Tailwind 4, React Router, Fuse.js, Leaflet, Zod. Ключи API для основного приложения не нужны. Относительные пути и HashRouter поддерживают GitHub Pages и обновление глубоких ссылок.
 
-```ts
-{
-  slug: 'teamlab-borderless',
-  nameEn: 'teamLab Borderless',
-  nameRu: 'тимЛаб Бордерлесс',
-  city: 'tokyo',
-  tags: ['museum', 'tickets-ahead'],
-  timeEstimateHours: [2, 3],
-  description: 'Иммерсивный цифровой арт-музей.',
-  mapsQuery: 'teamLab Borderless, Tokyo, Japan',
-},
+## Конструктор
+
+1. Откройте «Конструктор» и нажмите «Добавить страну».
+2. Добавьте города, районы или регионы.
+3. Внутри них добавляйте места: название, описание, фотографию, теги, ориентир по времени, координаты и личные заметки.
+4. Создавайте свои теги и дополнительные текстовые разделы у страны, города или места — например, «Транспорт», «Где жить», «Бюджет».
+5. Меняйте порядок стран, городов и мест стрелками. После удаления доступна отмена.
+
+Коды для ссылок можно задать вручную или оставить пустыми для автоматического создания. При редактировании код сохраняется, чтобы не терять адрес и личные отметки.
+
+**Сохранение — в текущем браузере.** Это не серверный редактор с общим аккаунтом. Устройство или другой браузер не получат изменения автоматически. В конструкторе есть экспорт и импорт JSON: резервная копия включает каталог, избранное, посещения и прежние японские отметки/личные события. Импорт сначала проверяет структуру и предлагает подтвердить замену. Файл ограничен 10 МБ. Не храните в общедоступном каталоге личные документы и секреты.
+
+## Как опубликовать каталог для всех устройств
+
+Экспортируйте резервную копию из конструктора, затем выполните:
+
+```sh
+npm run catalog -- apply /path/to/atlas-backup.json
+npm test
+npm run build
+git add src/atlas/published.json
+git commit -m "Update travel catalog"
+git push
 ```
 
-Field notes:
+Команда сохраняет только каталог в `src/atlas/published.json`. Избранное, посещения и личные календарные события в публикацию не попадают. После push в main GitHub Actions обновит сайт. Уже редактировавшие каталог в браузере пользователи сохраняют свою локальную копию; для замены используйте импорт.
 
-- **`tags`** — small chips on every card. Allowed values come from the `Tag` union in `src/data/types.ts` (`morning`, `food`, `temple-shrine`, `nature`, `view`, `shopping`, `nightlife`, `museum`, `walk`, `day-trip`, `castle`, `tickets-ahead`, `low-mobility`, `cafe`, `anime`). Their emoji + Russian labels live in `src/lib/tags.ts` (`TAG_LABELS`). To add a brand-new tag, extend the `Tag` type **and** add a label in `TAG_LABELS`. Tags are also a search key, so good tags improve search.
-- **`dayTripGroup`** — id of a group declared in `src/data/trip.ts` (`dayTripGroups`). Day-trips that share a group render together inside a dashed amber "pick one per day" block, with the group `label`/`note` shown above the cards.
-- **`incompatibleWith`** — list of other slugs that **cannot** be done on the same day. Rendered as a compact red "⚠ нельзя совмещать в один день с: …" line on the card and the detail page.
-- **`combinesWith`** — list of slugs that **pair well** on the same day. Rendered as a green "✓ часто совмещают с: …" line. (e.g. `hakone` ↔ `gotemba-premium-outlets`).
-- **`anime`** — optional list of anime connected to the place (e.g. `['Евангелион (Neon Genesis Evangelion)']`). Rendered as a "🎬 Аниме, связанные с этим местом" block when a card is expanded; add the `anime` tag too so the place is filterable.
+Экспорт чистого текущего каталога из исходников:
 
-After editing, run `npm run build` to confirm types are still valid.
+```sh
+npm run catalog -- export atlas-seed.json
+```
 
-## Edit booking checklist / Редактировать брони
+Для возврата к исходному набору установите `null` в `src/atlas/published.json`. Структура и проверки находятся в `src/atlas/model.ts`, исходный реестр — в `src/atlas/seed.ts`. Пример дополнительной страны — `docs/country-template.json`; её можно добавить командой `npm run catalog -- add-country docs/country-template.json`. UI позволяет сделать это без ручной правки JSON.
 
-Advance tickets and restaurant reservations live in **`src/data/bookings.ts`**. Each item points to a place by `{ city, placeSlug }`, carries a short timing note, and lists one or more purchase/reservation links. The `/bookings` page renders the checklist and stores completed booking marks in `localStorage` under `jt:booked`.
+## Данные и расширение
 
-Keep official links first, then add known partner platforms such as Klook, Trip.com, Lawson, TableCheck, OMAKASE, My Concierge or TABLEALL when they are useful. Because booking systems change often, re-check URLs before committing major trip updates.
+- `src/atlas/model.ts` — версионированные схемы стран, городов, мест, тегов, разделов и резервных копий.
+- `src/atlas/seed.ts` — четыре исходные страны, адаптер японского каталога и новые подборки.
+- `src/atlas/winter.json` — структурированные карточки и заметки winter26.
+- `scripts/migrate-winter.py` — воспроизводимый импорт архивного HTML без сторонних Python-пакетов.
+- `src/atlas/Editor.tsx`, `Builder.tsx` — общий редактор для всех стран.
+- `src/atlas/published.json` — опубликованный пользовательский каталог, если задан.
+- `src/data/` и `src/pages/` — сохранённые японские данные и дополнительные разделы.
 
-## Add real photos / Добавить настоящие фото
+Каждая страна может иметь произвольное число городов/регионов. У страны, города и места есть дополнительные разделы `sections: [{ id, title, body }]`. Новые категории определяются в `tags`; отдельные компоненты на каждую страну не требуются.
 
-1. Drop an image into the city subfolder **`public/photos/<city>/`** (`osaka` / `kyoto` / `tokyo`). Any web format works — `.jpg`, `.jpeg`, `.webp`, `.avif`. Name it after the place, e.g. `public/photos/kyoto/fushimi_inari.jpg`.
-2. Set the `photo` field on that place in `src/data/places.ts` to the path **relative to `public/`, without a leading slash**, including the real extension:
+## Офлайн и синхронизация
 
-   ```ts
-   photo: 'photos/kyoto/fushimi_inari.jpg',
-   ```
+После первого открытия production-версия сохраняет оболочку, данные и шрифты через service worker. Просмотренные локальные фотографии и тайлы OpenStreetMap кэшируются отдельно. Внешние фотографии, непросмотренные карты и ссылки на сторонние сервисы требуют интернета. Если внешнее фото недоступно, карточка использует обложку региона.
 
-   The component prepends `import.meta.env.BASE_URL`, so the path resolves correctly both locally and on a GitHub Pages project subpath — do **not** add a leading `/` or `./`.
+Старый опциональный backend синхронизации Японии сохранён в исходниках. Он не включён по умолчанию и не является облачной синхронизацией конструктора. Для его использования нужен отдельный сервер и `VITE_SYNC_API_URL` из `.env.example`. До настройки основное приложение не обращается к localhost-серверу.
 
-Notes:
+## GitHub Pages
 
-- Images are **lazy-loaded** (`loading="lazy"`) and rendered at a **fixed 16:9 aspect ratio** (`aspect-video`), so the layout never jumps while images load.
-- If `photo` is absent — or the file fails to load — a **colored placeholder renders automatically** (city-accent gradient with the place name). There are never broken images, so adding photos is fully optional and incremental.
+В `.github/workflows/deploy.yml` настроены проверки, сборка и публикация ветки main. Источник Pages: GitHub Actions. Новый сайт рассчитан на адрес `https://aiden2033.github.io/travel-atlas/`. Префикс репозитория не зашит в приложение.
 
-## Edit tips / Редактировать советы
+## Источники и изображения
 
-- **Per-city tips, intro and "where to stay":** `src/data/cities.ts` — each city object has `intro`, `stay` (`{ area, why }[]`) and `tips` (`string[]`). The `tips` array drives the collapsible "Советы по городу" block on each city page.
-- **Global tips, route, dates and departure:** `src/data/trip.ts` — `trip.globalTips` feeds the collapsible "Советы по Японии" on the home page, `trip.departure` feeds "Вылет / последняя ночь", and `trip.route` / `trip.summary` / `trip.dates` drive the home header. `dayTripGroups` defines the day-trip group labels and notes.
+- [Visit Singapore: идеи маршрута](https://www.visitsingapore.com/travel-tips/travelling-to-singapore/itineraries/7-days-in-singapore/) — стартовый каталог Сингапура, проверен 16.10.2026.
+- [Indonesia Travel: Комодо](https://www.indonesia.travel/id/en/travel-ideas/adventure/top-spots-to-shoot-spectacular-photos-in-komodo-national-park).
+- [Indonesia Travel: Иджен](https://www.indonesia.travel/id/id/destination/java/east-java/ijen-crater).
+- Фото Supertree Grove: Mustang Joe, CC0; Мерлион: Icantthinkofanamexd, CC BY 4.0; National Gallery: Uzoma Ozurumba, CC BY-SA 4.0. Ссылки на оригиналы и лицензии находятся в `public/atlas/*-credit.json` и в карточках мест. При отображении применяется адаптивное кадрирование.
+- Обложки Сингапура, Индонезии и Куала-Лумпура: Unsplash; Пенанга и Pantai Cenang — изображения исходных проектов. Их исходные адреса зафиксированы в `docs/assets.md`.
+- Баннер Малайзии, Sky Bridge и Килим — иллюстрации, созданные с помощью ИИ. Они предназначены для визуального оформления, а не документального описания мест.
+- Иконки: Phosphor Icons. Шрифты: Golos Text и Noto Serif, локальные пакеты Fontsource.
 
-## Deploy to GitHub Pages / Деплой
-
-- A push to **`main`** triggers **`.github/workflows/deploy.yml`**, which runs `npm ci && npm run build` and publishes `dist/` to GitHub Pages.
-- One-time setup: in the GitHub repo go to **Settings → Pages** and set **Source = GitHub Actions**.
-- `vite.config.ts` sets **`base: './'`**, so all asset URLs are relative and the site works under `https://<user>.github.io/<repo-name>/` without extra config.
-- Routing uses **`HashRouter`**, so deep links and page refreshes work on Pages with no `404` (the path lives after `#`, e.g. `…/#/tokyo/shibuya-sky`, and is never sent to the server).
-
-## Tech stack
-
-Vite · React · TypeScript · Tailwind CSS v3 · react-router (`HashRouter`) · Fuse.js (fuzzy EN+RU search).
+Визуальная проверка: `design-qa.md`. Старое README Японии сохранено в `docs/archive/japan-readme.md`.

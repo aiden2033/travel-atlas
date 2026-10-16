@@ -32,6 +32,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const authQuery = useQuery({
     queryKey: authQueryKey,
     queryFn: () => apiFetch<AuthResponse>('/api/auth/me'),
+    enabled: Boolean(import.meta.env.VITE_SYNC_API_URL),
     retry: false,
     staleTime: 60_000,
   });

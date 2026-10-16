@@ -3,23 +3,23 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
-  base: '/japan-trip/',
+  base: './',
   plugins: [
     react(),
     VitePWA({
       registerType: 'autoUpdate',
       includeAssets: ['apple-touch-icon.png'],
       manifest: {
-        name: 'Japan Trip Guide',
-        short_name: 'Japan Trip',
-        description: 'Офлайн-гид по поездке в Японию: места, города, маршрут.',
+        name: 'Атлас — мой путеводитель',
+        short_name: 'Атлас',
+        description: 'Страны, города и ваши любимые места в одном путеводителе.',
         lang: 'ru',
         start_url: '.',
         scope: '.',
         display: 'standalone',
         orientation: 'portrait',
-        theme_color: '#2563eb',
-        background_color: '#2563eb',
+        theme_color: '#123c2d',
+        background_color: '#faf9f5',
         icons: [
           { src: 'pwa-192x192.png', sizes: '192x192', type: 'image/png' },
           { src: 'pwa-512x512.png', sizes: '512x512', type: 'image/png' },
@@ -32,14 +32,16 @@ export default defineConfig({
         ],
       },
       workbox: {
-        // Precache app shell and local trip photos; viewed OSM tiles are cached at runtime (CacheFirst).
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,webp,jpg,jpeg,woff,woff2}'],
-        importScripts: ['sw-reload-clients.js'],
-        // Photos can be large; lift the per-file precache cap.
+        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2}'],
         maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
         navigateFallback: 'index.html',
         cleanupOutdatedCaches: true,
         runtimeCaching: [
+          {
+            urlPattern: /\/(?:photos|atlas)\/.*\.(?:jpg|jpeg|png|webp|avif)$/i,
+            handler: 'CacheFirst',
+            options: { cacheName: 'atlas-photos', expiration: { maxEntries: 250, maxAgeSeconds: 60 * 60 * 24 * 60 } },
+          },
           {
             urlPattern: /^https:\/\/[a-c]?\.?tile\.openstreetmap\.org\/.*/i,
             handler: 'CacheFirst',
