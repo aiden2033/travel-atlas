@@ -4,9 +4,9 @@ import { friendsMapPlaces } from '../data/friendsMapPlaces';
 import { trip } from '../data/trip';
 import winter from './winter.json';
 import published from './published.json';
-import gardensCredit from '../../public/atlas/singapore-gardens-credit.json';
-import merlionCredit from '../../public/atlas/singapore-merlion-credit.json';
-import galleryCredit from '../../public/atlas/singapore-gallery-credit.json';
+import gardensCredit from './credits/singapore-gardens-credit.json';
+import merlionCredit from './credits/singapore-merlion-credit.json';
+import galleryCredit from './credits/singapore-gallery-credit.json';
 import {
   catalogSchema,
   placeSchema,

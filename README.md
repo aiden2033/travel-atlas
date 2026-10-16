@@ -96,7 +96,7 @@ npm run catalog -- export atlas-seed.json
 - [Visit Singapore: идеи маршрута](https://www.visitsingapore.com/travel-tips/travelling-to-singapore/itineraries/7-days-in-singapore/) — стартовый каталог Сингапура, проверен 16.10.2026.
 - [Indonesia Travel: Комодо](https://www.indonesia.travel/id/en/travel-ideas/adventure/top-spots-to-shoot-spectacular-photos-in-komodo-national-park).
 - [Indonesia Travel: Иджен](https://www.indonesia.travel/id/id/destination/java/east-java/ijen-crater).
-- Фото Supertree Grove: Mustang Joe, CC0; Мерлион: Icantthinkofanamexd, CC BY 4.0; National Gallery: Uzoma Ozurumba, CC BY-SA 4.0. Ссылки на оригиналы и лицензии находятся в `public/atlas/*-credit.json` и в карточках мест. При отображении применяется адаптивное кадрирование.
+- Фото Supertree Grove: Mustang Joe, CC0; Мерлион: Icantthinkofanamexd, CC BY 4.0; National Gallery: Uzoma Ozurumba, CC BY-SA 4.0. Ссылки на оригиналы и лицензии находятся в `src/atlas/credits/*-credit.json` и в карточках мест. При отображении применяется адаптивное кадрирование.
 - Обложки Сингапура, Индонезии и Куала-Лумпура: Unsplash; Пенанга и Pantai Cenang — изображения исходных проектов. Их исходные адреса зафиксированы в `docs/assets.md`.
 - Баннер Малайзии, Sky Bridge и Килим — иллюстрации, созданные с помощью ИИ. Они предназначены для визуального оформления, а не документального описания мест.
 - Иконки: Phosphor Icons. Шрифты: Golos Text и Noto Serif, локальные пакеты Fontsource.

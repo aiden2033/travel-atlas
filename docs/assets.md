@@ -10,7 +10,7 @@ Locally stored additional source images:
 - `atlas/kuala-lumpur.jpg`: https://images.unsplash.com/photo-1596422846543-75c6fc197f07 — city cover.
 - `atlas/penang.jpg`: https://upload.wikimedia.org/wikipedia/commons/d/d5/Armenian_street-penang-095749145.jpg — retained winter26 asset.
 
-Wikimedia photographs have source page, author and license in `public/atlas/singapore-*-credit.json`. Attribution is displayed in each place detail and links to its source page. Images are cropped responsively when displayed; source files remain unaltered.
+Wikimedia photographs have source page, author and license in `src/atlas/credits/singapore-*-credit.json`. Attribution is displayed in each place detail and links to its source page. Images are cropped responsively when displayed; source files remain unaltered.
 
 The Malaysia hero, blended banner, Sky Bridge and Kilim images are generated editorial illustrations. Generated place images are labeled in the detail sheet. The selected design reference in `docs/design/reference.png` is an AI-generated design concept.
 

@@ -33,3 +33,7 @@ Capturing QA evidence in the in-app browser → viewport overrides use physical 
 ## 2026-10-16 12:23 — GPT-6
 
 Switching from development to production preview → an in-app browser DOMSnapshot timed out and the following screenshot call stalled the REPL. Recover with a fresh tab/session before finishing production verification.
+
+## 2026-10-16 12:24 — GPT-6
+
+Reviewing the development server log → importing photo credit JSON from public/ produces Vite dev warnings although production bundling succeeds. Keep imported metadata under src/atlas/credits/ and leave image assets in public/.

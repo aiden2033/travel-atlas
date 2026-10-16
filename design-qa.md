@@ -37,4 +37,8 @@ Production build and 8 migration/backup validation tests passed. npm audit repor
 
 P3: the selected mock uses different thumbnail crops and scenic photographs; these do not block the shared guide experience. Additional real photographs can be added incrementally for places currently using their region cover.
 
+## Deployment verification
+
+GitHub Pages deployed successfully: https://aiden2033.github.io/travel-atlas/ . The deployed guide was opened in the in-app browser; the Malaysia catalog and project-subpath assets render, country and constructor links resolve under /travel-atlas/, and the browser console error log is empty.
+
 final result: passed
