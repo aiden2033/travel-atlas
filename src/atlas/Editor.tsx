@@ -195,6 +195,11 @@ export default function Editor({
             get('mapsQuery') ||
             `${common.nameEn || common.nameRu}, ${city.nameEn}, ${country.nameEn}`,
           photo: get('cover'),
+          photoCredit: get('photoCredit') || undefined,
+          photoSourceUrl: get('photoSourceUrl') || undefined,
+          photoLicense: get('photoLicense') || undefined,
+          photoLicenseUrl: get('photoLicenseUrl') || undefined,
+          photoIllustration: get('photoIllustration') || undefined,
           coords:
             get('lat') || get('lng')
               ? { lat: number('lat'), lng: number('lng') }
@@ -404,6 +409,50 @@ export default function Editor({
               Личная заметка
               <textarea name="note" rows={3} defaultValue={place?.note} />
             </label>
+            <fieldset>
+              <legend>Автор и лицензия фотографии</legend>
+              <label>
+                Автор и изменения снимка
+                <input name="photoCredit" defaultValue={place?.photoCredit} />
+              </label>
+              <label>
+                Страница источника
+                <input
+                  name="photoSourceUrl"
+                  type="url"
+                  defaultValue={place?.photoSourceUrl}
+                />
+              </label>
+              <div className="field-row">
+                <label>
+                  Лицензия
+                  <input
+                    name="photoLicense"
+                    defaultValue={place?.photoLicense}
+                    placeholder="Например, CC BY-SA 4.0"
+                  />
+                </label>
+                <label>
+                  Ссылка на лицензию
+                  <input
+                    name="photoLicenseUrl"
+                    type="url"
+                    defaultValue={place?.photoLicenseUrl}
+                  />
+                </label>
+              </div>
+              <label>
+                Подпись к иллюстрации
+                <span className="field-hint">
+                  Заполните, если фото показывает пример блюда или район вместо
+                  самого места.
+                </span>
+                <input
+                  name="photoIllustration"
+                  defaultValue={place?.photoIllustration}
+                />
+              </label>
+            </fieldset>
           </>
         ) : (
           <>

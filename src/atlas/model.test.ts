@@ -3,6 +3,7 @@ import { defaultSeed as seed } from './seed';
 import { catalogSchema, parseBackup, stateKey, type Backup } from './model';
 import { places } from '../data/places';
 import { friendsMapPlaces } from '../data/friendsMapPlaces';
+import { migrateCatalog } from './migrations';
 
 const backup = (): Backup => ({
   format: 'travel-atlas',
@@ -49,6 +50,25 @@ describe('source consolidation', () => {
     expect(stateKey('malaysia', 'osaka', 'dotonbori')).not.toBe(
       stateKey('japan', 'osaka', 'dotonbori'),
     );
+  });
+
+  it('upgrades old island labels without changing IDs or custom names', () => {
+    const catalog = structuredClone(seed);
+    const indonesia = catalog.countries.find((c) => c.id === 'indonesia')!;
+    indonesia.cities[0].nameRu = 'Ява';
+    indonesia.cities[1].nameRu = 'Мой маршрут по Ломбоку';
+    indonesia.cities[2].nameRu = 'Острова Гили';
+    indonesia.cities[2].places[0].nameRu = 'Гили Траванган';
+    const migrated = migrateCatalog(catalog);
+    const islands = migrated.countries.find(
+      (c) => c.id === 'indonesia',
+    )!.cities;
+    expect(islands[0].nameRu).toBe('о. Ява');
+    expect(islands[1].nameRu).toBe('Мой маршрут по Ломбоку');
+    expect(islands[2].nameRu).toBe('о. Гили');
+    expect(islands[2].places[0].nameRu).toBe('о. Гили Траванган');
+    expect(islands.map((c) => c.id)).toEqual(indonesia.cities.map((c) => c.id));
+    expect(migrateCatalog(migrated)).toEqual(migrated);
   });
 });
 

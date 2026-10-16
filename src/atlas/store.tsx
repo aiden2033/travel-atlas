@@ -24,6 +24,8 @@ import {
 } from '../lib/sync/localState';
 import { catalogSchema, parseBackup, type Catalog, type Backup } from './model';
 import { seed } from './seed';
+import { migrateCatalog } from './migrations';
+import { withLicensedPhotos } from './photos';
 
 export const CATALOG_KEY = 'atlas:catalog:v1';
 
@@ -31,7 +33,9 @@ const loadCatalog = () => {
   try {
     const raw = localStorage.getItem(CATALOG_KEY);
     return {
-      catalog: raw ? catalogSchema.parse(JSON.parse(raw)) : seed,
+      catalog: withLicensedPhotos(
+        migrateCatalog(raw ? catalogSchema.parse(JSON.parse(raw)) : seed),
+      ),
       warning: '',
     };
   } catch {
@@ -94,7 +98,7 @@ export function CatalogProvider({ children }: { children: ReactNode }) {
 
   const restore = (raw: string) => {
     const backup = parseBackup(raw);
-    save(backup.catalog);
+    save(withLicensedPhotos(migrateCatalog(backup.catalog)));
     replaceStoredKeys(FAVORITES_KEY, backup.favorites);
     replaceStoredKeys(VISITED_KEY, backup.visited);
     replaceStoredKeys(BOOKED_KEY, backup.booked);

@@ -390,7 +390,7 @@ svg {
 }
 .card-photo {
   position: relative;
-  aspect-ratio: 1.37;
+  aspect-ratio: 3 / 2;
   background: var(--soft);
   overflow: hidden;
 }
@@ -408,6 +408,25 @@ svg {
 }
 .photo-open:hover img {
   transform: scale(1.035);
+}
+.photo-illustration-badge {
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  padding: 4px 9px;
+  border-radius: 20px;
+  background: #faf9f5ed;
+  color: var(--ink);
+  font-size: 11px;
+  pointer-events: none;
+}
+.illustration-caption {
+  margin: 0;
+  padding: 10px 20px 4px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
 }
 .favorite-button {
   position: absolute;
@@ -608,6 +627,7 @@ svg {
   overflow-wrap: anywhere;
 }
 .atlas-dialog {
+  margin: auto;
   padding: 0;
   border: 1px solid var(--line);
   border-radius: 20px;
@@ -653,10 +673,12 @@ svg {
 }
 .detail-photo {
   width: 100%;
-  height: 270px;
+  height: auto;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
 }
 .photo-credit {
+  overflow-wrap: anywhere;
   font-size: 10px;
   text-align: right;
   color: var(--muted);
@@ -1377,9 +1399,6 @@ svg {
   .places-grid {
     gap: 16px 10px;
   }
-  .card-photo {
-    aspect-ratio: 1.15;
-  }
   .card-body {
     padding: 12px 11px 8px;
   }
@@ -1548,9 +1567,6 @@ svg {
     padding: 8px 12px;
     min-height: 42px;
   }
-  .detail-photo {
-    height: 210px;
-  }
   .detail-meta {
     font-size: 11px;
     gap: 9px;
@@ -1601,9 +1617,6 @@ svg {
 @media (max-width: 390px) {
   .places-grid {
     grid-template-columns: 1fr;
-  }
-  .card-photo {
-    aspect-ratio: 1.7;
   }
   .card-title {
     font-size: 23px;
@@ -1720,16 +1733,10 @@ svg {
 .card-body footer {
   font-size: 11px;
 }
-.card-photo {
-  aspect-ratio: 1.32;
-}
 @media (max-width: 600px) {
   .places-grid {
     grid-template-columns: 1fr;
     gap: 20px;
-  }
-  .card-photo {
-    aspect-ratio: 1.65;
   }
   .card-body {
     padding: 15px 18px 10px;

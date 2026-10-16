@@ -4,6 +4,7 @@ import { friendsMapPlaces } from '../data/friendsMapPlaces';
 import { trip } from '../data/trip';
 import winter from './winter.json';
 import published from './published.json';
+import { withLicensedPhotos } from './photos';
 import gardensCredit from './credits/singapore-gardens-credit.json';
 import merlionCredit from './credits/singapore-merlion-credit.json';
 import galleryCredit from './credits/singapore-gallery-credit.json';
@@ -326,7 +327,7 @@ for (const [index, filename, credit] of [
 const indonesiaCities = [
   city(
     'java',
-    'Ява',
+    'о. Ява',
     'Java',
     'Вулканические пейзажи и культурные остановки.',
     'atlas/indonesia.jpg',
@@ -354,7 +355,7 @@ const indonesiaCities = [
   ),
   city(
     'lombok',
-    'Ломбок',
+    'о. Ломбок',
     'Lombok',
     'Пляжи, серфинг и горные маршруты.',
     'atlas/indonesia.jpg',
@@ -382,7 +383,7 @@ const indonesiaCities = [
   ),
   city(
     'gili',
-    'Острова Гили',
+    'о. Гили',
     'Gili Islands',
     'Островной отдых и прогулки у воды.',
     'atlas/indonesia.jpg',
@@ -390,7 +391,7 @@ const indonesiaCities = [
       spot(
         'gili',
         'gili-trawangan',
-        'Гили Траванган',
+        'о. Гили Траванган',
         'Gili Trawangan Indonesia',
         'Остров для пляжного отдыха и снорклинга. В исходном плане — остановка ради моря и черепах.',
         ['beach', 'nature', 'relax'],
@@ -401,7 +402,7 @@ const indonesiaCities = [
   ),
   city(
     'flores',
-    'Флорес и Комодо',
+    'о. Флорес и о. Комодо',
     'Flores & Komodo',
     'Лабуан-Баджо как отправная точка к островам и морским маршрутам.',
     'atlas/indonesia.jpg',
@@ -440,7 +441,7 @@ const indonesiaCities = [
   ),
   city(
     'kalimantan',
-    'Калимантан',
+    'о. Калимантан',
     'Kalimantan',
     'Речные маршруты и тропические леса Борнео.',
     'atlas/indonesia.jpg',
@@ -532,7 +533,7 @@ const japan: Country = {
   })),
 };
 
-export const defaultSeed = catalogSchema.parse({
+const baseSeed = catalogSchema.parse({
   version: 1,
   countries: [
     {
@@ -586,7 +587,7 @@ export const defaultSeed = catalogSchema.parse({
         {
           id: 'route',
           title: 'Идея маршрута',
-          body: 'Ява → Ломбок → Гили → Флорес → Калимантан. Это набор идей исходного проекта: выберите подходящие остановки, а переезды планируйте отдельно.',
+          body: 'о. Ява → о. Ломбок → о. Гили → о. Флорес → о. Калимантан. Это набор идей исходного проекта: выберите подходящие остановки, а переезды планируйте отдельно.',
         },
         originalNotes('indonesia'),
       ],
@@ -620,4 +621,7 @@ export const defaultSeed = catalogSchema.parse({
   ].map(([id, label, tone]) => ({ id, label, tone })),
 });
 
-export const seed = published ? catalogSchema.parse(published) : defaultSeed;
+export const defaultSeed = withLicensedPhotos(baseSeed);
+export const seed = withLicensedPhotos(
+  published ? catalogSchema.parse(published) : defaultSeed,
+);

@@ -135,9 +135,12 @@ export function PlaceCard({
           <Photo
             src={placePhoto(place, city.cover || country.cover)}
             fallback={assetUrl(city.cover || country.cover)}
-            alt={place.nameRu}
+            alt={place.photoIllustration || place.nameRu}
           />
         </button>
+        {place.photoIllustration && (
+          <span className="photo-illustration-badge">Иллюстрация</span>
+        )}
         <button
           className={`favorite-button ${favorites.hasKey(key) ? 'active' : ''}`}
           aria-label={`${favorites.hasKey(key) ? 'Убрать из избранного' : 'В избранное'}: ${place.nameRu}`}
@@ -203,9 +206,14 @@ export function PlaceDetails({
         className="detail-photo"
         src={placePhoto(place, city.cover || country.cover)}
         fallback={assetUrl(city.cover || country.cover)}
-        alt={place.nameRu}
+        alt={place.photoIllustration || place.nameRu}
       />
-      {place.photoCredit && (
+      {place.photoIllustration && (
+        <p className="illustration-caption">
+          Иллюстрация: {place.photoIllustration}
+        </p>
+      )}
+      {(place.photoCredit || place.photoLicense) && (
         <p className="photo-credit">
           {place.photoSourceUrl ? (
             <a href={place.photoSourceUrl} target="_blank" rel="noreferrer">
@@ -213,6 +221,22 @@ export function PlaceDetails({
             </a>
           ) : (
             place.photoCredit
+          )}
+          {place.photoLicense && (
+            <>
+              {place.photoCredit && ' · '}
+              {place.photoLicenseUrl ? (
+                <a
+                  href={place.photoLicenseUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {place.photoLicense}
+                </a>
+              ) : (
+                place.photoLicense
+              )}
+            </>
           )}
         </p>
       )}
