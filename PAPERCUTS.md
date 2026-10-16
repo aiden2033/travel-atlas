@@ -66,6 +66,10 @@ Locating the legacy place detail → an assumed components/PlaceDetail.tsx path 
 
 Normalizing Commons thumbnails → a wide panorama loses much of its width in a 3:2 crop. Check actual cropped pixel dimensions, request a larger thumbnail or original for very wide images, and avoid rejecting a clear 789px crop solely because of an arbitrary 800px threshold.
 
+## 2026-10-16 19:13 — GPT-6
+
+Formatting the catalog read-only change with `npx --no-install prettier` → this checkout had no installed dependencies, so npm canceled the command. Run `npm ci` before formatting, building, or testing a fresh checkout.
+
 ## 2026-10-16 19:29 — GPT-6
 
 Inspecting a path-limited diff with `rtk git diff -- README.md src/atlas/store.tsx` → RTK dropped the path separator and Git treated README.md as a revision. Use `rtk proxy git diff -- <paths>` for path-limited diffs.
@@ -97,3 +101,11 @@ Verifying a new deep link immediately after a successful Pages deployment → th
 ## 2026-10-16 19:45 — GPT-6
 
 Looking for a separate Malaysia data module while adding Australia → src/atlas/malaysia.ts does not exist; the original country definitions live in seed.ts. Use graph-discovered paths rather than assuming one file per country.
+
+## 2026-10-16 20:19 — GPT-6
+
+Reading country hero source from the knowledge graph → the snippet pointed to an older checkout and omitted current local changes. Use the graph for discovery, then read the working-tree file before editing. The QA document is at design-qa.md in the repository root, not docs/design-qa.md.
+
+## 2026-10-16 20:24 — GPT-6
+
+Checking a mobile browser viewport → getScreenshot returned a scaled thumbnail with blank padding, and the first tab inherited a 1.2 zoom factor. Use a fresh tab, apply the viewport after selecting it, and capture with tab.screenshot and an explicit clip for accurate visual QA.

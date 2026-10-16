@@ -28,6 +28,10 @@ import { migrateCatalog } from './migrations';
 import { withLicensedPhotos } from './photos';
 
 export const CATALOG_KEY = 'atlas:catalog:v1';
+// Catalog changes are paused until the backend enforces administrator access.
+export const CATALOG_READ_ONLY = true;
+export const CATALOG_READ_ONLY_MESSAGE =
+  'Добавление и редактирование временно недоступны. Управление каталогом будет доступно администратору.';
 
 const loadCatalog = () => {
   try {
@@ -97,6 +101,7 @@ export function CatalogProvider({ children }: { children: ReactNode }) {
   });
 
   const restore = (raw: string) => {
+    if (CATALOG_READ_ONLY) return;
     const backup = parseBackup(raw);
     save(withLicensedPhotos(migrateCatalog(backup.catalog)));
     replaceStoredKeys(FAVORITES_KEY, backup.favorites);
@@ -122,7 +127,10 @@ export function CatalogProvider({ children }: { children: ReactNode }) {
     <CatalogContext.Provider
       value={{
         ...state,
-        update: (updater) => save(catalogSchema.parse(updater(state.catalog))),
+        update: (updater) => {
+          if (!CATALOG_READ_ONLY)
+            save(catalogSchema.parse(updater(state.catalog)));
+        },
         restore,
         exportData,
       }}

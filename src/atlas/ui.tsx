@@ -16,7 +16,12 @@ import {
   type GuideCity,
   type GuidePlace,
 } from './model';
-import { useCatalog, useFlags } from './store';
+import {
+  useCatalog,
+  useFlags,
+  CATALOG_READ_ONLY,
+  CATALOG_READ_ONLY_MESSAGE,
+} from './store';
 
 export function Photo({
   src,
@@ -356,7 +361,12 @@ export function PlaceDetails({
           <span className="muted">
             {place.source && `Источник: ${place.source}`}
           </span>
-          <button className="text-link" onClick={edit}>
+          <button
+            className="text-link"
+            disabled={CATALOG_READ_ONLY}
+            title={CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined}
+            onClick={edit}
+          >
             <PencilSimple size={16} />
             Редактировать
           </button>

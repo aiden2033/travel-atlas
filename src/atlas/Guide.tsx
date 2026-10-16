@@ -30,7 +30,12 @@ import {
   type GuideCity,
   type GuidePlace,
 } from './model';
-import { useCatalog, useFlags } from './store';
+import {
+  useCatalog,
+  useFlags,
+  CATALOG_READ_ONLY,
+  CATALOG_READ_ONLY_MESSAGE,
+} from './store';
 import { PlaceCard, PlaceDetails } from './ui';
 import Editor, { type EditorTarget } from './Editor';
 
@@ -74,6 +79,7 @@ function CountryGuide({
   const [editor, setEditor] = useState<EditorTarget | null>(null);
   const [showSearch, setShowSearch] = useState(Boolean(params.get('q')));
   const city = country.cities.find((c) => c.id === cityId);
+  const heroPhoto = country.heroBanner || country.cover || country.cities[0]?.cover;
   const all = !cityId || cityId === 'all';
   const query = params.get('q') ?? '';
   const tag = params.get('tag') ?? '';
@@ -148,7 +154,7 @@ function CountryGuide({
   return (
     <div className="country-page">
       <section
-        className={`country-hero ${country.heroBanner ? 'has-banner' : !country.cover ? 'no-photo' : ''}`}
+        className={`country-hero ${heroPhoto ? 'has-banner' : 'no-photo'}`}
       >
         <div className="hero-copy">
           <span className="eyebrow">ЛИЧНЫЙ ПУТЕВОДИТЕЛЬ</span>
@@ -162,12 +168,10 @@ function CountryGuide({
             <ArrowUpRight size={15} />
           </Link>
         </div>
-        {(country.cover || country.cities[0]?.cover) && (
+        {heroPhoto && (
           <img
-            className="hero-photo"
-            src={assetUrl(
-              country.heroBanner || country.cover || country.cities[0]?.cover,
-            )}
+            className={`hero-photo ${country.heroBanner ? 'preblended' : ''}`}
+            src={assetUrl(heroPhoto)}
             alt={`Пейзаж: ${country.nameRu}`}
           />
         )}
@@ -193,7 +197,7 @@ function CountryGuide({
               Вся страна
             </Link>
           )}
-          {!country.cities.length && (
+          {!CATALOG_READ_ONLY && !country.cities.length && (
             <Link to={`/builder/${country.id}`}>
               <Plus size={18} />
               Добавить город
@@ -241,6 +245,8 @@ function CountryGuide({
             </button>
             <button
               className="primary"
+              disabled={CATALOG_READ_ONLY}
+              title={CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined}
               aria-label={
                 country.cities.length ? 'Добавить место' : 'Добавить город'
               }
@@ -331,7 +337,9 @@ function CountryGuide({
             <p>
               {pairs.length
                 ? 'Попробуйте другой запрос или сбросьте фильтры.'
-                : 'Добавьте первое место в конструкторе.'}
+                : CATALOG_READ_ONLY
+                  ? CATALOG_READ_ONLY_MESSAGE
+                  : 'Добавьте первое место в конструкторе.'}
             </p>
             {pairs.length > 0 && (
               <button className="secondary" onClick={() => setParams({})}>
@@ -365,7 +373,7 @@ function CountryGuide({
         <footer className="guide-footer">
           <span>Атлас · места, к которым хочется вернуться</span>
           <Link to={`/builder/${country.id}`}>
-            Настроить страну
+            {CATALOG_READ_ONLY ? 'Просмотреть каталог' : 'Настроить страну'}
             <ArrowUpRight size={15} />
           </Link>
         </footer>
@@ -392,7 +400,9 @@ function CountryGuide({
           }
         />
       )}
-      {editor && <Editor target={editor} close={() => setEditor(null)} />}
+      {!CATALOG_READ_ONLY && editor && (
+        <Editor target={editor} close={() => setEditor(null)} />
+      )}
     </div>
   );
 }
@@ -425,7 +435,7 @@ export function Notes() {
           <p className="muted">{country.nameRu} · идеи и детали поездки</p>
         </div>
         <Link className="secondary" to={`/builder/${country.id}`}>
-          Редактировать
+          {CATALOG_READ_ONLY ? 'Просмотреть каталог' : 'Редактировать'}
         </Link>
       </div>
       {country.id === 'japan' && (
@@ -583,7 +593,9 @@ export function Collection({ kind }: { kind: 'favorite' | 'visited' }) {
           edit={() => setEditor({ kind: 'place', ...currentSelection })}
         />
       )}
-      {editor && <Editor target={editor} close={() => setEditor(null)} />}
+      {!CATALOG_READ_ONLY && editor && (
+        <Editor target={editor} close={() => setEditor(null)} />
+      )}
     </div>
   );
 }

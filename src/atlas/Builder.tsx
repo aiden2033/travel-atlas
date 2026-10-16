@@ -12,7 +12,12 @@ import {
   ArrowCounterClockwise,
 } from '@phosphor-icons/react';
 import Editor, { type EditorTarget } from './Editor';
-import { useCatalog, downloadJson } from './store';
+import {
+  useCatalog,
+  downloadJson,
+  CATALOG_READ_ONLY,
+  CATALOG_READ_ONLY_MESSAGE,
+} from './store';
 import {
   parseBackup,
   guideUrl,
@@ -84,7 +89,7 @@ export default function Builder() {
   };
 
   const importFile = async (file?: File) => {
-    if (!file) return;
+    if (CATALOG_READ_ONLY || !file) return;
     try {
       if (file.size > 10 * 1024 * 1024) throw new Error('Файл больше 10 МБ');
       const raw = await file.text();
@@ -105,7 +110,7 @@ export default function Builder() {
     <>
       <button
         className="icon-button"
-        disabled={index === 0}
+        disabled={CATALOG_READ_ONLY || index === 0}
         title="Выше"
         aria-label={`Выше: ${label}`}
         onClick={() => reorder(kind, index, -1)}
@@ -114,7 +119,7 @@ export default function Builder() {
       </button>
       <button
         className="icon-button"
-        disabled={index === length - 1}
+        disabled={CATALOG_READ_ONLY || index === length - 1}
         title="Ниже"
         aria-label={`Ниже: ${label}`}
         onClick={() => reorder(kind, index, 1)}
@@ -130,18 +135,29 @@ export default function Builder() {
       <div className="page-heading">
         <div>
           <h1>Конструктор</h1>
-          <p className="muted">Одна структура. Любая следующая страна.</p>
+          <p className="muted">Страны, города и места путеводителя.</p>
         </div>
         <button
           className="primary"
+          disabled={CATALOG_READ_ONLY}
+          title={CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined}
           onClick={() => setEditor({ kind: 'country' })}
         >
           <Plus size={20} />
           Добавить страну
         </button>
       </div>
+      {CATALOG_READ_ONLY && (
+        <p role="status" className="notice">
+          {CATALOG_READ_ONLY_MESSAGE}
+        </p>
+      )}
       <div className="backup-bar">
-        <span>Сохранение в этом браузере</span>
+        <span>
+          {CATALOG_READ_ONLY
+            ? 'Каталог доступен для просмотра'
+            : 'Сохранение в этом браузере'}
+        </span>
         <div>
           <button
             className="text-link"
@@ -156,7 +172,12 @@ export default function Builder() {
             <DownloadSimple size={18} />
             Экспорт
           </button>
-          <button className="text-link" onClick={() => input.current?.click()}>
+          <button
+            className="text-link"
+            disabled={CATALOG_READ_ONLY}
+            title={CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined}
+            onClick={() => input.current?.click()}
+          >
             <UploadSimple size={18} />
             Импорт
           </button>
@@ -165,6 +186,7 @@ export default function Builder() {
             type="file"
             accept="application/json,.json"
             hidden
+            disabled={CATALOG_READ_ONLY}
             onChange={(e) => void importFile(e.target.files?.[0])}
           />
         </div>
@@ -231,6 +253,10 @@ export default function Builder() {
             <div className="entity-actions">
               <button
                 className="secondary"
+                disabled={CATALOG_READ_ONLY}
+                title={
+                  CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined
+                }
                 onClick={() => setEditor({ kind: 'country', country })}
               >
                 <PencilSimple size={17} />
@@ -238,7 +264,7 @@ export default function Builder() {
               </button>
               <button
                 className="icon-button danger"
-                disabled={catalog.countries.length === 1}
+                disabled={CATALOG_READ_ONLY || catalog.countries.length === 1}
                 aria-label="Удалить страну"
                 onClick={() =>
                   remove(`${country.nameRu} и все её города и места`, () =>
@@ -267,6 +293,8 @@ export default function Builder() {
             <h3>Города и регионы</h3>
             <button
               className="text-link"
+              disabled={CATALOG_READ_ONLY}
+              title={CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined}
               onClick={() => setEditor({ kind: 'city', country })}
             >
               <Plus size={18} />
@@ -298,6 +326,10 @@ export default function Builder() {
                   )}
                   <button
                     className="icon-button"
+                    disabled={CATALOG_READ_ONLY}
+                    title={
+                      CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined
+                    }
                     aria-label={`Редактировать город: ${item.nameRu}`}
                     onClick={() =>
                       setEditor({ kind: 'city', country, city: item })
@@ -307,6 +339,10 @@ export default function Builder() {
                   </button>
                   <button
                     className="icon-button danger"
+                    disabled={CATALOG_READ_ONLY}
+                    title={
+                      CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined
+                    }
                     aria-label={`Удалить город: ${item.nameRu}`}
                     onClick={() =>
                       remove(`${item.nameRu} и все места в нём`, () =>
@@ -334,6 +370,10 @@ export default function Builder() {
                 </div>
                 <button
                   className="primary"
+                  disabled={CATALOG_READ_ONLY}
+                  title={
+                    CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined
+                  }
                   onClick={() => setEditor({ kind: 'place', country, city })}
                 >
                   <Plus size={19} />
@@ -378,6 +418,12 @@ export default function Builder() {
                         )}
                         <button
                           className="icon-button"
+                          disabled={CATALOG_READ_ONLY}
+                          title={
+                            CATALOG_READ_ONLY
+                              ? CATALOG_READ_ONLY_MESSAGE
+                              : undefined
+                          }
                           aria-label={`Редактировать место: ${place.nameRu}`}
                           onClick={() =>
                             setEditor({ kind: 'place', country, city, place })
@@ -387,6 +433,12 @@ export default function Builder() {
                         </button>
                         <button
                           className="icon-button danger"
+                          disabled={CATALOG_READ_ONLY}
+                          title={
+                            CATALOG_READ_ONLY
+                              ? CATALOG_READ_ONLY_MESSAGE
+                              : undefined
+                          }
                           aria-label={`Удалить место: ${place.nameRu}`}
                           onClick={() =>
                             remove(place.nameRu, () =>
@@ -413,10 +465,15 @@ export default function Builder() {
                   ))}
                 {!city.places.length && (
                   <div className="empty-state">
-                    <h3>Начните с первого места</h3>
+                    <h3>
+                      {CATALOG_READ_ONLY
+                        ? 'Здесь пока нет мест'
+                        : 'Начните с первого места'}
+                    </h3>
                     <p>
-                      Добавьте название, теги и описание. Остальное можно
-                      заполнить позже.
+                      {CATALOG_READ_ONLY
+                        ? CATALOG_READ_ONLY_MESSAGE
+                        : 'Добавьте название, теги и описание. Остальное можно заполнить позже.'}
                     </p>
                   </div>
                 )}
@@ -424,13 +481,21 @@ export default function Builder() {
             </>
           ) : (
             <div className="empty-state">
-              <h3>Добавьте первый город или регион</h3>
-              <p>Затем в нём можно будет собирать места.</p>
+              <h3>
+                {CATALOG_READ_ONLY
+                  ? 'Здесь пока нет городов и регионов'
+                  : 'Добавьте первый город или регион'}
+              </h3>
+              <p>
+                {CATALOG_READ_ONLY
+                  ? CATALOG_READ_ONLY_MESSAGE
+                  : 'Затем в нём можно будет собирать места.'}
+              </p>
             </div>
           )}
         </section>
       </div>
-      {editor && (
+      {!CATALOG_READ_ONLY && editor && (
         <Editor
           target={editor}
           close={() => setEditor(null)}
@@ -440,7 +505,7 @@ export default function Builder() {
           }}
         />
       )}
-      {pending && (
+      {!CATALOG_READ_ONLY && pending && (
         <Modal title="Удалить раздел?" close={() => setPending(null)}>
           <div className="dialog-content">
             <p>
@@ -451,14 +516,21 @@ export default function Builder() {
               <button className="secondary" onClick={() => setPending(null)}>
                 Отмена
               </button>
-              <button className="primary destructive" onClick={pending.remove}>
+              <button
+                className="primary destructive"
+                disabled={CATALOG_READ_ONLY}
+                title={
+                  CATALOG_READ_ONLY ? CATALOG_READ_ONLY_MESSAGE : undefined
+                }
+                onClick={pending.remove}
+              >
                 Удалить
               </button>
             </div>
           </div>
         </Modal>
       )}
-      {backup && (
+      {!CATALOG_READ_ONLY && backup && (
         <Modal
           title="Восстановить резервную копию?"
           close={() => setBackup(null)}

@@ -1655,6 +1655,15 @@ svg {
   object-fit: cover;
   z-index: 0;
 }
+.has-banner .hero-photo:not(.preblended) {
+  mask-image: linear-gradient(
+    to right,
+    transparent 30%,
+    rgb(0 0 0 / 4%) 40%,
+    rgb(0 0 0 / 20%) 48%,
+    #000 65%
+  );
+}
 .has-banner .hero-copy {
   width: 53%;
   position: relative;
@@ -1692,9 +1701,14 @@ svg {
     object-fit: cover;
     object-position: right;
   }
+  .has-banner .hero-photo,
+  .has-banner .hero-photo:not(.preblended) {
+    mask-image: linear-gradient(to bottom, #000 55%, transparent 100%);
+  }
   .has-banner .hero-copy {
     width: 100%;
     order: 2;
+    margin-top: -20px;
   }
   .has-banner .hero-photo {
     order: 1;
