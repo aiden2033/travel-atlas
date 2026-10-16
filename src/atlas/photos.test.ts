@@ -30,6 +30,27 @@ describe('licensed photographs', () => {
     }
   });
 
+  it('never shows the same original photograph for two places', () => {
+    const repeated = licensedPhotos.filter(
+      (photo, index) =>
+        licensedPhotos.findIndex(
+          (other) => other.originalUrl === photo.originalUrl,
+        ) !== index,
+    );
+    expect(repeated.map((photo) => photo.key)).toEqual([]);
+  });
+
+  it('gives every catalog place a licensed photograph', () => {
+    const withoutLicense = defaultSeed.countries.flatMap((country) =>
+      country.cities.flatMap((city) =>
+        city.places
+          .filter((place) => !place.photoLicense)
+          .map((place) => `${country.id}/${city.id}/${place.slug}`),
+      ),
+    );
+    expect(withoutLicense).toEqual([]);
+  });
+
   it('rejects restricted licenses, portrait images and insecure sources', () => {
     const photo = licensedPhotos[0];
     expect(

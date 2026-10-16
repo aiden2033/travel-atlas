@@ -41,7 +41,7 @@ describe('source consolidation', () => {
       'penang',
     ]);
     expect(malaysia.cities.flatMap((c) => c.places)).toHaveLength(49);
-    expect(seed.countries[1].cities.flatMap((c) => c.places)).toHaveLength(11);
+    expect(seed.countries[1].cities.flatMap((c) => c.places)).toHaveLength(46);
     expect(seed.countries[2].cities).toHaveLength(5);
   });
 

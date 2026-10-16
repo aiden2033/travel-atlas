@@ -230,15 +230,15 @@
   {
     "key": "japan/kyoto/giro-giro-hitoshina",
     "photo": "photos/licensed/japan-kyoto-giro-giro-hitoshina.jpg",
-    "author": "Sgroey",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Couples_sitting_by_the_Kamo_river_in_Kyoto.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Couples_sitting_by_the_Kamo_river_in_Kyoto.jpg",
-    "width": 3648,
-    "height": 2736,
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaiseki_Kai_Tsugaru_Owani_Onsen_Aomori_pref_Japan02s.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Kaiseki_Kai_Tsugaru_Owani_Onsen_Aomori_pref_Japan02s.jpg",
+    "width": 4800,
+    "height": 3200,
     "illustrative": true,
-    "illustrationCaption": "Река Камо: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Кайсэки: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
       "photos/kyoto/giro_giro_hitoshina.jpg"
     ]
@@ -263,15 +263,15 @@
   {
     "key": "japan/kyoto/hario-cafe",
     "photo": "photos/licensed/japan-kyoto-hario-cafe.jpg",
-    "author": "Basile Morin",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yasaka-dori_early_morning_with_street_lanterns_and_the_Tower_of_Yasaka_(Hokan-ji_Temple),_Kyoto,_Japan.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Yasaka-dori_early_morning_with_street_lanterns_and_the_Tower_of_Yasaka_%28Hokan-ji_Temple%29%2C_Kyoto%2C_Japan.jpg",
-    "width": 5550,
-    "height": 3700,
+    "author": "Kim Sanso",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Manual_drip_(pour-over)_coffee.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/df/Manual_drip_%28pour-over%29_coffee.jpg",
+    "width": 3849,
+    "height": 2561,
     "illustrative": true,
-    "illustrationCaption": "Хигасияма: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Пуровер: иллюстрация кофе, не снимок этого кафе.",
     "replaces": [
       "photos/kyoto/hario_cafe.jpg"
     ]
@@ -279,13 +279,13 @@
   {
     "key": "japan/kyoto/hitomebore-kyoto",
     "photo": "photos/licensed/japan-kyoto-hitomebore-kyoto.jpg",
-    "author": "Wolfiewolf from Pontocho street in Nakagyo, Kyoto",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pontocho_by_Wolfiewolf_in_Nabeyacho,_Kyoto.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Pontocho_by_Wolfiewolf_in_Nabeyacho%2C_Kyoto.jpg",
-    "width": 3840,
-    "height": 2160,
+    "author": "Yiannis Theologos Michellis",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nightview_of_Pontocho_in_Kyoto,_Japan_20170408131402_(34291538511).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Nightview_of_Pontocho_in_Kyoto%2C_Japan_20170408131402_%2834291538511%29.jpg",
+    "width": 5412,
+    "height": 3044,
     "illustrative": true,
     "illustrationCaption": "Понтотё: иллюстрация района, не снимок этого заведения.",
     "replaces": [
@@ -311,15 +311,15 @@
   {
     "key": "japan/kyoto/hyotei",
     "photo": "photos/licensed/japan-kyoto-hyotei.jpg",
-    "author": "Gzzz",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tetsugaku-no-michi_-_Philosopher%27s_Walk_-_Kyoto.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Tetsugaku-no-michi_-_Philosopher%27s_Walk_-_Kyoto.jpg",
-    "width": 5568,
-    "height": 3712,
+    "author": "MichaelMaggs",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Breakfast_at_Tamahan_Ryokan,_Kyoto.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Breakfast_at_Tamahan_Ryokan%2C_Kyoto.jpg",
+    "width": 3404,
+    "height": 2004,
     "illustrative": true,
-    "illustrationCaption": "Восточная часть Киото: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Японский завтрак: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
       "photos/kyoto/hyotei.jpg"
     ]
@@ -374,15 +374,15 @@
   {
     "key": "japan/kyoto/kikunoi-honten",
     "photo": "photos/licensed/japan-kyoto-kikunoi-honten.jpg",
-    "author": "Basile Morin",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wooden_and_bamboo_facades_of_dwellings_with_sudare_in_a_cobbled_street_of_Gion,_perspective_effect_with_vanishing_point,_Kyoto,_Japan.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Wooden_and_bamboo_facades_of_dwellings_with_sudare_in_a_cobbled_street_of_Gion%2C_perspective_effect_with_vanishing_point%2C_Kyoto%2C_Japan.jpg",
-    "width": 5722,
-    "height": 3815,
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaiseki_Kai_Tsugaru_Owani_Onsen_Aomori_pref_Japan04s.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/65/Kaiseki_Kai_Tsugaru_Owani_Onsen_Aomori_pref_Japan04s.jpg",
+    "width": 4650,
+    "height": 3100,
     "illustrative": true,
-    "illustrationCaption": "Гион: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Кайсэки: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
       "photos/kyoto/kikunoi_honten.jpg"
     ]
@@ -485,15 +485,15 @@
   {
     "key": "japan/kyoto/monk",
     "photo": "photos/licensed/japan-kyoto-monk.jpg",
-    "author": "Gzzz",
-    "license": "CC BY 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tetsugaku-no-michi_-_Philosopher%27s_Walk_-_Kyoto.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/01/Tetsugaku-no-michi_-_Philosopher%27s_Walk_-_Kyoto.jpg",
-    "width": 5568,
-    "height": 3712,
+    "author": "Jared Tarbell from Awesometown, United States of America",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pizza_baking_in_Wood-fired_oven.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Pizza_baking_in_Wood-fired_oven.jpg",
+    "width": 5616,
+    "height": 3744,
     "illustrative": true,
-    "illustrationCaption": "Философская тропа: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Пицца из дровяной печи: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
       "photos/kyoto/monk.jpg"
     ]
@@ -547,15 +547,15 @@
   {
     "key": "japan/kyoto/sabanji",
     "photo": "photos/licensed/japan-kyoto-sabanji.jpg",
-    "author": "lazy fri13th",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/73479994@N00/49114964871",
-    "originalUrl": "https://live.staticflickr.com/65535/49114964871_09c8b1e1b5_b.jpg",
-    "width": 1024,
-    "height": 768,
+    "author": "nesnad",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dandan_noodles_in_Japan_-_tantanmen_-_September_2014.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Dandan_noodles_in_Japan_-_tantanmen_-_September_2014.jpg",
+    "width": 2592,
+    "height": 1936,
     "illustrative": true,
-    "illustrationCaption": "Рамен: иллюстрация блюда, не снимок этого ресторана.",
+    "illustrationCaption": "Острый рамен тантанмэн: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
       "photos/kyoto/sabanji.jpg",
       "https://live.staticflickr.com/82/218419332_4ef0f80abb_b.jpg"
@@ -730,27 +730,27 @@
   {
     "key": "japan/osaka/friends-camera-kitamura-osaka-namba-city-shop",
     "photo": "photos/licensed/japan-osaka-friends-camera-kitamura-osaka-namba-city-shop.jpg",
-    "author": "32linesky",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Dotonbori_Canal.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Osaka_Dotonbori_Canal.jpg",
-    "width": 4032,
-    "height": 3024,
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Namba_parks04s3872.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Namba_parks04s3872.jpg",
+    "width": 3840,
+    "height": 2560,
     "illustrative": true,
-    "illustrationCaption": "Район Намба: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Намба: иллюстрация района, не снимок этого магазина.",
     "replaces": []
   },
   {
     "key": "japan/osaka/friends-d09fd0b0d180d0ba20d181d182d183d0",
     "photo": "photos/licensed/japan-osaka-friends-d09fd0b0d180d0ba20d181d182d183d0.jpg",
-    "author": "Leeyj0401",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Universal_Studios_in_Japan.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Universal_Studios_in_Japan.jpg",
-    "width": 1440,
-    "height": 810,
+    "author": "Rebirth10",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Universal_Studios_Japan_2019,08.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Universal_Studios_Japan_2019%2C08.jpg",
+    "width": 5161,
+    "height": 3871,
     "illustrative": false,
     "replaces": []
   },
@@ -817,15 +817,15 @@
   {
     "key": "japan/osaka/hajime",
     "photo": "photos/licensed/japan-osaka-hajime.jpg",
-    "author": "Martin Falbisoner",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Umeda_Sky_Building,_Osaka,_November_2016_-01.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Umeda_Sky_Building%2C_Osaka%2C_November_2016_-01.jpg",
-    "width": 5558,
-    "height": 3568,
+    "author": "yuichiro anazawa",
+    "license": "CC BY 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Utsbo_Park_Osaka_-_panoramio.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Utsbo_Park_Osaka_-_panoramio.jpg",
+    "width": 3680,
+    "height": 2760,
     "illustrative": true,
-    "illustrationCaption": "Умэда: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Парк Уцубо: иллюстрация района, не снимок этого заведения.",
     "replaces": [
       "photos/osaka/hajime.jpg"
     ]
@@ -833,13 +833,13 @@
   {
     "key": "japan/osaka/harukoma-branch-shop",
     "photo": "photos/licensed/japan-osaka-harukoma-branch-shop.jpg",
-    "author": "Yuri Samoilov",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/103414654@N05/10590565034",
-    "originalUrl": "https://live.staticflickr.com/7341/10590565034_5dcfee04aa_o.jpg",
-    "width": 5760,
-    "height": 3840,
+    "author": "Cheng-en Cheng",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2014-09-09_sushi_at_Sushizanmai_in_Tsukiji_Outer_Market.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/2014-09-09_sushi_at_Sushizanmai_in_Tsukiji_Outer_Market.jpg",
+    "width": 5000,
+    "height": 3333,
     "illustrative": true,
     "illustrationCaption": "Суши: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
@@ -867,13 +867,13 @@
   {
     "key": "japan/osaka/hep-five-ferris-wheel",
     "photo": "photos/licensed/japan-osaka-hep-five-ferris-wheel.jpg",
-    "author": "Mstyslav Chernov/Unframe/unframe.com",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:HEP_FIVE_Ferris_Wheel._Osaka,_Kansai_region,_Island_of_Honshu,_Japan.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/07/HEP_FIVE_Ferris_Wheel._Osaka%2C_Kansai_region%2C_Island_of_Honshu%2C_Japan.jpg",
-    "width": 1200,
-    "height": 800,
+    "author": "Mc681",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:HEP-FIVE_in_201409_001.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/HEP-FIVE_in_201409_001.JPG",
+    "width": 3200,
+    "height": 2000,
     "illustrative": false,
     "replaces": [
       "photos/osaka/hep_five_wheel.jpeg"
@@ -882,15 +882,15 @@
   {
     "key": "japan/osaka/higashishinsaibashi-b1f-chicken-rice",
     "photo": "photos/licensed/japan-osaka-higashishinsaibashi-b1f-chicken-rice.jpg",
-    "author": "Wpcpey",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Amerikamura_2014.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Amerikamura_2014.jpg",
-    "width": 1600,
-    "height": 1200,
+    "author": "Ocdp",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Oyakodon_003.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Oyakodon_003.jpg",
+    "width": 4303,
+    "height": 2871,
     "illustrative": true,
-    "illustrationCaption": "Центр Осаки: иллюстрация района, не снимок этого заведения.",
+    "illustrationCaption": "Рис с курицей: иллюстрация блюда, не снимок этого заведения.",
     "replaces": [
       "photos/osaka/higashishinsaibashi-b1f-chicken-rice.jpg",
       "https://live.staticflickr.com/5022/5758126141_f4b13bbcff_b.jpg"
@@ -914,15 +914,15 @@
   {
     "key": "japan/osaka/hozenji-yamakazu",
     "photo": "photos/licensed/japan-osaka-hozenji-yamakazu.jpg",
-    "author": "Nullumayulife",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/72859063@N00/2564419056",
-    "originalUrl": "https://live.staticflickr.com/3058/2564419056_9f75916d1a_o.jpg",
-    "width": 2560,
-    "height": 1920,
+    "author": "lumoplank",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_-_Osaka194.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Osaka_-_Osaka194.jpg",
+    "width": 5211,
+    "height": 3474,
     "illustrative": true,
-    "illustrationCaption": "Унаги с рисом: иллюстрация блюда, не снимок этого ресторана.",
+    "illustrationCaption": "Ходзэндзи-ёкотё: иллюстрация района, не снимок этого заведения.",
     "replaces": [
       "photos/osaka/hozenji-yamakazu.jpg",
       "https://live.staticflickr.com/3058/2564419056_3f47eecf97_b.jpg"
@@ -948,15 +948,14 @@
   {
     "key": "japan/osaka/kadoya-shokudo-osaka",
     "photo": "photos/licensed/japan-osaka-kadoya-shokudo-osaka.jpg",
-    "author": "Marufish",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/8819274@N04/2645993425",
-    "originalUrl": "https://live.staticflickr.com/2194/2645993425_3d27a8d9f1_o.jpg",
-    "width": 1280,
-    "height": 960,
-    "illustrative": true,
-    "illustrationCaption": "Рамен: иллюстрация блюда, не снимок этого ресторана.",
+    "author": "ロマンシュの神様",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E3%82%AB%E3%83%89%E3%83%A4%E9%A3%9F%E5%A0%82_%E3%81%A4%E3%81%91%E3%81%9D%E3%81%B0_%E5%91%B3%E7%8E%89%E8%BF%BD%E5%8A%A0.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/39/%E3%82%AB%E3%83%89%E3%83%A4%E9%A3%9F%E5%A0%82_%E3%81%A4%E3%81%91%E3%81%9D%E3%81%B0_%E5%91%B3%E7%8E%89%E8%BF%BD%E5%8A%A0.jpg",
+    "width": 4080,
+    "height": 3072,
+    "illustrative": false,
     "replaces": [
       "photos/osaka/kadoya-shokudo-osaka.jpg",
       "https://live.staticflickr.com/82/218419332_4ef0f80abb_b.jpg"
@@ -982,13 +981,13 @@
   {
     "key": "japan/osaka/la-cime",
     "photo": "photos/licensed/japan-osaka-la-cime.jpg",
-    "author": "Sakai Yayoi",
-    "license": "CC0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Osaka_Nakanoshima_2026_yoru_01.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Osaka_Nakanoshima_2026_yoru_01.jpg",
-    "width": 4028,
-    "height": 2685,
+    "author": "掬茶",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buildings_along_the_Tosabori_River_20250831.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Buildings_along_the_Tosabori_River_20250831.jpg",
+    "width": 6000,
+    "height": 4000,
     "illustrative": true,
     "illustrationCaption": "Наканосима: иллюстрация района, не снимок этого заведения.",
     "replaces": [
@@ -1015,13 +1014,13 @@
   {
     "key": "japan/osaka/mugi-to-mensuke",
     "photo": "photos/licensed/japan-osaka-mugi-to-mensuke.jpg",
-    "author": "lazy fri13th",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/73479994@N00/49114964871",
-    "originalUrl": "https://live.staticflickr.com/65535/49114964871_09c8b1e1b5_b.jpg",
-    "width": 1024,
-    "height": 768,
+    "author": "Quercus acuta",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Shoyu_Ramen%EF%BC%88Tokyo_Ramen%EF%BC%89_-_01.jpg",
+    "width": 3299,
+    "height": 2474,
     "illustrative": true,
     "illustrationCaption": "Рамен: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
@@ -1107,13 +1106,13 @@
   {
     "key": "japan/osaka/sakae-sushi-osaka",
     "photo": "photos/licensed/japan-osaka-sakae-sushi-osaka.jpg",
-    "author": "Alpha from Melbourne, Australia",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tuna_nigiri_sushi_-_Sushiko_(2648979899).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tuna_nigiri_sushi_-_Sushiko_%282648979899%29.jpg",
-    "width": 2048,
-    "height": 1536,
+    "author": "N509FZ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shichifuku_Nigiri_Sushi_at_Tsukiji_Tamasushi,_Wing_Takanawa_(20230802203124).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Shichifuku_Nigiri_Sushi_at_Tsukiji_Tamasushi%2C_Wing_Takanawa_%2820230802203124%29.jpg",
+    "width": 4032,
+    "height": 2688,
     "illustrative": true,
     "illustrationCaption": "Суши: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
@@ -1171,13 +1170,13 @@
   {
     "key": "japan/osaka/sushi-sawamura-osaka",
     "photo": "photos/licensed/japan-osaka-sushi-sawamura-osaka.jpg",
-    "author": "Tim Reckmann from Hamm, Deutschland",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nigiri_Sushi_(26478732232).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Nigiri_Sushi_%2826478732232%29.jpg",
-    "width": 5345,
-    "height": 3563,
+    "author": "Jpatokal",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hebinome_Sushi.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Hebinome_Sushi.JPG",
+    "width": 3008,
+    "height": 2000,
     "illustrative": true,
     "illustrationCaption": "Суши: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
@@ -1188,13 +1187,13 @@
   {
     "key": "japan/osaka/sushi-shabu-shabu-no8-umeda",
     "photo": "photos/licensed/japan-osaka-sushi-shabu-shabu-no8-umeda.jpg",
-    "author": "Gustavo Veríssimo",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/81619620@N00/253552825",
-    "originalUrl": "https://live.staticflickr.com/100/253552825_13f793207c_b.jpg",
-    "width": 1024,
-    "height": 681,
+    "author": "漱石の猫",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shabu-shabu_Sapporo.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Shabu-shabu_Sapporo.jpg",
+    "width": 4000,
+    "height": 3000,
     "illustrative": true,
     "illustrationCaption": "Сябу-сябу: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
@@ -1252,13 +1251,13 @@
   {
     "key": "japan/osaka/wagyu-idaten",
     "photo": "photos/licensed/japan-osaka-wagyu-idaten.jpg",
-    "author": "Jos, Joanna, Micaela, Finn, and Davey Purvis",
-    "license": "CC BY-SA 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/77044159@N00/4047109082",
-    "originalUrl": "https://live.staticflickr.com/3213/4047109082_cf11cc0907_3k.jpg",
-    "width": 3072,
-    "height": 2304,
+    "author": "Naha Mama Pavilionz",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:JP_%E6%97%A5%E6%9C%AC_Japan_%E6%B2%96%E7%B9%A9_OKINAWA_%E9%82%A3%E9%9C%B8_Naha_%E4%B9%85%E8%8C%82%E5%9C%B0_Kumoji_MK_Building_shop_%E5%92%8C%E7%89%9B%E7%87%92%E8%82%89%E5%BA%97_BBQ_Motobu_WAGYU_Yakiniku_Beef_Restaurant_lunch_meal_January_2025_R12S_31.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/27/JP_%E6%97%A5%E6%9C%AC_Japan_%E6%B2%96%E7%B9%A9_OKINAWA_%E9%82%A3%E9%9C%B8_Naha_%E4%B9%85%E8%8C%82%E5%9C%B0_Kumoji_MK_Building_shop_%E5%92%8C%E7%89%9B%E7%87%92%E8%82%89%E5%BA%97_BBQ_Motobu_WAGYU_Yakiniku_Beef_Restaurant_lunch_meal_January_2025_R12S_31.jpg",
+    "width": 4000,
+    "height": 3000,
     "illustrative": true,
     "illustrationCaption": "Якинику: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
@@ -1269,18 +1268,475 @@
   {
     "key": "japan/osaka/yakko-sushi-tengo",
     "photo": "photos/licensed/japan-osaka-yakko-sushi-tengo.jpg",
-    "author": "Tim Reckmann from Hamm, Deutschland",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nigiri_Sushi_(26505096851).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Nigiri_Sushi_%2826505096851%29.jpg",
-    "width": 5328,
-    "height": 3552,
+    "author": "FASTILY",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Omakase_1_2021-08-07.jpeg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Omakase_1_2021-08-07.jpeg",
+    "width": 4032,
+    "height": 3024,
     "illustrative": true,
     "illustrationCaption": "Суши: иллюстрация блюда, не снимок этого ресторана.",
     "replaces": [
       "photos/osaka/yakko-sushi-tengo.jpg",
       "https://live.staticflickr.com/3025/2396982087_2885dc6f67_b.jpg"
+    ]
+  },
+  {
+    "key": "japan/other/dan-dan-cafe",
+    "photo": "photos/licensed/japan-other-dan-dan-cafe.jpg",
+    "author": "Saigen Jiro",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ishidera-no-Chabatake,_gaikan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Ishidera-no-Chabatake%2C_gaikan.jpg",
+    "width": 5568,
+    "height": 3712,
+    "illustrative": true,
+    "illustrationCaption": "Чайные поля Исидэры в Вадзуке: иллюстрация района, не снимок этого кафе.",
+    "replaces": [
+      "photos/other/dan-dan-cafe.jpg",
+      "https://live.staticflickr.com/4131/5185404965_0d61bd17f1_b.jpg"
+    ]
+  },
+  {
+    "key": "japan/other/friends-arashiyama-bamboo-forest-google",
+    "photo": "photos/licensed/japan-other-friends-arashiyama-bamboo-forest-google.jpg",
+    "author": "Naokijp",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2021_Sagano_Bamboo_forest_in_Arashiyama,_Kyoto,_Japan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/2021_Sagano_Bamboo_forest_in_Arashiyama%2C_Kyoto%2C_Japan.jpg",
+    "width": 3837,
+    "height": 2622,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-children-s-peace-monument-google",
+    "photo": "photos/licensed/japan-other-friends-children-s-peace-monument-google.jpg",
+    "author": "Hyppolyte de Saint-Rambert",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hiroshima_Peace_Memorial_park_hdsr_Childrens_for_peace_S5_08.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Hiroshima_Peace_Memorial_park_hdsr_Childrens_for_peace_S5_08.jpg",
+    "width": 5328,
+    "height": 4000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-cue-google",
+    "photo": "photos/licensed/japan-other-friends-cue-google.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_from_Hiroshima_Castle_Keep_Tower,_20240817_1531_4318.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/View_from_Hiroshima_Castle_Keep_Tower%2C_20240817_1531_4318.jpg",
+    "width": 5872,
+    "height": 3901,
+    "illustrative": true,
+    "illustrationCaption": "Центр Хиросимы: иллюстрация района, не снимок этого заведения.",
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d090d180d0b0d188d0b8d18fd0bcd0b0-google",
+    "photo": "photos/licensed/japan-other-friends-d090d180d0b0d188d0b8d18fd0bcd0b0-google.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Togetsu-kyo_bridge_at_dusk,_Kyoto,_Japan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ab/Togetsu-kyo_bridge_at_dusk%2C_Kyoto%2C_Japan.jpg",
+    "width": 5863,
+    "height": 3909,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d093d0b8d0bdd0bad0b0d0bad1832dd0-google",
+    "photo": "photos/licensed/japan-other-friends-d093d0b8d0bdd0bad0b0d0bad1832dd0-google.jpg",
+    "author": "Laitr Keiows",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ginkaku-ji_after_being_restored_in_2008.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/Ginkaku-ji_after_being_restored_in_2008.jpg",
+    "width": 4002,
+    "height": 3422,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d097d0b0d0bcd0bed0ba20d0bad0b0d1-google",
+    "photo": "photos/licensed/japan-other-friends-d097d0b0d0bcd0bed0ba20d0bad0b0d1-google.jpg",
+    "author": "Evelyn-rose",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hiroshima-Castle-1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/70/Hiroshima-Castle-1.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d09ad0b8d0bed182d181d0bad0b8d0b9-google",
+    "photo": "photos/licensed/japan-other-friends-d09ad0b8d0bed182d181d0bad0b8d0b9-google.jpg",
+    "author": "珈琲ルンバ",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%BA%AC%E9%83%BD%E5%9B%BD%E9%9A%9B%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/%E4%BA%AC%E9%83%BD%E5%9B%BD%E9%9A%9B%E3%83%9E%E3%83%B3%E3%82%AC%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%82%A2%E3%83%A0.jpg",
+    "width": 3098,
+    "height": 1818,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d09ad18ed181d18e-google",
+    "photo": "photos/licensed/japan-other-friends-d09ad18ed181d18e-google.jpg",
+    "author": "Miya.m",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mt.Aso_and_caldera01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Mt.Aso_and_caldera01.jpg",
+    "width": 3872,
+    "height": 2592,
+    "illustrative": true,
+    "illustrationCaption": "Кальдера Асо: иллюстрация острова, не снимок конкретной точки на Кюсю.",
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d09cd0b5d0bcd0bed180d0b8d0b0d0bb-google",
+    "photo": "photos/licensed/japan-other-friends-d09cd0b5d0bcd0bed180d0b8d0b0d0bb-google.jpg",
+    "author": "Balon Greyjoy",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20190317_Atomic_Bomb_Dome-1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/20190317_Atomic_Bomb_Dome-1.jpg",
+    "width": 5760,
+    "height": 3840,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d09dd0b0d0bad0b0d0bcd0b5d0b3d183-google",
+    "photo": "photos/licensed/japan-other-friends-d09dd0b0d0bad0b0d0bcd0b5d0b3d183-google.jpg",
+    "author": "Zengame",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meguro_River_01_-_Mar_31,_2019.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Meguro_River_01_-_Mar_31%2C_2019.jpg",
+    "width": 8368,
+    "height": 5584,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d0a1d0b2d18fd182d0b8d0bbd0b8d189-google",
+    "photo": "photos/licensed/japan-other-friends-d0a1d0b2d18fd182d0b8d0bbd0b8d189-google.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Itsukushima-jinja_torii_at_sunset,_Miyajima,_Japan,_20240816_1829_4161.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/72/Itsukushima-jinja_torii_at_sunset%2C_Miyajima%2C_Japan%2C_20240816_1829_4161.jpg",
+    "width": 5202,
+    "height": 3474,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d0a1d0b2d18fd182d0b8d0bbd0b8d189-google-2",
+    "photo": "photos/licensed/japan-other-friends-d0a1d0b2d18fd182d0b8d0bbd0b8d189-google-2.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine,_Kyoto,_Japan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Torii_path_with_lantern_at_Fushimi_Inari_Taisha_Shrine%2C_Kyoto%2C_Japan.jpg",
+    "width": 5765,
+    "height": 3843,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d0a1d0b8d0b1d183d18f-google",
+    "photo": "photos/licensed/japan-other-friends-d0a1d0b8d0b1d183d18f-google.jpg",
+    "author": "Dick Thomas Johnson from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shibuya_Center_Gai_(53330139827).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Shibuya_Center_Gai_%2853330139827%29.jpg",
+    "width": 6000,
+    "height": 4000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d0a1d0b8d0bdd0b4d0b7d18ed0bad183-google",
+    "photo": "photos/licensed/japan-other-friends-d0a1d0b8d0bdd0b4d0b7d18ed0bad183-google.jpg",
+    "author": "Celuici",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shinjuku,_night,_May_2017.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Shinjuku%2C_night%2C_May_2017.jpg",
+    "width": 5426,
+    "height": 3617,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d0a1d18dd0bdd181d0bed0b4d0b7d0b8-google",
+    "photo": "photos/licensed/japan-other-friends-d0a1d18dd0bdd181d0bed0b4d0b7d0b8-google.jpg",
+    "author": "Kakidai",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Asakusa_Sensoji_Kaminarimon_2012.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Asakusa_Sensoji_Kaminarimon_2012.JPG",
+    "width": 3430,
+    "height": 2395,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-d0a3d0bbd0b8d186d0b020d094d0bed1-google",
+    "photo": "photos/licensed/japan-other-friends-d0a3d0bbd0b8d186d0b020d094d0bed1-google.jpg",
+    "author": "そらみみ",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Glico_Man_Neon_Sign_and_Ebisubashi_Bridge_at_night.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Glico_Man_Neon_Sign_and_Ebisubashi_Bridge_at_night.jpg",
+    "width": 4009,
+    "height": 3007,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-donguri-republic-donguri-kyowakoku-ghibli-store-google",
+    "photo": "photos/licensed/japan-other-friends-donguri-republic-donguri-kyowakoku-ghibli-store-google.jpg",
+    "author": "FZHS",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nagoya_Station_JR_Central_Towers_and_JR_Gate_Tower.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Nagoya_Station_JR_Central_Towers_and_JR_Gate_Tower.jpg",
+    "width": 4861,
+    "height": 4488,
+    "illustrative": true,
+    "illustrationCaption": "Вокзал Нагоя: иллюстрация района, не снимок этого магазина.",
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-e5b1b1e4b8ade6b996e38393e383bce3-google",
+    "photo": "photos/licensed/japan-other-friends-e5b1b1e4b8ade6b996e38393e383bce3-google.jpg",
+    "author": "663highland",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:170504_Lake_Yamanaka_Japan06n.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3a/170504_Lake_Yamanaka_Japan06n.jpg",
+    "width": 5850,
+    "height": 3900,
+    "illustrative": true,
+    "illustrationCaption": "Озеро Яманака: иллюстрация района, не снимок этой марины.",
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-gotemba-premium-outlets-google",
+    "photo": "photos/licensed/japan-other-friends-gotemba-premium-outlets-google.jpg",
+    "author": "Jungle",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gotemba_premium_outlets2.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/00/Gotemba_premium_outlets2.jpg",
+    "width": 2048,
+    "height": 1536,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-hario-cafe-kyoto-store-google",
+    "photo": "photos/licensed/japan-other-friends-hario-cafe-kyoto-store-google.jpg",
+    "author": "Thomas Martinsen faceline",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Drip_brewing_(Unsplash).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Drip_brewing_%28Unsplash%29.jpg",
+    "width": 5472,
+    "height": 3648,
+    "illustrative": true,
+    "illustrationCaption": "Пуровер: иллюстрация кофе, не снимок этого кафе.",
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-hokan-ji-temple-yasaka-pagoda-google",
+    "photo": "photos/licensed/japan-other-friends-hokan-ji-temple-yasaka-pagoda-google.jpg",
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:150124_At_Yasakakamimachi_Kyoto_Japan01n.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f0/150124_At_Yasakakamimachi_Kyoto_Japan01n.jpg",
+    "width": 6000,
+    "height": 4000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-kawaguchiko-station-google",
+    "photo": "photos/licensed/japan-other-friends-kawaguchiko-station-google.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:20100728_Kawaguchiko_Station_6622.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/20100728_Kawaguchiko_Station_6622.jpg",
+    "width": 4091,
+    "height": 2730,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-namba-yasaka-jinja-google",
+    "photo": "photos/licensed/japan-other-friends-namba-yasaka-jinja-google.jpg",
+    "author": "Thomas Housieaux",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Namba_Yasaka-Jinja.png",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Namba_Yasaka-Jinja.png",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-nara-park-google",
+    "photo": "photos/licensed/japan-other-friends-nara-park-google.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sika_Deer_in_Nara,_Japan,_20240819_1539_4763.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Sika_Deer_in_Nara%2C_Japan%2C_20240819_1539_4763.jpg",
+    "width": 4195,
+    "height": 2782,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-shibuya-crossing-google",
+    "photo": "photos/licensed/japan-other-friends-shibuya-crossing-google.jpg",
+    "author": "Yoshikazu TAKADA from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shibuya_Scramble_Crossing_(31000739560).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Shibuya_Scramble_Crossing_%2831000739560%29.jpg",
+    "width": 5935,
+    "height": 3957,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/friends-suga-shrine-google",
+    "photo": "photos/licensed/japan-other-friends-suga-shrine-google.jpg",
+    "author": "Higa4",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Suga_Shrine,_Shinjuku_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Suga_Shrine%2C_Shinjuku_01.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/other/mizuya-chaya-nara",
+    "photo": "photos/licensed/japan-other-mizuya-chaya-nara.jpg",
+    "author": "663highland",
+    "license": "CC BY 2.5",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.5",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nara_Mizutani-tyaya01ds3872.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Nara_Mizutani-tyaya01ds3872.jpg",
+    "width": 3872,
+    "height": 2592,
+    "illustrative": false,
+    "replaces": [
+      "photos/other/mizuya-chaya-nara.jpg",
+      "https://live.staticflickr.com/4131/5185404965_0d61bd17f1_b.jpg"
+    ]
+  },
+  {
+    "key": "japan/other/sakana-uotomo-nara",
+    "photo": "photos/licensed/japan-other-sakana-uotomo-nara.jpg",
+    "author": "Maarten Heerlien from Voorschoten, The Netherlands",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wining_and_dining_in_Nara_(6156060454).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Wining_and_dining_in_Nara_%286156060454%29.jpg",
+    "width": 3872,
+    "height": 2592,
+    "illustrative": true,
+    "illustrationCaption": "Идзакая в Наре: иллюстрация формата, не снимок этого заведения.",
+    "replaces": [
+      "photos/other/sakana-uotomo-nara.jpg",
+      "https://live.staticflickr.com/8721/28351436614_35d7e3d9db_b.jpg"
+    ]
+  },
+  {
+    "key": "japan/other/sushi-ishimatsu-other",
+    "photo": "photos/licensed/japan-other-sushi-ishimatsu-other.jpg",
+    "author": "Naotake Murayama from San Francisco, CA, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sushi_-_Tuna_Spectrum_(2678128917).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7e/Sushi_-_Tuna_Spectrum_%282678128917%29.jpg",
+    "width": 3648,
+    "height": 2432,
+    "illustrative": true,
+    "illustrationCaption": "Суши: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/other/sushi-ishimatsu-other.jpg",
+      "https://live.staticflickr.com/3025/2396982087_2885dc6f67_b.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/akihabara",
+    "photo": "photos/licensed/japan-tokyo-akihabara.jpg",
+    "author": "Phineyes",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sotokanda,_Akihabara_Electric_Town_at_night_20231114.png",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Sotokanda%2C_Akihabara_Electric_Town_at_night_20231114.png",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/akihabara.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/asakusa-menchi",
+    "photo": "photos/licensed/japan-tokyo-asakusa-menchi.jpg",
+    "author": "経済特区",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E8%B1%9A%E6%96%99%E7%90%86%E5%B0%82%E9%96%80%E5%BA%97_%E8%B1%9A%E9%83%BDIMG_20220601_222946_07.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/%E8%B1%9A%E6%96%99%E7%90%86%E5%B0%82%E9%96%80%E5%BA%97_%E8%B1%9A%E9%83%BDIMG_20220601_222946_07.jpg",
+    "width": 3840,
+    "height": 2160,
+    "illustrative": true,
+    "illustrationCaption": "Менчи-кацу: иллюстрация блюда, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/asakusa-menchi.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/asakusa-monja-zenya",
+    "photo": "photos/licensed/japan-tokyo-asakusa-monja-zenya.jpg",
+    "author": "Jpatokal",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monjayaki_After.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Monjayaki_After.JPG",
+    "width": 3008,
+    "height": 2000,
+    "illustrative": true,
+    "illustrationCaption": "Монджаяки: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/asakusa-monja-zenya.jpg"
     ]
   },
   {
@@ -1299,19 +1755,783 @@
     ]
   },
   {
+    "key": "japan/tokyo/bird-land-ginza",
+    "photo": "photos/licensed/japan-tokyo-bird-land-ginza.jpg",
+    "author": "Ocdp",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yakitori_001.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Yakitori_001.jpg",
+    "width": 4288,
+    "height": 2848,
+    "illustrative": true,
+    "illustrationCaption": "Якитори: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/bird_land.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/cafe-capyba",
+    "photo": "photos/licensed/japan-tokyo-cafe-capyba.jpg",
+    "author": "Wilfredor",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hydrochoeris_hydrochaeris_in_Brazil_in_Petr%C3%B3polis,_Rio_de_Janeiro,_Brazil_09.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Hydrochoeris_hydrochaeris_in_Brazil_in_Petr%C3%B3polis%2C_Rio_de_Janeiro%2C_Brazil_09.jpg",
+    "width": 8256,
+    "height": 5504,
+    "illustrative": true,
+    "illustrationCaption": "Капибара: иллюстрация, не снимок этого кафе.",
+    "replaces": [
+      "photos/tokyo/cafe-capyba.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/daikanyama-nakameguro",
+    "photo": "photos/licensed/japan-tokyo-daikanyama-nakameguro.jpg",
+    "author": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meguro_River_Cherry_Blossom_Festival_@_Meguro_River_(13592987494).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/94/Meguro_River_Cherry_Blossom_Festival_%40_Meguro_River_%2813592987494%29.jpg",
+    "width": 3968,
+    "height": 2976,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/daikanyama.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/den",
+    "photo": "photos/licensed/japan-tokyo-den.jpg",
+    "author": "Yuya Tamai",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaiseki_001.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Kaiseki_001.jpg",
+    "width": 3648,
+    "height": 2736,
+    "illustrative": true,
+    "illustrationCaption": "Кайсэки: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/den.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/ebisu",
+    "photo": "photos/licensed/japan-tokyo-ebisu.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lustre_Baccarat,_Yebisu_Garden_Place.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Lustre_Baccarat%2C_Yebisu_Garden_Place.jpg",
+    "width": 4080,
+    "height": 3072,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/ebisu.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/friends-d09ad0b0d0b2d0b0d0b3d0bed18d",
+    "photo": "photos/licensed/japan-tokyo-friends-d09ad0b0d0b2d0b0d0b3d0bed18d.jpg",
+    "author": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kawagoe_Toki_no_Kane_1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Kawagoe_Toki_no_Kane_1.jpg",
+    "width": 4504,
+    "height": 3149,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-d09cd183d0b7d0b5d0b920d0a5d0b0d0",
+    "photo": "photos/licensed/japan-tokyo-friends-d09cd183d0b7d0b5d0b920d0a5d0b0d0.jpg",
+    "author": "ikm",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Hakone_Open-Air_Museum_-_panoramio.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/The_Hakone_Open-Air_Museum_-_panoramio.jpg",
+    "width": 2816,
+    "height": 2112,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-d09fd0b0d180d0ba20d081d191d0b3d0",
+    "photo": "photos/licensed/japan-tokyo-friends-d09fd0b0d180d0ba20d081d191d0b3d0.jpg",
+    "author": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yoyogi_Park_@_Tokyo_(13406878405).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/Yoyogi_Park_%40_Tokyo_%2813406878405%29.jpg",
+    "width": 3968,
+    "height": 2976,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-enoshima-ohashi-bridge",
+    "photo": "photos/licensed/japan-tokyo-friends-enoshima-ohashi-bridge.jpg",
+    "author": "SuFlyer",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Enoshima_Great_Bridge_(Feb_2022).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Enoshima_Great_Bridge_%28Feb_2022%29.jpg",
+    "width": 5568,
+    "height": 3712,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-fuji-maple-viewpoint",
+    "photo": "photos/licensed/japan-tokyo-friends-fuji-maple-viewpoint.jpg",
+    "author": "lumoplank",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kawaguchiko,_Part_III_-_Kawaguchiko6783.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Kawaguchiko%2C_Part_III_-_Kawaguchiko6783.jpg",
+    "width": 5581,
+    "height": 3721,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-fuji-railroad-crossing",
+    "photo": "photos/licensed/japan-tokyo-friends-fuji-railroad-crossing.jpg",
+    "author": "MaedaAkihiko",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fujikyuko-Line_Series6000-6551_Mt.Fuji.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/19/Fujikyuko-Line_Series6000-6551_Mt.Fuji.jpg",
+    "width": 5166,
+    "height": 3444,
+    "illustrative": true,
+    "illustrationCaption": "Линия Fujikyu у Фудзи: иллюстрация, не снимок этого переезда.",
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-fujisan-shokupan",
+    "photo": "photos/licensed/japan-tokyo-friends-fujisan-shokupan.jpg",
+    "author": "lumoplank",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fujiyoshida_-_Fujiyoshida6763.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Fujiyoshida_-_Fujiyoshida6763.jpg",
+    "width": 5125,
+    "height": 3648,
+    "illustrative": true,
+    "illustrationCaption": "Фудзиёсида: иллюстрация района, не снимок этой пекарни.",
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-godzilla-head",
+    "photo": "photos/licensed/japan-tokyo-friends-godzilla-head.jpg",
+    "author": "Ajay Suresh from New York, NY, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Godzilla_(27813102648).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Godzilla_%2827813102648%29.jpg",
+    "width": 4608,
+    "height": 3456,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-gotokuji-temple",
+    "photo": "photos/licensed/japan-tokyo-friends-gotokuji-temple.jpg",
+    "author": "Laika ac from UK",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gotokuji_Temple_(24527021034).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/28/Gotokuji_Temple_%2824527021034%29.jpg",
+    "width": 4527,
+    "height": 3398,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-kotsuboiijima-park",
+    "photo": "photos/licensed/japan-tokyo-friends-kotsuboiijima-park.jpg",
+    "author": "Quercus acuta",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:View_of_Mount_Fuji_from_Zushi_Beach.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/View_of_Mount_Fuji_from_Zushi_Beach.jpg",
+    "width": 3648,
+    "height": 2736,
+    "illustrative": true,
+    "illustrationCaption": "Пляж Дзуси: иллюстрация района, не снимок этого парка.",
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-lawson-kawaguchiko-station",
+    "photo": "photos/licensed/japan-tokyo-friends-lawson-kawaguchiko-station.jpg",
+    "author": "Jeffrey Hayes",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85%E5%89%8D%E5%BA%97_(54218169430).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/04/%E6%B2%B3%E5%8F%A3%E6%B9%96%E9%A7%85%E5%89%8D%E5%BA%97_%2854218169430%29.jpg",
+    "width": 5725,
+    "height": 3817,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-slam-dunk-crossing",
+    "photo": "photos/licensed/japan-tokyo-friends-slam-dunk-crossing.jpg",
+    "author": "Quercus acuta",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kamakura_koukou_mae_Fumikiri_-_02.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Kamakura_koukou_mae_Fumikiri_-_02.jpg",
+    "width": 4000,
+    "height": 3000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-slow-rush-coffee",
+    "photo": "photos/licensed/japan-tokyo-friends-slow-rush-coffee.jpg",
+    "author": "Σ64",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Komachi_Street,_Kanagawa_02.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/29/Komachi_Street%2C_Kanagawa_02.jpg",
+    "width": 5910,
+    "height": 3940,
+    "illustrative": true,
+    "illustrationCaption": "Улица Комати в Камакуре: иллюстрация района, не снимок этого заведения.",
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-the-making-of-harry-potter-warner-bros-studio-tour-tokyo",
+    "photo": "photos/licensed/japan-tokyo-friends-the-making-of-harry-potter-warner-bros-studio-tour-tokyo.jpg",
+    "author": "Jeremy Thompson",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Warner_Bros._Studio_Tour_Tokyo_-_The_Making_of_Harry_Potter.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Warner_Bros._Studio_Tour_Tokyo_-_The_Making_of_Harry_Potter.jpg",
+    "width": 4080,
+    "height": 3072,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-the-national-art-center-tokyo",
+    "photo": "photos/licensed/japan-tokyo-friends-the-national-art-center-tokyo.jpg",
+    "author": "Wiiii",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:National_Art_Center_Tokyo_2008.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/National_Art_Center_Tokyo_2008.jpg",
+    "width": 2700,
+    "height": 1800,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-tokyo-skytree",
+    "photo": "photos/licensed/japan-tokyo-friends-tokyo-skytree.jpg",
+    "author": "Suicasmo",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Skytree_20170208.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/84/Tokyo_Skytree_20170208.jpg",
+    "width": 5184,
+    "height": 3456,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-transparent-public-toilet-yoyogi-park",
+    "photo": "photos/licensed/japan-tokyo-friends-transparent-public-toilet-yoyogi-park.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Transparent_toilets_at_Harunogawa_community_park,_locking_the_door_makes_the_walls_opaque_3.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Transparent_toilets_at_Harunogawa_community_park%2C_locking_the_door_makes_the_walls_opaque_3.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/friends-yoyogi-fukamachi-mini-park",
+    "photo": "photos/licensed/japan-tokyo-friends-yoyogi-fukamachi-mini-park.jpg",
+    "author": "Mr.Asylum",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Toilet_Project_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/42/Tokyo_Toilet_Project_01.jpg",
+    "width": 5472,
+    "height": 3648,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "japan/tokyo/ghibli-museum",
+    "photo": "photos/licensed/japan-tokyo-ghibli-museum.jpg",
+    "author": "lumoplank",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ghibli_Museum_-_GhibliMuseum864.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Ghibli_Museum_-_GhibliMuseum864.jpg",
+    "width": 5080,
+    "height": 3810,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/ghibli-museum.jpg"
+    ]
+  },
+  {
     "key": "japan/tokyo/ginza-hachigou",
     "photo": "photos/licensed/japan-tokyo-ginza-hachigou.jpg",
-    "author": "lazy fri13th",
+    "author": "Jeremy Thompson",
     "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
-    "sourceUrl": "https://www.flickr.com/photos/73479994@N00/49114964871",
-    "originalUrl": "https://live.staticflickr.com/65535/49114964871_09c8b1e1b5_b.jpg",
-    "width": 1024,
-    "height": 768,
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E4%B8%AD%E8%8F%AF%E3%81%9D%E3%81%B0_%E9%8A%80%E5%BA%A7_%E5%85%AB%E4%BA%94_%E5%85%A5%E5%8F%A3_Dec_10,_2023.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d2/%E4%B8%AD%E8%8F%AF%E3%81%9D%E3%81%B0_%E9%8A%80%E5%BA%A7_%E5%85%AB%E4%BA%94_%E5%85%A5%E5%8F%A3_Dec_10%2C_2023.jpg",
+    "width": 4080,
+    "height": 3072,
     "illustrative": false,
     "replaces": [
       "photos/tokyo/ginza_hachigou.jpg",
       "https://live.staticflickr.com/65535/49114964871_09c8b1e1b5_b.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/ginza-happo",
+    "photo": "photos/licensed/japan-tokyo-ginza-happo.jpg",
+    "author": "Wakuwaku99",
+    "license": "Public domain",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Namiki-Dori_Avenue_at_night.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Namiki-Dori_Avenue_at_night.jpg",
+    "width": 4000,
+    "height": 3000,
+    "illustrative": true,
+    "illustrationCaption": "Гиндза: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/ginza-happo.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/ginza-onodera",
+    "photo": "photos/licensed/japan-tokyo-ginza-onodera.jpg",
+    "author": "Ajay Suresh from New York, NY, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sushi_Ginza_Onodera_(48105954952).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Sushi_Ginza_Onodera_%2848105954952%29.jpg",
+    "width": 4440,
+    "height": 3330,
+    "illustrative": true,
+    "illustrationCaption": "Sushi Ginza Onodera в Нью-Йорке: иллюстрация сети, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/ginza-onodera.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/ginza-yurakucho",
+    "photo": "photos/licensed/japan-tokyo-ginza-yurakucho.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Illuminated_street_corner_at_blue_hour_-_facade_of_the_building_Fujiya_in_Ginza_Chuo-ku_Tokyo_Japan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Illuminated_street_corner_at_blue_hour_-_facade_of_the_building_Fujiya_in_Ginza_Chuo-ku_Tokyo_Japan.jpg",
+    "width": 4720,
+    "height": 3192,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/ginza.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/golden-gai",
+    "photo": "photos/licensed/japan-tokyo-golden-gai.jpg",
+    "author": "Alexkom000",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2024-10-20_Shinjuku_Golden_Gai_at_night.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/2024-10-20_Shinjuku_Golden_Gai_at_night.jpg",
+    "width": 4961,
+    "height": 3307,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/golden_gai.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/gotemba-premium-outlets",
+    "photo": "photos/licensed/japan-tokyo-gotemba-premium-outlets.jpg",
+    "author": "Jungle (Wikimedia Commons)",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Gotemba_premium_outlets1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Gotemba_premium_outlets1.jpg",
+    "width": 2048,
+    "height": 1536,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/gotemba_premium_outlets.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/gyukatsu-motomura-ueno",
+    "photo": "photos/licensed/japan-tokyo-gyukatsu-motomura-ueno.jpg",
+    "author": "bryan... from Taipei, Taiwan",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:%E7%82%B8%E7%89%9B%E6%8E%92,_%E4%BA%AC%E9%83%BD%E5%8B%9D%E7%89%9B,_%E5%8B%9D%E7%89%9B,_%E4%BA%AC%E9%83%BD,_%E6%97%A5%E6%9C%AC,_%E4%BA%AC%E9%83%BD%E5%8B%9D%E7%89%9B%E4%BA%AC%E9%83%BD%E9%A7%85%E5%89%8D,_%E7%89%9B%E3%82%AB%E3%83%84%E5%B0%82%E9%96%80%E5%BA%97,_%E3%81%8D%E3%82%87%E3%81%86%E3%81%A8,_%E3%81%BF%E3%82%84%E3%81%93,_%E3%81%8D%E3%82%87%E3%81%86%E3%81%AE%E3%81%BF%E3%82%84%E3%81%93,_%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93,_%E3%81%AB%E3%81%BB%E3%82%93,_Kyoto_Katsugyu,_Kyoto,_Japan,_Nippon,_Nihon_(24897293890).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/%E7%82%B8%E7%89%9B%E6%8E%92%2C_%E4%BA%AC%E9%83%BD%E5%8B%9D%E7%89%9B%2C_%E5%8B%9D%E7%89%9B%2C_%E4%BA%AC%E9%83%BD%2C_%E6%97%A5%E6%9C%AC%2C_%E4%BA%AC%E9%83%BD%E5%8B%9D%E7%89%9B%E4%BA%AC%E9%83%BD%E9%A7%85%E5%89%8D%2C_%E7%89%9B%E3%82%AB%E3%83%84%E5%B0%82%E9%96%80%E5%BA%97%2C_%E3%81%8D%E3%82%87%E3%81%86%E3%81%A8%2C_%E3%81%BF%E3%82%84%E3%81%93%2C_%E3%81%8D%E3%82%87%E3%81%86%E3%81%AE%E3%81%BF%E3%82%84%E3%81%93%2C_%E3%81%AB%E3%81%A3%E3%81%BD%E3%82%93%2C_%E3%81%AB%E3%81%BB%E3%82%93%2C_Kyoto_Katsugyu%2C_Kyoto%2C_Japan%2C_Nippon%2C_Nihon_%2824897293890%29.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": true,
+    "illustrationCaption": "Гюкацу: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/gyukatsu-motomura-ueno.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/hakone",
+    "photo": "photos/licensed/japan-tokyo-hakone.jpg",
+    "author": "Charlie fong",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Lake_Ashi_%26_Mt_Fuji_%26_Hakone_Shrine.jpg",
+    "width": 5472,
+    "height": 3648,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/hakone.webp"
+    ]
+  },
+  {
+    "key": "japan/tokyo/harajuku-takeshita",
+    "photo": "photos/licensed/japan-tokyo-harajuku-takeshita.jpg",
+    "author": "Joe Mabel on Flickr as Joe Mabel from Seattle, US",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Harajuku_-_Takeshita_Street_13_(15120530713).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Harajuku_-_Takeshita_Street_13_%2815120530713%29.jpg",
+    "width": 4288,
+    "height": 2848,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/harajuku.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/hatcoffee",
+    "photo": "photos/licensed/japan-tokyo-hatcoffee.jpg",
+    "author": "Ajay Suresh from New York, NY, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:3D_Pikachu_Latte_Art_-_Harajuku_(28080147878).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/ce/3D_Pikachu_Latte_Art_-_Harajuku_%2828080147878%29.jpg",
+    "width": 4608,
+    "height": 3456,
+    "illustrative": true,
+    "illustrationCaption": "3D латте-арт: иллюстрация напитка, не снимок этой кофейни.",
+    "replaces": [
+      "photos/tokyo/hatcoffee.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/hijiri-bashi",
+    "photo": "photos/licensed/japan-tokyo-hijiri-bashi.jpg",
+    "author": "aokomoriuta（青子守歌）",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hijiri_Biridge_from_station.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Hijiri_Biridge_from_station.JPG",
+    "width": 3648,
+    "height": 2736,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/hijiri_bashi.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/itamae-sushi-shimbashi",
+    "photo": "photos/licensed/japan-tokyo-itamae-sushi-shimbashi.jpg",
+    "author": "Mustang Joe",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Sushi_Chef,_Tsukiji_SushiDai_restaurant_(14500658580).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/16/The_Sushi_Chef%2C_Tsukiji_SushiDai_restaurant_%2814500658580%29.jpg",
+    "width": 3914,
+    "height": 2202,
+    "illustrative": true,
+    "illustrationCaption": "Суши-стойка: иллюстрация, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/itamae-sushi-shimbashi.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/kagurazaka",
+    "photo": "photos/licensed/japan-tokyo-kagurazaka.jpg",
+    "author": "Dick Thomas Johnson from Tokyo, Japan",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kagurazaka_(49997157523).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/50/Kagurazaka_%2849997157523%29.jpg",
+    "width": 6000,
+    "height": 4000,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/kagurazaka.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/kamakura",
+    "photo": "photos/licensed/japan-tokyo-kamakura.jpg",
+    "author": "Maarten Heerlien from Voorschoten, The Netherlands",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Daibutsu_or_Great_Buddha_of_Kamakura_(9412296776).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/The_Daibutsu_or_Great_Buddha_of_Kamakura_%289412296776%29.jpg",
+    "width": 7360,
+    "height": 4912,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/kamakura.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/kawaguchiko",
+    "photo": "photos/licensed/japan-tokyo-kawaguchiko.jpg",
+    "author": "Marion & Christoph Aistleitner",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fuji_Kawaguchi_475.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Fuji_Kawaguchi_475.JPG",
+    "width": 4320,
+    "height": 2880,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/kawaguchiko.webp"
+    ]
+  },
+  {
+    "key": "japan/tokyo/kitte-marunouchi",
+    "photo": "photos/licensed/japan-tokyo-kitte-marunouchi.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kitte.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Kitte.jpg",
+    "width": 4608,
+    "height": 3456,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/kitte_marunouchi.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/kyushu-jangara-akihabara",
+    "photo": "photos/licensed/japan-tokyo-kyushu-jangara-akihabara.jpg",
+    "author": "Keiichi Yasu",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kyushu_Jangara_Akhabara_Honten_-_2015-01-24_(by_Keiichi_Yasu).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Kyushu_Jangara_Akhabara_Honten_-_2015-01-24_%28by_Keiichi_Yasu%29.jpg",
+    "width": 4704,
+    "height": 3136,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/kyushu-jangara-akihabara.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/latte-art-mania",
+    "photo": "photos/licensed/japan-tokyo-latte-art-mania.jpg",
+    "author": "Kim Sanso",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Latte_art_3.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Latte_art_3.jpg",
+    "width": 3442,
+    "height": 2290,
+    "illustrative": true,
+    "illustrationCaption": "Латте-арт: иллюстрация напитка, не снимок этой кофейни.",
+    "replaces": [
+      "photos/tokyo/latte_art_mania.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/manten-sushi-marunouchi",
+    "photo": "photos/licensed/japan-tokyo-manten-sushi-marunouchi.jpg",
+    "author": "DXR",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Skyscrapers_in_Marunouchi,_Tokyo_20190420_1.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Skyscrapers_in_Marunouchi%2C_Tokyo_20190420_1.jpg",
+    "width": 7478,
+    "height": 5007,
+    "illustrative": true,
+    "illustrationCaption": "Марунути: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/manten-sushi-marunouchi.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/meiji-shrine",
+    "photo": "photos/licensed/japan-tokyo-meiji-shrine.jpg",
+    "author": "Asanagi",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Meiji_Shrine_Minami-tamagaki-torii_2023-01-26.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Meiji_Shrine_Minami-tamagaki-torii_2023-01-26.jpg",
+    "width": 3940,
+    "height": 2954,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/meiji_shrine.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/micasadeco-cafe-jingumae",
+    "photo": "photos/licensed/japan-tokyo-micasadeco-cafe-jingumae.jpg",
+    "author": "Rhododendrites",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Souffe_pancakes_(76653).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Souffe_pancakes_%2876653%29.jpg",
+    "width": 4555,
+    "height": 2738,
+    "illustrative": true,
+    "illustrationCaption": "Суфле-панкейки: иллюстрация блюда, не снимок этого кафе.",
+    "replaces": [
+      "photos/tokyo/micasadeco-cafe-jingumae.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/midori-sushi-akasaka",
+    "photo": "photos/licensed/japan-tokyo-midori-sushi-akasaka.jpg",
+    "author": "Macgills2",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Akasaka_at_night_during_Coronavirus_outbreak.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Akasaka_at_night_during_Coronavirus_outbreak.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": true,
+    "illustrationCaption": "Акасака: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/midori-sushi-akasaka.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/nanaya-aoyama",
+    "photo": "photos/licensed/japan-tokyo-nanaya-aoyama.jpg",
+    "author": "City Foodsters",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matcha_ice_cream_001.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/46/Matcha_ice_cream_001.jpg",
+    "width": 3670,
+    "height": 2614,
+    "illustrative": true,
+    "illustrationCaption": "Матча-мороженое: иллюстрация десерта, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/nanaya-aoyama.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/narisawa",
+    "photo": "photos/licensed/japan-tokyo-narisawa.jpg",
+    "author": "Pocsywe",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Narisawa_restaurant.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Narisawa_restaurant.jpg",
+    "width": 3264,
+    "height": 2448,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/narisawa.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/nemuro-hanamaru-ginza",
+    "photo": "photos/licensed/japan-tokyo-nemuro-hanamaru-ginza.jpg",
+    "author": "RuinDig/Yuki Uchida",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo-Bunkyo-Ward-2022_027.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/75/Tokyo-Bunkyo-Ward-2022_027.jpg",
+    "width": 3648,
+    "height": 2736,
+    "illustrative": true,
+    "illustrationCaption": "Нэмуро Ханамару в Коракуэне: иллюстрация сети, не снимок этого филиала.",
+    "replaces": [
+      "photos/tokyo/nemuro-hanamaru-ginza.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/omotesando",
+    "photo": "photos/licensed/japan-tokyo-omotesando.jpg",
+    "author": "gog.creator",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Omotesando_Avenue_at_sunset_from_pedestrian_bridge,_Jingumae,_Shibuya,_Tokyo.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Omotesando_Avenue_at_sunset_from_pedestrian_bridge%2C_Jingumae%2C_Shibuya%2C_Tokyo.jpg",
+    "width": 6240,
+    "height": 4160,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/omotesando.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/ramen-watanabe-asakusa",
+    "photo": "photos/licensed/japan-tokyo-ramen-watanabe-asakusa.jpg",
+    "author": "Zheng Zhou",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chashu_Niboshi_Ramen.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Chashu_Niboshi_Ramen.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": true,
+    "illustrationCaption": "Рамен: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/ramen-watanabe-asakusa.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sacya-shibuya-matcha",
+    "photo": "photos/licensed/japan-tokyo-sacya-shibuya-matcha.jpg",
+    "author": "Irvan Ary Maulana",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matcha_tea_latte_with_rosetta_latte_art.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Matcha_tea_latte_with_rosetta_latte_art.jpg",
+    "width": 4032,
+    "height": 2268,
+    "illustrative": true,
+    "illustrationCaption": "Матча-латте: иллюстрация напитка, не снимок этого кафе.",
+    "replaces": [
+      "photos/tokyo/sacya-shibuya-matcha.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/senso-ji",
+    "photo": "photos/licensed/japan-tokyo-senso-ji.jpg",
+    "author": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Senso-ji_Kaminarimon_4.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Senso-ji_Kaminarimon_4.jpg",
+    "width": 4592,
+    "height": 3448,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/sensoji.jpg"
     ]
   },
   {
@@ -1330,6 +2550,22 @@
     ]
   },
   {
+    "key": "japan/tokyo/shibuya-sakuragaoka-beer-hall",
+    "photo": "photos/licensed/japan-tokyo-shibuya-sakuragaoka-beer-hall.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:November_2023,_Shibuya_Sakura_Stage_5.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/November_2023%2C_Shibuya_Sakura_Stage_5.jpg",
+    "width": 4080,
+    "height": 3072,
+    "illustrative": true,
+    "illustrationCaption": "Сакурагаока, Сибуя: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/shibuya-sakuragaoka-beer-hall.jpg"
+    ]
+  },
+  {
     "key": "japan/tokyo/shibuya-sky",
     "photo": "photos/licensed/japan-tokyo-shibuya-sky.jpg",
     "author": "Kakidai",
@@ -1345,6 +2581,194 @@
     ]
   },
   {
+    "key": "japan/tokyo/shimokitazawa",
+    "photo": "photos/licensed/japan-tokyo-shimokitazawa.jpg",
+    "author": "Stephen Kelly from San Francisco, CA, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Dense_Street_in_Shimokitazawa_(11919213554).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Dense_Street_in_Shimokitazawa_%2811919213554%29.jpg",
+    "width": 4728,
+    "height": 3132,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/shimokitazawa.webp"
+    ]
+  },
+  {
+    "key": "japan/tokyo/shinjuku",
+    "photo": "photos/licensed/japan-tokyo-shinjuku.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Colorful_neon_street_signs_in_Kabukich%C5%8D,_Shinjuku,_Tokyo.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Colorful_neon_street_signs_in_Kabukich%C5%8D%2C_Shinjuku%2C_Tokyo.jpg",
+    "width": 6521,
+    "height": 4347,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/shinjuku.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/shishikura-tokyo",
+    "photo": "photos/licensed/japan-tokyo-shishikura-tokyo.jpg",
+    "author": "Srgyu",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Atre_Ebisu_station_building_Tokyo_Japan_2021.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/43/Atre_Ebisu_station_building_Tokyo_Japan_2021.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": true,
+    "illustrationCaption": "Эбису: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/shishikura-tokyo.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/shunya-chan",
+    "photo": "photos/licensed/japan-tokyo-shunya-chan.jpg",
+    "author": "Mister0124",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Takao_Station_North_Exit.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/83/Takao_Station_North_Exit.jpg",
+    "width": 4346,
+    "height": 2484,
+    "illustrative": true,
+    "illustrationCaption": "Станция Такао: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/shunya-chan.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/starbucks-reserve-ginza-marronnier",
+    "photo": "photos/licensed/japan-tokyo-starbucks-reserve-ginza-marronnier.jpg",
+    "author": "編集中",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Starbucks-Reserve-Roastery-Tokyo-2019-07-18.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Starbucks-Reserve-Roastery-Tokyo-2019-07-18.jpg",
+    "width": 5520,
+    "height": 4140,
+    "illustrative": true,
+    "illustrationCaption": "Starbucks Reserve Roastery в Накамэгуро: иллюстрация сети, не снимок этого филиала.",
+    "replaces": [
+      "photos/tokyo/starbucks-reserve-ginza-marronnier.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/suga-shrine",
+    "photo": "photos/licensed/japan-tokyo-suga-shrine.jpg",
+    "author": "Yuet Man Lee",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Suga_Shrine_staircase,_9_December_2024.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/Suga_Shrine_staircase%2C_9_December_2024.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/suga-shrine.webp"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sumibiyakiniku-nakahara",
+    "photo": "photos/licensed/japan-tokyo-sumibiyakiniku-nakahara.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yakiniku_restaurant_in_Shibuya_-21769.jpeg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Yakiniku_restaurant_in_Shibuya_-21769.jpeg",
+    "width": 4080,
+    "height": 3072,
+    "illustrative": true,
+    "illustrationCaption": "Якинику: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/sumibiyakiniku_nakahara.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sushi-no-midori-nihonbashi",
+    "photo": "photos/licensed/japan-tokyo-sushi-no-midori-nihonbashi.jpg",
+    "author": "さえぼー",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sushi_at_Midori,_Shibuya.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Sushi_at_Midori%2C_Shibuya.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": true,
+    "illustrationCaption": "Суши в Sushi no Midori в Сибуе: иллюстрация сети, не снимок этого филиала.",
+    "replaces": [
+      "photos/tokyo/sushi-no-midori-nihonbashi.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sushi-no-midori-umegaoka",
+    "photo": "photos/licensed/japan-tokyo-sushi-no-midori-umegaoka.jpg",
+    "author": "江戸村のとくぞう (Edomura no Tokuzo)",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Midori_Sushi5.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/93/Midori_Sushi5.JPG",
+    "width": 2368,
+    "height": 1776,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/sushi-no-midori-umegaoka.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sushi-sen-shibuya",
+    "photo": "photos/licensed/japan-tokyo-sushi-sen-shibuya.jpg",
+    "author": "Tim Reckmann from Hamm, Deutschland",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nigiri_Sushi_(26478725732).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Nigiri_Sushi_%2826478725732%29.jpg",
+    "width": 5015,
+    "height": 3343,
+    "illustrative": true,
+    "illustrationCaption": "Суши: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/sushi-sen-shibuya.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sushiro-yurakucho",
+    "photo": "photos/licensed/japan-tokyo-sushiro-yurakucho.jpg",
+    "author": "RuinDig/Yuki Uchida",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sushiro---2023-10-26_001.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Sushiro---2023-10-26_001.jpg",
+    "width": 3648,
+    "height": 2736,
+    "illustrative": true,
+    "illustrationCaption": "Суши в Sushiro: иллюстрация сети, не снимок этого филиала.",
+    "replaces": [
+      "photos/tokyo/sushiro-yurakucho.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/sweet-check",
+    "photo": "photos/licensed/japan-tokyo-sweet-check.jpg",
+    "author": "Mark Miller",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Eggs_Benedict.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/24/Traditional_Eggs_Benedict.jpg",
+    "width": 6000,
+    "height": 4000,
+    "illustrative": true,
+    "illustrationCaption": "Яйца Бенедикт: иллюстрация блюда, не снимок этого кафе.",
+    "replaces": [
+      "photos/tokyo/sweet-check.jpg"
+    ]
+  },
+  {
     "key": "japan/tokyo/teamlab-planets",
     "photo": "photos/licensed/japan-tokyo-teamlab-planets.jpg",
     "author": "Maarten Heerlien from Voorschoten, The Netherlands",
@@ -1357,6 +2781,179 @@
     "illustrative": false,
     "replaces": [
       "photos/tokyo/teamlab_planets.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/the-matcha-tokyo-miyashita-park",
+    "photo": "photos/licensed/japan-tokyo-the-matcha-tokyo-miyashita-park.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Miyashita_Park,_seen_from_Meiji_avenue.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6a/Miyashita_Park%2C_seen_from_Meiji_avenue.jpg",
+    "width": 4080,
+    "height": 3072,
+    "illustrative": true,
+    "illustrationCaption": "Миясита-парк: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/the-matcha-tokyo-miyashita-park.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/the-matcha-tokyo-omotesando",
+    "photo": "photos/licensed/japan-tokyo-the-matcha-tokyo-omotesando.jpg",
+    "author": "Derjochenmeyer",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Matcha_latte_in_Totaro_caf%C3%A9_Kyoto_Japan.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Matcha_latte_in_Totaro_caf%C3%A9_Kyoto_Japan.jpg",
+    "width": 6048,
+    "height": 3942,
+    "illustrative": true,
+    "illustrationCaption": "Матча-латте: иллюстрация напитка, не снимок этого кафе.",
+    "replaces": [
+      "photos/tokyo/the-matcha-tokyo-omotesando.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/tokyo-tower",
+    "photo": "photos/licensed/japan-tokyo-tokyo-tower.jpg",
+    "author": "Kakidai",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tokyo_Tower_Afterglow.JPG",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/80/Tokyo_Tower_Afterglow.JPG",
+    "width": 3500,
+    "height": 2707,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/tokyo_tower.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/tsujihan-nihonbashi",
+    "photo": "photos/licensed/japan-tokyo-tsujihan-nihonbashi.jpg",
+    "author": "海鮮ドン",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kaisendon.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Kaisendon.jpg",
+    "width": 3000,
+    "height": 2000,
+    "illustrative": true,
+    "illustrationCaption": "Кайсэндон: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/tsujihan-nihonbashi.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/tsujita-ginza",
+    "photo": "photos/licensed/japan-tokyo-tsujita-ginza.jpg",
+    "author": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tonkotsu_Gyokai_Tsukemen_@_Nidaime_Tsujita_(12151511824).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Tonkotsu_Gyokai_Tsukemen_%40_Nidaime_Tsujita_%2812151511824%29.jpg",
+    "width": 3968,
+    "height": 2976,
+    "illustrative": true,
+    "illustrationCaption": "Цукэмэн Tsujita: иллюстрация сети, не снимок этого филиала.",
+    "replaces": [
+      "photos/tokyo/tsujita-ginza.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/udon-shin",
+    "photo": "photos/licensed/japan-tokyo-udon-shin.jpg",
+    "author": "IXTA9839 Sony ILCE-7M3",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Chicken_and_burdock_tempura_udon_in_Sukesan_Udon_Maebashi-Nishi.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Chicken_and_burdock_tempura_udon_in_Sukesan_Udon_Maebashi-Nishi.jpg",
+    "width": 6000,
+    "height": 4000,
+    "illustrative": true,
+    "illustrationCaption": "Удон: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/udon-shin.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/ueno",
+    "photo": "photos/licensed/japan-tokyo-ueno.jpg",
+    "author": "Guilhem Vellut from Annecy, France",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ueno_Sakura_Festival_@_Ueno_Park_(13581930363).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ee/Ueno_Sakura_Festival_%40_Ueno_Park_%2813581930363%29.jpg",
+    "width": 3968,
+    "height": 2976,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/ueno_park.jpeg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/unosato-shibuya",
+    "photo": "photos/licensed/japan-tokyo-unosato-shibuya.jpg",
+    "author": "Benlisquare",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Shibuya_Center_Gai_on_a_rainy_afternoon.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/34/Shibuya_Center_Gai_on_a_rainy_afternoon.jpg",
+    "width": 4000,
+    "height": 3000,
+    "illustrative": true,
+    "illustrationCaption": "Сибуя: иллюстрация района, не снимок этого заведения.",
+    "replaces": [
+      "photos/tokyo/unosato-shibuya.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/uogashi-nihon-ichi-shibuya",
+    "photo": "photos/licensed/japan-tokyo-uogashi-nihon-ichi-shibuya.jpg",
+    "author": "MD111",
+    "license": "CC BY-SA 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Uogashi_Standing_Sushi_Bar,_Shibuya_Tokyo,_Japan_(33234037108).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/60/Uogashi_Standing_Sushi_Bar%2C_Shibuya_Tokyo%2C_Japan_%2833234037108%29.jpg",
+    "width": 4032,
+    "height": 1960,
+    "illustrative": true,
+    "illustrationCaption": "Стоячая суши-стойка Uogashi в Сибуе: иллюстрация сети, не обязательно этот филиал.",
+    "replaces": [
+      "photos/tokyo/uogashi-nihon-ichi-shibuya.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/yakiniku-tamakiya",
+    "photo": "photos/licensed/japan-tokyo-yakiniku-tamakiya.jpg",
+    "author": "Syced",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Steak_at_yakiniku_restaurant_just_outside_Moon_Beach.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Steak_at_yakiniku_restaurant_just_outside_Moon_Beach.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": true,
+    "illustrationCaption": "Вагю для якинику: иллюстрация блюда, не снимок этого ресторана.",
+    "replaces": [
+      "photos/tokyo/yakiniku-tamakiya.jpg"
+    ]
+  },
+  {
+    "key": "japan/tokyo/yanaka",
+    "photo": "photos/licensed/japan-tokyo-yanaka.jpg",
+    "author": "1904.CC",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Yanaka_Ginza_entrance.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Yanaka_Ginza_entrance.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": [
+      "photos/tokyo/yanaka.webp"
     ]
   },
   {
@@ -1694,13 +3291,13 @@
   {
     "key": "malaysia/langkawi/lagenda-beach",
     "photo": "photos/licensed/malaysia-langkawi-lagenda-beach.jpg",
-    "author": "CyberTroopers",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pantai_Cenang_3.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/54/Pantai_Cenang_3.jpg",
-    "width": 4096,
-    "height": 3072,
+    "author": "Anton Zelenov",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langkawi_beach.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Langkawi_beach.jpg",
+    "width": 4252,
+    "height": 2834,
     "illustrative": true,
     "illustrationCaption": "Пляжи Лангкави: иллюстрация побережья, не снимок Lagenda Beach.",
     "replaces": []
@@ -1738,13 +3335,13 @@
   {
     "key": "malaysia/langkawi/langkawi-12",
     "photo": "photos/licensed/malaysia-langkawi-langkawi-12.jpg",
-    "author": "Dcpeets",
+    "author": "Leonardo0511",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Kilim_Geoforest_Park,_Langkawi.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/48/Kilim_Geoforest_Park%2C_Langkawi.jpg",
-    "width": 4608,
-    "height": 3456,
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langkawi_Mangrove_Forest.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Langkawi_Mangrove_Forest.jpg",
+    "width": 3008,
+    "height": 2000,
     "illustrative": true,
     "illustrationCaption": "Мангровое побережье Лангкави: иллюстрация маршрута, не снимок пещеры летучих мышей.",
     "replaces": [
@@ -1754,15 +3351,15 @@
   {
     "key": "malaysia/langkawi/langkawi-13",
     "photo": "photos/licensed/malaysia-langkawi-langkawi-13.jpg",
-    "author": "Slleong",
-    "license": "CC0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Beach_Street_4.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Beach_Street_4.jpg",
-    "width": 4032,
-    "height": 3024,
+    "author": "*angys*",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Pasar_Malam_Seri_Kembangan_(230403)_02.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Pasar_Malam_Seri_Kembangan_%28230403%29_02.jpg",
+    "width": 4000,
+    "height": 3000,
     "illustrative": true,
-    "illustrationCaption": "Уличная еда Малайзии: иллюстрация гастрономической прогулки, не фото ночного рынка на Лангкави.",
+    "illustrationCaption": "Пасар-малам в Малайзии: иллюстрация ночного рынка, не снимок рынка на Лангкави.",
     "replaces": [
       "https://media-cdn.tripadvisor.com/media/photo-s/0a/90/c6/a1/gece-pazari.jpg"
     ]
@@ -1800,13 +3397,13 @@
   {
     "key": "malaysia/langkawi/langkawi-4",
     "photo": "photos/licensed/malaysia-langkawi-langkawi-4.jpg",
-    "author": "Tim Parkinson",
-    "license": "CC BY 2.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tanjung_Rhu_Beach.jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Tanjung_Rhu_Beach.jpg",
-    "width": 2304,
-    "height": 1728,
+    "author": "Jonathan Muhiudeen",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langkawi,_Kedah,_Malaysia_-_panoramio_(3).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/1/18/Langkawi%2C_Kedah%2C_Malaysia_-_panoramio_%283%29.jpg",
+    "width": 3264,
+    "height": 2448,
     "illustrative": true,
     "illustrationCaption": "Побережье Лангкави: иллюстрация пляжного отдыха, не снимок Pantai Pasir Tengkorak.",
     "replaces": [
@@ -1816,15 +3413,15 @@
   {
     "key": "malaysia/langkawi/langkawi-6",
     "photo": "photos/licensed/malaysia-langkawi-langkawi-6.jpg",
-    "author": "Bernard Spragg. NZ from Christchurch, New Zealand",
-    "license": "CC0",
-    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/deed.en",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Langkawi_Eagle_Square_-_Kuah_Town._(36668381331).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Langkawi_Eagle_Square_-_Kuah_Town._%2836668381331%29.jpg",
-    "width": 3207,
-    "height": 2148,
+    "author": "shankar s. from Dubai, united arab emirates",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Wat_Chayamangkalaram-_overview_(12290318285).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/81/Wat_Chayamangkalaram-_overview_%2812290318285%29.jpg",
+    "width": 4288,
+    "height": 2848,
     "illustrative": true,
-    "illustrationCaption": "Куах, Лангкави: иллюстрация острова, не фотография храма Ват Кох Ванарам.",
+    "illustrationCaption": "Тайский буддийский храм в Пенанге: иллюстрация, не фотография храма Ват Кох Ванарам.",
     "replaces": [
       "https://live.staticflickr.com/65535/54258063651_0a3eb5a5de_o.jpg"
     ]
@@ -1847,15 +3444,15 @@
   {
     "key": "malaysia/langkawi/langkawi-8",
     "photo": "photos/licensed/malaysia-langkawi-langkawi-8.jpg",
-    "author": "Snshiny",
-    "license": "CC BY-SA 3.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:112,_Kampung_Kilim,_07000_Langkawi,_Kedah,_Malaysia_-_panoramio_(1).jpg",
-    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/112%2C_Kampung_Kilim%2C_07000_Langkawi%2C_Kedah%2C_Malaysia_-_panoramio_%281%29.jpg",
-    "width": 5184,
-    "height": 3456,
+    "author": "Ronykr",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:White-Bellied_Sea_Eagle_Langkawi.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/White-Bellied_Sea_Eagle_Langkawi.jpg",
+    "width": 2862,
+    "height": 1909,
     "illustrative": true,
-    "illustrationCaption": "Побережье Лангкави: иллюстрация природы острова, не снимок Langkawi Wildlife Park.",
+    "illustrationCaption": "Белобрюхий орлан на Лангкави: иллюстрация природы острова, не снимок Langkawi Wildlife Park.",
     "replaces": [
       "https://langkawi-travel.ru/wp-content/uploads/2020/03/olen-wild-park.jpg"
     ]
@@ -2099,6 +3696,58 @@
     ]
   },
   {
+    "key": "singapore/east/east-coast-park",
+    "photo": "photos/licensed/singapore-east-east-coast-park.jpg",
+    "author": "Mike Peel",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:At_East_Coast_Park,_Singapore_2023_046.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e9/At_East_Coast_Park%2C_Singapore_2023_046.jpg",
+    "width": 6960,
+    "height": 4640,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/east/jewel-changi",
+    "photo": "photos/licensed/singapore-east-jewel-changi.jpg",
+    "author": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Rain_Vortex_Jewel_Changi_Airport.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/02/Rain_Vortex_Jewel_Changi_Airport.jpg",
+    "width": 5250,
+    "height": 3445,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/east/katong-joo-chiat",
+    "photo": "photos/licensed/singapore-east-katong-joo-chiat.jpg",
+    "author": "Firzafp",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:The_Colourful_Peranakan_Houses_of_Koon_Seng_Road_-_Singapore_(14_July_%2724)_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/79/The_Colourful_Peranakan_Houses_of_Koon_Seng_Road_-_Singapore_%2814_July_%2724%29_01.jpg",
+    "width": 5120,
+    "height": 2880,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/east/old-airport-road",
+    "photo": "photos/licensed/singapore-east-old-airport-road.jpg",
+    "author": "Orderinchaos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Old_Airport_Road_FC_front_sign_and_garden.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Old_Airport_Road_FC_front_sign_and_garden.jpg",
+    "width": 3264,
+    "height": 2448,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
     "key": "singapore/islands-and-gardens/botanic-gardens",
     "photo": "photos/licensed/singapore-islands-and-gardens-botanic-gardens.jpg",
     "author": "Basile Morin",
@@ -2138,6 +3787,45 @@
     "replaces": []
   },
   {
+    "key": "singapore/islands-and-gardens/southern-ridges",
+    "photo": "photos/licensed/singapore-islands-and-gardens-southern-ridges.jpg",
+    "author": "Supanut Arunoprayote",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Henderson_Wave_Bridge_(I).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Henderson_Wave_Bridge_%28I%29.jpg",
+    "width": 6528,
+    "height": 3672,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/marina-bay/artscience-museum",
+    "photo": "photos/licensed/singapore-marina-bay-artscience-museum.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:ArtScience_Museum,_Marina_Bay_Sands,_Singapore.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f3/ArtScience_Museum%2C_Marina_Bay_Sands%2C_Singapore.jpg",
+    "width": 5911,
+    "height": 3941,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/marina-bay/esplanade",
+    "photo": "photos/licensed/singapore-marina-bay-esplanade.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur,_Downtown_Core,_Esplanade_%E2%80%93_Theatres_on_the_Bay_(06).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/2016_Singapur%2C_Downtown_Core%2C_Esplanade_%E2%80%93_Theatres_on_the_Bay_%2806%29.jpg",
+    "width": 4994,
+    "height": 3329,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
     "key": "singapore/marina-bay/gardens-by-the-bay",
     "photo": "photos/licensed/singapore-marina-bay-gardens-by-the-bay.jpg",
     "author": "Mustang Joe",
@@ -2151,6 +3839,19 @@
     "replaces": [
       "atlas/singapore-gardens.jpg"
     ]
+  },
+  {
+    "key": "singapore/marina-bay/lau-pa-sat",
+    "photo": "photos/licensed/singapore-marina-bay-lau-pa-sat.jpg",
+    "author": "kallerna",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lau_Pa_Sat_Singapore_2.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Lau_Pa_Sat_Singapore_2.jpg",
+    "width": 5400,
+    "height": 3600,
+    "illustrative": false,
+    "replaces": []
   },
   {
     "key": "singapore/marina-bay/marina-bay-sands",
@@ -2196,6 +3897,32 @@
     ]
   },
   {
+    "key": "singapore/neighbourhoods/atlas-bar",
+    "photo": "photos/licensed/singapore-neighbourhoods-atlas-bar.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Top_of_the_building_Parkview_Square_in_Singapore.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Top_of_the_building_Parkview_Square_in_Singapore.jpg",
+    "width": 6437,
+    "height": 3955,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/buddha-tooth-relic-temple",
+    "photo": "photos/licensed/singapore-neighbourhoods-buddha-tooth-relic-temple.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Buddha_Tooth_Relic_Temple,_Singapore,_20240122_0810_2924_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/0/09/Buddha_Tooth_Relic_Temple%2C_Singapore%2C_20240122_0810_2924_01.jpg",
+    "width": 3848,
+    "height": 2528,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
     "key": "singapore/neighbourhoods/chinatown",
     "photo": "photos/licensed/singapore-neighbourhoods-chinatown.jpg",
     "author": "Dietmar Rabich",
@@ -2222,6 +3949,32 @@
     "replaces": []
   },
   {
+    "key": "singapore/neighbourhoods/haji-lane",
+    "photo": "photos/licensed/singapore-neighbourhoods-haji-lane.jpg",
+    "author": "Moheen Reeyad",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Haji_Lane,_Kampong_Glam_(02).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/de/Haji_Lane%2C_Kampong_Glam_%2802%29.jpg",
+    "width": 4000,
+    "height": 2667,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/hill-street-tai-hwa",
+    "photo": "photos/licensed/singapore-neighbourhoods-hill-street-tai-hwa.jpg",
+    "author": "Ken Marshall from Absecon, New Jersey, USA",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hill_Street_Tai_Hwa_Pork_Noodle.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/66/Hill_Street_Tai_Hwa_Pork_Noodle.jpg",
+    "width": 4000,
+    "height": 3000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
     "key": "singapore/neighbourhoods/kampong-glam",
     "photo": "photos/licensed/singapore-neighbourhoods-kampong-glam.jpg",
     "author": "Marcin Konsek",
@@ -2244,6 +3997,305 @@
     "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/2016_Singapur%2C_Little_India%2C_Ulica_Kerbau%2C_Domy-sklepy_%2805%29.jpg",
     "width": 4744,
     "height": 3446,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/maxwell-food-centre",
+    "photo": "photos/licensed/singapore-neighbourhoods-maxwell-food-centre.jpg",
+    "author": "Bahnfrend",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Maxwell_Food_Centre,_2024_(10).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/76/Maxwell_Food_Centre%2C_2024_%2810%29.jpg",
+    "width": 3315,
+    "height": 2210,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/mustafa-centre",
+    "photo": "photos/licensed/singapore-neighbourhoods-mustafa-centre.jpg",
+    "author": "Fabio Achilli from Milano, Italy",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mustafa_Centre,_Little_India,_Singapore_(9005264972).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/97/Mustafa_Centre%2C_Little_India%2C_Singapore_%289005264972%29.jpg",
+    "width": 4608,
+    "height": 3456,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/sri-mariamman-temple",
+    "photo": "photos/licensed/singapore-neighbourhoods-sri-mariamman-temple.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sri_Mariamman_Temple,_Singapore,_20240122_0842_2943.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Sri_Mariamman_Temple%2C_Singapore%2C_20240122_0842_2943.jpg",
+    "width": 4515,
+    "height": 2926,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/sri-veeramakaliamman-temple",
+    "photo": "photos/licensed/singapore-neighbourhoods-sri-veeramakaliamman-temple.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Templo_Sri_Veeramakaliamman,_Singapur,_2023-08-17,_DD_01.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Templo_Sri_Veeramakaliamman%2C_Singapur%2C_2023-08-17%2C_DD_01.jpg",
+    "width": 7195,
+    "height": 4797,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/sultan-mosque",
+    "photo": "photos/licensed/singapore-neighbourhoods-sultan-mosque.jpg",
+    "author": "Chainwit.",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Masjid_Sultan,_Singapore_(2023_June)_-_img_05.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Masjid_Sultan%2C_Singapore_%282023_June%29_-_img_05.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/tekka-centre",
+    "photo": "photos/licensed/singapore-neighbourhoods-tekka-centre.jpg",
+    "author": "Kari.Shouur",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tekka_Centre_Wet_Market.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Tekka_Centre_Wet_Market.jpg",
+    "width": 8256,
+    "height": 5504,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/thian-hock-keng",
+    "photo": "photos/licensed/singapore-neighbourhoods-thian-hock-keng.jpg",
+    "author": "Dietmar Rabich",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Singapore_(SG),_China_Town,_Thian_Hock_Keng_--_2019_--_4532.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Singapore_%28SG%29%2C_China_Town%2C_Thian_Hock_Keng_--_2019_--_4532.jpg",
+    "width": 6720,
+    "height": 3780,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/tian-tian-chicken-rice",
+    "photo": "photos/licensed/singapore-neighbourhoods-tian-tian-chicken-rice.jpg",
+    "author": "Orderinchaos",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Singapore_food_-_Tian_Tian_chicken_rice_Nov_2016.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Singapore_food_-_Tian_Tian_chicken_rice_Nov_2016.jpg",
+    "width": 2048,
+    "height": 1152,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/tiong-bahru",
+    "photo": "photos/licensed/singapore-neighbourhoods-tiong-bahru.jpg",
+    "author": "Wzhkevin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:57_and_58_Tiong_Bahru_Road_from_Lim_Liak_Street_-_2022-08-14.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/eb/57_and_58_Tiong_Bahru_Road_from_Lim_Liak_Street_-_2022-08-14.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/neighbourhoods/tiong-bahru-market",
+    "photo": "photos/licensed/singapore-neighbourhoods-tiong-bahru-market.jpg",
+    "author": "Kbseah",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Tiong_Bahru_Market,_open_air_seating.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Tiong_Bahru_Market%2C_open_air_seating.jpg",
+    "width": 4000,
+    "height": 3000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/north-and-nature/bukit-timah",
+    "photo": "photos/licensed/singapore-north-and-nature-bukit-timah.jpg",
+    "author": "Zairon",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Singapore_Bukit_Timah_Nature_Reserve_5.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Singapore_Bukit_Timah_Nature_Reserve_5.jpg",
+    "width": 4582,
+    "height": 3073,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/north-and-nature/macritchie-reservoir",
+    "photo": "photos/licensed/singapore-north-and-nature-macritchie-reservoir.jpg",
+    "author": "Drew Tarvin",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Treetop_Walk_in_MacRitchie_Nature_Trail,_Singapore.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Treetop_Walk_in_MacRitchie_Nature_Trail%2C_Singapore.jpg",
+    "width": 3840,
+    "height": 2160,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/north-and-nature/night-safari",
+    "photo": "photos/licensed/singapore-north-and-nature-night-safari.jpg",
+    "author": "Allie Caulfield",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Entrance_of_Night_Safari,_Singapore,_2012.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Entrance_of_Night_Safari%2C_Singapore%2C_2012.jpg",
+    "width": 5767,
+    "height": 3822,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/north-and-nature/singapore-zoo",
+    "photo": "photos/licensed/singapore-north-and-nature-singapore-zoo.jpg",
+    "author": "Basile Morin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Two_white_tigers_playing_in_the_water_at_Singapore_Zoo.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/37/Two_white_tigers_playing_in_the_water_at_Singapore_Zoo.jpg",
+    "width": 5799,
+    "height": 3866,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/north-and-nature/sungei-buloh",
+    "photo": "photos/licensed/singapore-north-and-nature-sungei-buloh.jpg",
+    "author": "FN-082",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Sungei_Buloh_Wetland_Reserve_202408_7.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Sungei_Buloh_Wetland_Reserve_202408_7.jpg",
+    "width": 4096,
+    "height": 2640,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/asian-civilisations-museum",
+    "photo": "photos/licensed/singapore-river-and-orchard-asian-civilisations-museum.jpg",
+    "author": "Alexey Komarov",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Empress_Place_Building_2023-03-22.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Empress_Place_Building_2023-03-22.jpg",
+    "width": 4154,
+    "height": 2769,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/clarke-quay",
+    "photo": "photos/licensed/singapore-river-and-orchard-clarke-quay.jpg",
+    "author": "Jakub Hałun",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Clarke_Quay_at_night,_Singapore,_20240205_1946_6058.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/2/22/Clarke_Quay_at_night%2C_Singapore%2C_20240205_1946_6058.jpg",
+    "width": 5818,
+    "height": 3884,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/fort-canning",
+    "photo": "photos/licensed/singapore-river-and-orchard-fort-canning.jpg",
+    "author": "Wzhkevin",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fort_Canning_Centre,_Fort_Canning_Park_-_2022-07-26.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Fort_Canning_Centre%2C_Fort_Canning_Park_-_2022-07-26.jpg",
+    "width": 4032,
+    "height": 3024,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/national-museum",
+    "photo": "photos/licensed/singapore-river-and-orchard-national-museum.jpg",
+    "author": "Marcin Konsek",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:2016_Singapur,_Museum_Planning_Area,_Narodowe_Muzeum_Singapuru_(02).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/2016_Singapur%2C_Museum_Planning_Area%2C_Narodowe_Muzeum_Singapuru_%2802%29.jpg",
+    "width": 5172,
+    "height": 2909,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/newton-food-centre",
+    "photo": "photos/licensed/singapore-river-and-orchard-newton-food-centre.jpg",
+    "author": "Kbseah",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Newton_Food_Centre_food_stalls_(30881).jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Newton_Food_Centre_food_stalls_%2830881%29.jpg",
+    "width": 4000,
+    "height": 3000,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/orchard-road",
+    "photo": "photos/licensed/singapore-river-and-orchard-orchard-road.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Ion_Orchard_Link,_Singapur,_2023-08-18,_DD_06.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Ion_Orchard_Link%2C_Singapur%2C_2023-08-18%2C_DD_06.jpg",
+    "width": 7017,
+    "height": 4480,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/raffles-hotel",
+    "photo": "photos/licensed/singapore-river-and-orchard-raffles-hotel.jpg",
+    "author": "Diego Delso",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Hotel_Raffles,_Singapur,_2023-08-16,_DD_153-155_HDR.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/71/Hotel_Raffles%2C_Singapur%2C_2023-08-16%2C_DD_153-155_HDR.jpg",
+    "width": 7341,
+    "height": 4894,
+    "illustrative": false,
+    "replaces": []
+  },
+  {
+    "key": "singapore/river-and-orchard/song-fa-bak-kut-teh",
+    "photo": "photos/licensed/singapore-river-and-orchard-song-fa-bak-kut-teh.jpg",
+    "author": "Chainwit.",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Song_Fa_Bak_Kut_Teh,_New_Bridge_Rd,_Singapore_(2023)_06.jpg",
+    "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Song_Fa_Bak_Kut_Teh%2C_New_Bridge_Rd%2C_Singapore_%282023%29_06.jpg",
+    "width": 4032,
+    "height": 3024,
     "illustrative": false,
     "replaces": []
   }
