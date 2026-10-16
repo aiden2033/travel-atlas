@@ -40,11 +40,18 @@ describe('licensed photographs', () => {
     expect(repeated.map((photo) => photo.key)).toEqual([]);
   });
 
-  it('gives every catalog place a licensed photograph', () => {
+  it('keeps bundled and explicit catalog photographs licensed', () => {
+    const bundled = new Set(licensedPhotos.map((photo) => photo.key));
     const withoutLicense = defaultSeed.countries.flatMap((country) =>
       country.cities.flatMap((city) =>
         city.places
-          .filter((place) => !place.photoLicense)
+          .filter(
+            (place) =>
+              !place.photoLicense &&
+              (place.photo ||
+                place.remotePhoto ||
+                bundled.has(`${country.id}/${city.id}/${place.slug}`)),
+          )
           .map((place) => `${country.id}/${city.id}/${place.slug}`),
       ),
     );

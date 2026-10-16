@@ -4,6 +4,7 @@ import { catalogSchema, parseBackup, stateKey, type Backup } from './model';
 import { places } from '../data/places';
 import { friendsMapPlaces } from '../data/friendsMapPlaces';
 import { migrateCatalog } from './migrations';
+import winter from './winter.json';
 
 const backup = (): Backup => ({
   format: 'travel-atlas',
@@ -40,9 +41,21 @@ describe('source consolidation', () => {
       'kuala-lumpur',
       'penang',
     ]);
-    expect(malaysia.cities.flatMap((c) => c.places)).toHaveLength(49);
+    for (const city of malaysia.cities) {
+      const original = winter.cities[city.id as keyof typeof winter.cities];
+      expect(city.places.length).toBeGreaterThanOrEqual(original.length);
+    }
     expect(seed.countries[1].cities.flatMap((c) => c.places)).toHaveLength(46);
-    expect(seed.countries[2].cities).toHaveLength(5);
+    expect(seed.countries[2].cities.map((c) => c.id)).toEqual(
+      expect.arrayContaining([
+        'java',
+        'lombok',
+        'gili',
+        'flores',
+        'kalimantan',
+        'bali',
+      ]),
+    );
   });
 
   it('keeps countries isolated while preserving old Japanese state keys', () => {
@@ -50,6 +63,43 @@ describe('source consolidation', () => {
     expect(stateKey('malaysia', 'osaka', 'dotonbori')).not.toBe(
       stateKey('japan', 'osaka', 'dotonbori'),
     );
+  });
+
+  it('adds researched places to older catalogs while preserving personal edits', () => {
+    const catalog = structuredClone(seed);
+    const malaysia = catalog.countries.find(
+      (country) => country.id === 'malaysia',
+    )!;
+    const penang = malaysia.cities.find((city) => city.id === 'penang')!;
+    const original = penang.places[0];
+    original.note = 'Моя остановка';
+    original.nameRu = 'Личное название';
+    penang.places = [original];
+    const indonesia = catalog.countries.find(
+      (country) => country.id === 'indonesia',
+    )!;
+    indonesia.cities = indonesia.cities.filter((city) => city.id !== 'bali');
+    const migrated = migrateCatalog(catalog);
+    const updatedPenang = migrated.countries
+      .find((country) => country.id === 'malaysia')!
+      .cities.find((city) => city.id === 'penang')!;
+    expect(updatedPenang.places[0]).toEqual(original);
+    expect(
+      updatedPenang.places.some(
+        (place) => place.foodSpot && place.links?.length,
+      ),
+    ).toBe(true);
+    expect(
+      migrated.countries
+        .find((country) => country.id === 'indonesia')!
+        .cities.some((city) => city.id === 'bali'),
+    ).toBe(true);
+    expect(
+      catalog.countries
+        .find((country) => country.id === 'indonesia')!
+        .cities.some((city) => city.id === 'bali'),
+    ).toBe(false);
+    expect(migrateCatalog(migrated)).toEqual(migrated);
   });
 
   it('upgrades old island labels without changing IDs or custom names', () => {

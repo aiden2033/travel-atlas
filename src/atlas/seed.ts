@@ -4,6 +4,8 @@ import { friendsMapPlaces } from '../data/friendsMapPlaces';
 import { trip } from '../data/trip';
 import winter from './winter.json';
 import published from './published.json';
+import { malaysiaDining } from './malaysia-dining';
+import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { withLicensedPhotos } from './photos';
 import gardensCredit from './credits/singapore-gardens-credit.json';
 import merlionCredit from './credits/singapore-merlion-credit.json';
@@ -836,6 +838,13 @@ const indonesiaPhotos: Record<string, string> = {
   'manta-point':
     'https://diveclub.ru/view/images/upload/nicedit/194235885scd0419_todd-winner-97a0838.jpg',
 };
+malaysiaCities.forEach((city) => {
+  city.places.push(...(malaysiaDining[city.id] ?? []));
+});
+indonesiaCities.forEach((city) => {
+  city.places.push(...(indonesiaAdditions[city.id] ?? []));
+});
+indonesiaCities.push(...indonesiaNewCities);
 indonesiaCities.forEach((city) =>
   city.places.forEach((place) => {
     place.remotePhoto = indonesiaPhotos[place.slug];
@@ -944,13 +953,13 @@ const baseSeed = catalogSchema.parse({
       nameEn: 'Indonesia',
       cover: 'atlas/indonesia.jpg',
       intro:
-        'Вулканы Явы, спокойные пляжи Ломбока, острова Гили и морские маршруты Комодо. Большая поездка, которую удобно собирать по островам.',
+        'Вулканы Явы, кафе Бали, пляжи Ломбока, морские маршруты Комодо и дальние острова. Выбирайте природу, культуру и местную еду по регионам архипелага.',
       cities: indonesiaCities,
       sections: [
         {
           id: 'route',
           title: 'Идея маршрута',
-          body: 'о. Ява → о. Ломбок → о. Гили → о. Флорес → о. Калимантан. Это набор идей исходного проекта: выберите подходящие остановки, а переезды планируйте отдельно.',
+          body: 'Соберите одну связку островов: Ява → Бали → Ломбок и Гили либо Бали → Флорес и Комодо. Суматра, Калимантан, Сулавеси и дальние архипелаги подходят для отдельных поездок. Каталог охватывает основные туристические регионы, а переезды планируются отдельно.',
         },
         originalNotes('indonesia'),
       ],

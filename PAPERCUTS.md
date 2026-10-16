@@ -65,3 +65,27 @@ Locating the legacy place detail → an assumed components/PlaceDetail.tsx path 
 ## 2026-10-16 13:03 — GPT-6
 
 Normalizing Commons thumbnails → a wide panorama loses much of its width in a 3:2 crop. Check actual cropped pixel dimensions, request a larger thumbnail or original for very wide images, and avoid rejecting a clear 789px crop solely because of an arbitrary 800px threshold.
+
+## 2026-10-16 19:29 — GPT-6
+
+Inspecting a path-limited diff with `rtk git diff -- README.md src/atlas/store.tsx` → RTK dropped the path separator and Git treated README.md as a revision. Use `rtk proxy git diff -- <paths>` for path-limited diffs.
+
+## 2026-10-16 19:34 — GPT-6
+
+Following the photo documentation link from README → docs/photos.md is absent in this checkout. Inspect the actual photo manifest and tests rather than relying on that stale link.
+
+## 2026-10-16 19:35 — GPT-6
+
+Resolving dining coordinates from Michelin map links → web clicks returned Internal Error and direct HTML retrieval returned HTTP403. Keep the verified full street address in mapsQuery when a source does not expose reliable coordinates.
+
+## 2026-10-16 19:39 — GPT-6
+
+Checking the new Bali navigation with a browser accessibility index → the click failed with a shadow-root error although the link was visible in the snapshot. Navigating to the route already confirmed by the snapshot opened the section successfully.
+
+## 2026-10-16 19:39 — GPT-6
+
+Separating pre-existing papercut changes from this task in the Git index → reversing the initial tail-only patch failed after new entries were appended. Build the staged blob by removing the exact pre-existing addition, keeping the working copy untouched.
+
+## 2026-10-16 19:40 — GPT-6
+
+Verifying Indonesian source links → some indexed tourism PDFs were already HTTP404, while several official sites rate-limited direct checks with 403/406/429. Replace removed PDFs with live government HTML pages and distinguish blocked fetches from confirmed missing pages; Penida Colada uses its working .com domain.
