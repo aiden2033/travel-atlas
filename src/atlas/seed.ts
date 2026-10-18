@@ -5,6 +5,7 @@ import { trip } from '../data/trip';
 import winter from './winter.json';
 import published from './published.json';
 import { malaysiaDining } from './malaysia-dining';
+import { malaysiaHighlights } from './penang-highlights';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { australia } from './australia';
 import { withLicensedPhotos } from './photos';
@@ -840,7 +841,10 @@ const indonesiaPhotos: Record<string, string> = {
     'https://diveclub.ru/view/images/upload/nicedit/194235885scd0419_todd-winner-97a0838.jpg',
 };
 malaysiaCities.forEach((city) => {
-  city.places.push(...(malaysiaDining[city.id] ?? []));
+  city.places.push(
+    ...(malaysiaHighlights[city.id] ?? []),
+    ...(malaysiaDining[city.id] ?? []),
+  );
 });
 indonesiaCities.forEach((city) => {
   city.places.push(...(indonesiaAdditions[city.id] ?? []));

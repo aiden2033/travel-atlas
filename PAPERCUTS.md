@@ -109,3 +109,19 @@ Reading country hero source from the knowledge graph → the snippet pointed to 
 ## 2026-10-16 20:24 — GPT-6
 
 Checking a mobile browser viewport → getScreenshot returned a scaled thumbnail with blank padding, and the first tab inherited a 1.2 zoom factor. Use a fresh tab, apply the viewport after selecting it, and capture with tab.screenshot and an explicit clip for accurate visual QA.
+
+## 2026-10-18 12:18 — claude-opus-5-5
+
+Running `npx vitest run`, `curl … | python3` and `wc -l` through the RTK hook → RTK replaced vitest output with "parser failed", mangled Commons API JSON (invalid control character) and printed wrong line counts. Prefix such commands with `rtk proxy`.
+
+## 2026-10-18 12:18 — claude-opus-5-5
+
+Importing ~180 Commons photos with six parallel agents → Wikimedia answered 429 for most of an hour because all agents shared one IP. Fewer parallel searchers or a descriptive User-Agent with a project URL (as in `scripts/add-commons-photos.mjs`) keep requests flowing.
+
+## 2026-10-18 12:18 — claude-opus-5-5
+
+Prettier has no config in this repo, but the code uses single quotes → plain `npx prettier --write` turns a new file into double quotes and `npm run format` would reformat everything. Use `prettier --single-quote` until a `.prettierrc` is added.
+
+## 2026-10-18 12:18 — claude-opus-5-5
+
+Building a contact sheet of photos with CSS grid `repeat(n, 1fr)` → images overflowed the grid because `1fr` keeps the image's intrinsic width as minimum. Use `repeat(n, minmax(0, 1fr))`.

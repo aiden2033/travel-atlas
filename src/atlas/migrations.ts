@@ -1,5 +1,6 @@
 import type { Catalog, Country, GuideCity, GuidePlace } from './model';
 import { malaysiaDining } from './malaysia-dining';
+import { malaysiaHighlights } from './penang-highlights';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { australia } from './australia';
 
@@ -52,9 +53,19 @@ const updateIslandLabels = (city: GuideCity): GuideCity => {
   };
 };
 
+const malaysiaAdditions = Object.fromEntries(
+  Object.keys({ ...malaysiaHighlights, ...malaysiaDining }).map((city) => [
+    city,
+    [...(malaysiaHighlights[city] ?? []), ...(malaysiaDining[city] ?? [])],
+  ]),
+);
+
 const expandCountry = (country: Country): Country => {
   if (country.id === 'malaysia')
-    return { ...country, cities: expandCities(country.cities, malaysiaDining) };
+    return {
+      ...country,
+      cities: expandCities(country.cities, malaysiaAdditions),
+    };
   if (country.id === australia.id)
     return {
       ...country,

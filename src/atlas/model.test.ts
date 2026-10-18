@@ -136,6 +136,9 @@ describe('source consolidation', () => {
         (place) => place.foodSpot && place.links?.length,
       ),
     ).toBe(true);
+    expect(updatedPenang.places.map((place) => place.slug)).toEqual(
+      expect.arrayContaining(['penang-habitat', 'penang-fort-cornwallis']),
+    );
     expect(
       migrated.countries
         .find((country) => country.id === 'indonesia')!
