@@ -1,4 +1,4 @@
-const configuredBaseUrl = import.meta.env.VITE_SYNC_API_URL ?? 'http://127.0.0.1:3001';
+const configuredBaseUrl = import.meta.env.VITE_SYNC_API_URL ?? 'http://localhost:5080';
 
 export const SYNC_API_BASE_URL = configuredBaseUrl.replace(/\/$/, '');
 
@@ -16,8 +16,8 @@ export class SyncApiError extends Error {
 const csrfToken = (): string | undefined => {
   const match = document.cookie
     .split('; ')
-    .find((part) => part.startsWith('jt_csrf='));
-  return match ? decodeURIComponent(match.slice('jt_csrf='.length)) : undefined;
+    .find((part) => part.startsWith('atlas_csrf='));
+  return match ? decodeURIComponent(match.slice('atlas_csrf='.length)) : undefined;
 };
 
 interface ApiFetchOptions {

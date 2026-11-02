@@ -6,12 +6,35 @@ import {
   type ReactNode,
 } from 'react';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
-import { apiFetch } from './api';
+import { apiFetch, SyncApiError } from './api';
 import type { SyncUser } from './types';
 
 interface AuthResponse {
   user: SyncUser | null;
 }
+
+interface MeResponse {
+  id: string;
+  email: string | null;
+  displayName: string | null;
+}
+
+const meQuery = async (): Promise<AuthResponse> => {
+  try {
+    const me = await apiFetch<MeResponse>('/v1/me');
+    return {
+      user: {
+        id: me.id,
+        email: me.email,
+        displayName: me.displayName,
+        telegramUsername: null,
+      },
+    };
+  } catch (error) {
+    if (error instanceof SyncApiError && error.status === 401) return { user: null };
+    throw error;
+  }
+};
 
 interface AuthContextValue {
   user: SyncUser | null;
@@ -31,7 +54,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const queryClient = useQueryClient();
   const authQuery = useQuery({
     queryKey: authQueryKey,
-    queryFn: () => apiFetch<AuthResponse>('/api/auth/me'),
+    queryFn: meQuery,
     enabled: Boolean(import.meta.env.VITE_SYNC_API_URL),
     retry: false,
     staleTime: 60_000,
