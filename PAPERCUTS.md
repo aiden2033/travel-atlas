@@ -215,5 +215,5 @@ Reading Mailpit JSON through the rtk-wrapped `curl` → `json.load` fails with "
 Researching the backend plan against official references → the old YooKassa self-employed receipts URL redirects to the general changelog, and the Consultant Article 8 page repeatedly times out. Use the current receipts/basics page and keep unverified authorization-law interpretations explicit.
 ## 2026-11-02 14:02 — Codex
 
-Запускал `npm test` после правок интеграции с atlas-api → vitest подхватил тесты из устаревшего воркдере `.claude/worktrees/kind-bohr-354f7b` и упал с `Cannot find package 'jsdom'`, хотя все 77 тестов основного репозитория зелёные. Фикс: исключить `.claude` из тестов (например, `exclude` в vitest-конфиге) или удалить устаревший worktree.
+Запускал `npm test` после правок интеграции с atlas-api → vitest подхватил тесты из устаревшего воркдере `.claude/worktrees/kind-bohr-354f7b` и упал с `Cannot find package 'jsdom'`. Часть «проходящих» тестов тоже была дублями из worktree: в основном репозитории 2 файла / 17 тестов. Фикс: добавлен `vitest.config.ts` с exclude `**/.claude/**` — теперь discovery чистый, exit code 0.
 

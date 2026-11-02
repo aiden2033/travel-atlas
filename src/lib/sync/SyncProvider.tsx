@@ -19,7 +19,7 @@ import {
   VISITED_KEY,
   type StoredSetChangeDetail,
 } from '../useStoredSet';
-import { apiFetch } from './api';
+import { apiFetch, SyncApiError } from './api';
 import { useAuth } from './AuthProvider';
 import {
   readPersonalTripEvents,
@@ -37,6 +37,12 @@ const DEVICE_ID_KEY = 'jt:sync:device-id';
 const LAST_USER_ID_KEY = 'jt:sync:last-user-id';
 const QUEUE_KEY = 'jt:sync:ops';
 const QUEUE_CHANGE_EVENT = 'jt:sync-queue-change';
+
+const isUnauthorized = (error: unknown): error is SyncApiError =>
+  error instanceof SyncApiError && error.status === 401;
+
+const migrateEndpoint = (endpoint: string): string =>
+  endpoint.startsWith('/api/') ? endpoint.replace('/api/', '/v1/') : endpoint;
 
 type SyncMethod = 'POST' | 'PUT' | 'DELETE';
 
@@ -115,12 +121,14 @@ const setLastUserId = (userId: string | null): void => {
 };
 
 const readQueue = (): SyncOp[] =>
-  readJsonArray<SyncOp>(QUEUE_KEY).filter(
-    (op) =>
-      typeof op.id === 'string' &&
-      typeof op.userId === 'string' &&
-      typeof op.endpoint === 'string',
-  );
+  readJsonArray<SyncOp>(QUEUE_KEY)
+    .filter(
+      (op) =>
+        typeof op.id === 'string' &&
+        typeof op.userId === 'string' &&
+        typeof op.endpoint === 'string',
+    )
+    .map((op) => ({ ...op, endpoint: migrateEndpoint(op.endpoint) }));
 
 const writeQueue = (ops: SyncOp[]): void => {
   writeJsonArray(QUEUE_KEY, ops);
@@ -233,11 +241,16 @@ export function SyncProvider({ children }: { children: ReactNode }) {
 
   const syncQuery = useQuery({
     queryKey: ['sync', 'state', auth.user?.id],
-    queryFn: () => apiFetch<SyncSnapshot>('/api/sync/state'),
+    queryFn: () => apiFetch<SyncSnapshot>('/v1/sync/state'),
     enabled: Boolean(auth.user),
     retry: 1,
     refetchInterval: 10_000,
   });
+
+  useEffect(() => {
+    if (!isUnauthorized(syncQuery.error)) return;
+    void queryClient.invalidateQueries({ queryKey: ['auth', 'me'] });
+  }, [queryClient, syncQuery.error]);
 
   const refreshPendingCount = useCallback(() => {
     setPendingCount(queueCount(auth.user?.id ?? getLastUserId()));
@@ -279,7 +292,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
       if (!userId) return;
 
       if (detail.storageKey === PREFLIGHT_KEY) {
-        enqueueSyncOp(userId, '/api/sync/preflight-state', 'POST', {
+        enqueueSyncOp(userId, '/v1/sync/preflight-state', 'POST', {
           itemKey: detail.key,
           enabled: detail.enabled,
           updatedAt: detail.updatedAt,
@@ -297,7 +310,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
               : null;
       if (!kind) return;
 
-      enqueueSyncOp(userId, '/api/sync/place-state', 'POST', {
+      enqueueSyncOp(userId, '/v1/sync/place-state', 'POST', {
         placeKey: detail.key,
         kind,
         enabled: detail.enabled,
@@ -309,7 +322,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
       const detail = (event as CustomEvent<TripEventChangeDetail>).detail;
       const userId = userRef.current?.id ?? getLastUserId();
       if (!userId) return;
-      enqueueSyncOp(userId, `/api/trip-events/${detail.event.id}`, 'PUT', detail.event);
+      enqueueSyncOp(userId, `/v1/trip-events/${detail.event.id}`, 'PUT', detail.event);
     };
 
     const onSavedRouteChange = (event: Event) => {
@@ -318,7 +331,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
       if (!userId) return;
       enqueueSyncOp(
         userId,
-        `/api/saved-routes/${encodeURIComponent(detail.route.routeId)}`,
+        `/v1/saved-routes/${encodeURIComponent(detail.route.routeId)}`,
         'PUT',
         detail.route,
       );
@@ -355,7 +368,7 @@ export function SyncProvider({ children }: { children: ReactNode }) {
     if (!userId || hasImported(userId) || importInFlightRef.current === userId) return;
 
     importInFlightRef.current = userId;
-    apiFetch('/api/sync/import', {
+    apiFetch('/v1/sync/import', {
       method: 'POST',
       body: {
         deviceId: getSyncDeviceId(),
@@ -388,9 +401,10 @@ export function SyncProvider({ children }: { children: ReactNode }) {
       pendingCount,
       syncing,
       lastSyncedAt,
-      backendUnavailable: auth.unavailable || syncQuery.isError,
+      backendUnavailable:
+        auth.unavailable || (syncQuery.isError && !isUnauthorized(syncQuery.error)),
     }),
-    [auth.unavailable, auth.user, lastSyncedAt, pendingCount, syncQuery.isError, syncing],
+    [auth.unavailable, auth.user, lastSyncedAt, pendingCount, syncQuery.error, syncQuery.isError, syncing],
   );
 
   return <SyncContext.Provider value={value}>{children}</SyncContext.Provider>;

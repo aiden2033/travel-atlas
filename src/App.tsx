@@ -14,6 +14,7 @@ import {
   Heart,
   CheckCircle,
   ArrowUpRight,
+  Wallet,
 } from '@phosphor-icons/react';
 import { CatalogProvider, useCatalog } from './atlas/store';
 import { assetUrl, guideUrl } from './atlas/model';
@@ -35,6 +36,7 @@ const legacy = {
 };
 const CityPage = lazy(() => import('./pages/CityPage'));
 const PlaceDetail = lazy(() => import('./pages/PlaceDetail'));
+const Purchases = lazy(() => import('./pages/Purchases'));
 
 export default function App() {
   return (
@@ -52,7 +54,7 @@ function Shell() {
   const activeId = /^\/(?:guide|notes|builder)\/([^/]+)/.exec(pathname)?.[1];
   const activeCountry = catalog.countries.find((c) => c.id === activeId);
   const isLegacy =
-    !['/guide', '/notes', '/builder', '/favorites', '/visited'].some((prefix) =>
+    !['/guide', '/notes', '/builder', '/favorites', '/visited', '/purchases'].some((prefix) =>
       pathname.startsWith(prefix),
     ) && pathname !== '/';
 
@@ -124,6 +126,13 @@ function Shell() {
             <CheckCircle size={24} />
             Посещено
           </Link>
+          <Link
+            className={pathname === '/purchases' ? 'active' : ''}
+            to="/purchases"
+          >
+            <Wallet size={24} />
+            Покупки
+          </Link>
           <span className="sidebar-caption">ВАША СЛЕДУЮЩАЯ ИСТОРИЯ</span>
         </nav>
       </aside>
@@ -155,6 +164,14 @@ function Shell() {
             <Route path="/builder/:country?" element={<Builder />} />
             <Route path="/favorites" element={<Collection kind="favorite" />} />
             <Route path="/visited" element={<Collection kind="visited" />} />
+            <Route
+              path="/purchases"
+              element={
+                <div className="legacy-page">
+                  <Purchases />
+                </div>
+              }
+            />
             {Object.entries(legacy).map(([path, Page]) => (
               <Route
                 key={path}

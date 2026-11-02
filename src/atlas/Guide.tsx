@@ -38,6 +38,7 @@ import {
 } from './store';
 import { PlaceCard, PlaceDetails } from './ui';
 import Editor, { type EditorTarget } from './Editor';
+import BuyGuideSection from './billing/BuyGuideSection';
 
 const GuideMap = lazy(() => import('./GuideMap'));
 const primaryFilters = [
@@ -167,6 +168,7 @@ function CountryGuide({
             Маршрут и заметки
             <ArrowUpRight size={15} />
           </Link>
+          <BuyGuideSection country={country} />
         </div>
         {heroPhoto && (
           <img

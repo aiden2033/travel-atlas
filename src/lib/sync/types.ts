@@ -5,7 +5,7 @@ export interface SyncUser {
   id: string;
   email: string | null;
   displayName: string | null;
-  telegramUsername: string | null;
+  telegramUsername?: string | null;
 }
 
 export interface PlaceSyncState {

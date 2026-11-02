@@ -2,6 +2,7 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   type ReactNode,
 } from 'react';
@@ -9,15 +10,28 @@ import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import { apiFetch, SyncApiError } from './api';
 import type { SyncUser } from './types';
 
-interface AuthResponse {
-  user: SyncUser | null;
-}
-
 interface MeResponse {
   id: string;
   email: string | null;
   displayName: string | null;
 }
+
+interface AuthResponse {
+  user: SyncUser | null;
+}
+
+interface AuthContextValue {
+  user: SyncUser | null;
+  loading: boolean;
+  unavailable: boolean;
+  requestMagicLink: (email: string, pdConsent: boolean) => Promise<void>;
+  logout: () => Promise<void>;
+}
+
+const AuthContext = createContext<AuthContextValue | null>(null);
+
+const authQueryKey = ['auth', 'me'] as const;
+const verifyHashPrefix = '#/login/verify';
 
 const meQuery = async (): Promise<AuthResponse> => {
   try {
@@ -36,19 +50,20 @@ const meQuery = async (): Promise<AuthResponse> => {
   }
 };
 
-interface AuthContextValue {
-  user: SyncUser | null;
-  loading: boolean;
-  unavailable: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  signup: (email: string, password: string, displayName?: string) => Promise<void>;
-  logout: () => Promise<void>;
-  telegramLogin: (payload: unknown) => Promise<void>;
-}
+const readVerifyToken = (): string | null => {
+  const hash = window.location.hash;
+  if (!hash.startsWith(verifyHashPrefix)) return null;
+  const query = hash.slice(verifyHashPrefix.length);
+  return new URLSearchParams(query.replace(/^\?/, '')).get('token');
+};
 
-const AuthContext = createContext<AuthContextValue | null>(null);
+const safeReturnPath = (value: string | undefined): string =>
+  value && value.startsWith('/') && !value.startsWith('//') ? value : '/account';
 
-const authQueryKey = ['auth', 'me'] as const;
+const finishLogin = (path: string, status: 'ok' | 'consent' | 'error'): void => {
+  const separator = path.includes('?') ? '&' : '?';
+  window.location.replace(`#${path}${separator}login=${status}`);
+};
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const queryClient = useQueryClient();
@@ -64,30 +79,46 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     await queryClient.invalidateQueries({ queryKey: authQueryKey });
   }, [queryClient]);
 
-  const loginMutation = useMutation({
-    mutationFn: (body: { email: string; password: string }) =>
-      apiFetch<AuthResponse>('/api/auth/login', { method: 'POST', body }),
-    onSuccess: refreshAuth,
-  });
+  useEffect(() => {
+    const token = readVerifyToken();
+    if (!token) return;
+    let cancelled = false;
 
-  const signupMutation = useMutation({
-    mutationFn: (body: { email: string; password: string; displayName?: string }) =>
-      apiFetch<AuthResponse>('/api/auth/signup', { method: 'POST', body }),
-    onSuccess: refreshAuth,
+    apiFetch<{ returnPath: string }>('/v1/auth/magic-link/verify', {
+      method: 'POST',
+      body: { token, pdConsent: true },
+    })
+      .then(async (result) => {
+        if (cancelled) return;
+        await queryClient.invalidateQueries({ queryKey: authQueryKey });
+        finishLogin(safeReturnPath(result.returnPath), 'ok');
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        const status =
+          error instanceof SyncApiError && error.status === 422 ? 'consent' : 'error';
+        finishLogin('/account', status);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [queryClient]);
+
+  const magicLinkMutation = useMutation({
+    mutationFn: (body: { email: string; pdConsent: boolean }) =>
+      apiFetch('/v1/auth/magic-link', {
+        method: 'POST',
+        body: { ...body, returnPath: '/account', captchaToken: null },
+      }),
   });
 
   const logoutMutation = useMutation({
-    mutationFn: () => apiFetch<{ ok: true }>('/api/auth/logout', { method: 'POST' }),
+    mutationFn: () => apiFetch('/v1/auth/logout', { method: 'POST' }),
     onSuccess: async () => {
       queryClient.setQueryData<AuthResponse>(authQueryKey, { user: null });
       await queryClient.invalidateQueries({ queryKey: ['sync'] });
     },
-  });
-
-  const telegramMutation = useMutation({
-    mutationFn: (payload: unknown) =>
-      apiFetch<AuthResponse>('/api/auth/telegram', { method: 'POST', body: payload }),
-    onSuccess: refreshAuth,
   });
 
   const value = useMemo<AuthContextValue>(
@@ -95,27 +126,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       user: authQuery.data?.user ?? null,
       loading: authQuery.isLoading,
       unavailable: authQuery.isError,
-      login: async (email, password) => {
-        await loginMutation.mutateAsync({ email, password });
-      },
-      signup: async (email, password, displayName) => {
-        await signupMutation.mutateAsync({ email, password, displayName });
+      requestMagicLink: async (email, pdConsent) => {
+        await magicLinkMutation.mutateAsync({ email, pdConsent });
+        await refreshAuth();
       },
       logout: async () => {
         await logoutMutation.mutateAsync();
-      },
-      telegramLogin: async (payload) => {
-        await telegramMutation.mutateAsync(payload);
       },
     }),
     [
       authQuery.data?.user,
       authQuery.isError,
       authQuery.isLoading,
-      loginMutation,
       logoutMutation,
-      signupMutation,
-      telegramMutation,
+      magicLinkMutation,
+      refreshAuth,
     ],
   );
 
