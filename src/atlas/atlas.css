@@ -82,6 +82,7 @@ svg {
   width: 236px;
   border-right: 1px solid var(--line);
   padding: 29px 14px 20px;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   z-index: 20;
@@ -420,7 +421,8 @@ svg {
   font-size: 11px;
   pointer-events: none;
 }
-.illustration-caption {
+.illustration-caption,
+.photo-caption {
   margin: 0;
   padding: 10px 20px 4px;
   color: var(--muted);
@@ -1245,6 +1247,7 @@ svg {
   .atlas-sidebar {
     position: relative;
     width: auto;
+    overflow: visible;
     padding: 15px 16px 0;
     border-right: 0;
     border-bottom: 1px solid var(--line);

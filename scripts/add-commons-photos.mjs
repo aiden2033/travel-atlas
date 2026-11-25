@@ -110,6 +110,7 @@ const toEntry = async (request, previous, manifest, workDir) => {
     originalUrl,
     width: info.width,
     height: info.height,
+    ...(request.caption ? { caption: request.caption } : {}),
     illustrative: Boolean(request.illustrative),
     ...(request.illustrative ? { illustrationCaption: request.illustrationCaption } : {}),
     replaces: [...new Set([...(previous?.replaces ?? []), ...(previous ? [previous.photo] : []), ...(request.replaces ?? [])])],

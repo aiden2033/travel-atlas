@@ -1,6 +1,12 @@
 import { describe, expect, it } from 'vitest';
 import { defaultSeed as seed } from './seed';
-import { catalogSchema, parseBackup, stateKey, type Backup } from './model';
+import {
+  catalogSchema,
+  guideUrl,
+  parseBackup,
+  stateKey,
+  type Backup,
+} from './model';
 import { places } from '../data/places';
 import { friendsMapPlaces } from '../data/friendsMapPlaces';
 import { migrateCatalog } from './migrations';
@@ -28,13 +34,14 @@ describe('source consolidation', () => {
       ).toBe(place.description);
   });
 
-  it('includes all five requested countries and the winter city catalog', () => {
+  it('includes all six countries and the winter city catalog', () => {
     expect(seed.countries.map((c) => c.id)).toEqual([
       'malaysia',
       'singapore',
       'indonesia',
       'japan',
       'australia',
+      'vietnam',
     ]);
     const malaysia = seed.countries[0];
     expect(malaysia.cities.map((c) => c.id)).toEqual([
@@ -169,6 +176,113 @@ describe('source consolidation', () => {
     expect(islands[2].places[0].nameRu).toBe('о. Гили Траванган');
     expect(islands.map((c) => c.id)).toEqual(indonesia.cities.map((c) => c.id));
     expect(migrateCatalog(migrated)).toEqual(migrated);
+  });
+});
+
+describe('Vietnam catalog', () => {
+  it('includes nine bases with seven northern, six central and seven southern places', () => {
+    const vietnam = seed.countries[5];
+    expect(vietnam.cities.map((city) => city.id)).toEqual([
+      'hanoi',
+      'ninh-binh',
+      'sapa',
+      'phong-nha',
+      'hue',
+      'hoi-an',
+      'ho-chi-minh',
+      'can-tho',
+      'phu-quoc',
+    ]);
+    expect(
+      [0, 3, 6].map(
+        (start) =>
+          vietnam.cities.slice(start, start + 3).flatMap((city) => city.places)
+            .length,
+      ),
+    ).toEqual([7, 6, 7]);
+    expect(guideUrl(vietnam)).toBe('/guide/vietnam/hanoi');
+    expect(stateKey(vietnam.id, 'hanoi', 'ha-long-bay')).toBe(
+      'vietnam:hanoi:ha-long-bay',
+    );
+    expect(migrateCatalog(seed)).toEqual(seed);
+  });
+
+  it('appends Vietnam to a saved catalog without changing existing countries', () => {
+    const catalog = structuredClone(seed);
+    catalog.countries.pop();
+    catalog.countries[0].intro = 'Мой маршрут по Малайзии';
+
+    const migrated = migrateCatalog(catalog);
+    expect(migrated.countries.slice(0, -1)).toEqual(catalog.countries);
+    expect(migrated.countries.at(-1)?.id).toBe('vietnam');
+    expect(migrated.countries.at(-1)?.cities).toHaveLength(9);
+    expect(migrateCatalog(migrated)).toEqual(migrated);
+  });
+
+  it('adds definitions for new tags and retains the saved tag labels', () => {
+    const catalog = structuredClone(seed);
+    catalog.countries = [
+      catalog.countries.find((country) => country.id === 'singapore')!,
+    ];
+    catalog.countries[0].cities = [];
+    catalog.tags = [
+      { id: 'sight', label: 'Мои достопримечательности', tone: 'sand' },
+      { id: 'personal', label: 'Личное', tone: 'green' },
+    ];
+
+    const migrated = migrateCatalog(catalog);
+    expect(migrated.tags.slice(0, 2)).toEqual(catalog.tags);
+    expect(migrated.tags.some((tag) => tag.id === 'nature')).toBe(true);
+    expect(catalogSchema.safeParse(migrated).success).toBe(true);
+    expect(migrateCatalog(migrated)).toEqual(migrated);
+  });
+
+  it('fills a partial Vietnam guide while keeping user edits, links and marks', () => {
+    const value = backup();
+    const vietnam = value.catalog.countries[5];
+    vietnam.nameRu = 'Мой Вьетнам';
+    vietnam.sections = [
+      { id: 'personal-plan', title: 'Мой план', body: 'Встреча' },
+    ];
+    const hanoi = vietnam.cities[0];
+    hanoi.nameRu = 'Мой Ханой';
+    const halong = hanoi.places.find((place) => place.slug === 'ha-long-bay')!;
+    halong.note = 'Личная заметка';
+    halong.links = [
+      { label: 'Мой маршрут', url: 'https://example.org/halong' },
+    ];
+    const customPlace = { ...halong, slug: 'my-place' };
+    hanoi.places = [customPlace, halong];
+    const customCity = { ...hanoi, id: 'my-base', places: [] };
+    vietnam.cities = [customCity, hanoi];
+    value.favorites = ['vietnam:hanoi:ha-long-bay'];
+    value.visited = ['osaka:dotonbori'];
+    value.booked = ['vietnam:hanoi:my-place'];
+
+    const migrated = migrateCatalog(value.catalog);
+    const expanded = migrated.countries[5];
+    expect(expanded.nameRu).toBe(vietnam.nameRu);
+    expect(expanded.sections).toEqual(vietnam.sections);
+    expect(expanded.cities[0]).toEqual(customCity);
+    expect(expanded.cities[1].nameRu).toBe(hanoi.nameRu);
+    expect(expanded.cities[1].places.slice(0, 2)).toEqual([
+      customPlace,
+      halong,
+    ]);
+    expect(expanded.cities).toHaveLength(10);
+    expect(expanded.cities.flatMap((city) => city.places)).toHaveLength(21);
+    expect(vietnam.cities).toHaveLength(2);
+    expect(migrateCatalog(migrated)).toEqual(migrated);
+
+    const restored = parseBackup(
+      JSON.stringify({ ...value, catalog: migrated }),
+    );
+    expect(restored.favorites).toEqual(value.favorites);
+    expect(restored.visited).toEqual(value.visited);
+    expect(restored.booked).toEqual(value.booked);
+    expect(restored.favorites[0]).toBe(
+      stateKey(expanded.id, hanoi.id, halong.slug),
+    );
   });
 });
 

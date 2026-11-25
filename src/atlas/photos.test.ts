@@ -2,6 +2,7 @@ import { existsSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { defaultSeed } from './seed';
 import {
+  getLicensedPhoto,
   licensedPhotos,
   photoManifestSchema,
   withLicensedPhotos,
@@ -58,6 +59,20 @@ describe('licensed photographs', () => {
     expect(withoutLicense).toEqual([]);
   });
 
+  it('provides a captioned local photograph for every Vietnam place', () => {
+    const vietnam = defaultSeed.countries.find(({ id }) => id === 'vietnam')!;
+    const places = vietnam.cities.flatMap(({ places }) => places);
+
+    expect(places).toHaveLength(20);
+    for (const place of places) {
+      const photo = getLicensedPhoto(vietnam.id, place.city, place.slug);
+      expect(photo?.photo, place.slug).toMatch(/^photos\/licensed\/vietnam-/);
+      expect(photo?.caption, place.slug).toBeTruthy();
+      expect(place.photo, place.slug).toBe(photo?.photo);
+      expect(place.photoCaption, place.slug).toBe(photo?.caption);
+    }
+  });
+
   it('rejects restricted licenses, portrait images and insecure sources', () => {
     const photo = licensedPhotos[0];
     expect(
@@ -94,6 +109,18 @@ describe('licensed photographs', () => {
       .cities.find((city) => city.id === cityId)!
       .places.find((place) => place.slug === slug)!;
     expect(saved).toEqual(place);
+  });
+
+  it('keeps a custom photograph and caption on a place with a captioned bundled image', () => {
+    const catalog = structuredClone(defaultSeed);
+    const place = catalog.countries
+      .find(({ id }) => id === 'vietnam')!
+      .cities.find(({ id }) => id === 'can-tho')!
+      .places.find(({ slug }) => slug === 'cai-rang-floating-market')!;
+    place.photo = 'https://example.com/my-market-photo.jpg';
+    place.photoCaption = 'Лодки перед рассветом';
+
+    expect(withLicensedPhotos(catalog)).toEqual(catalog);
   });
 
   it('preserves edited attribution and illustration captions for a bundled image', () => {

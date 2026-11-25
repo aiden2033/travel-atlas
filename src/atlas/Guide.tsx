@@ -106,6 +106,7 @@ function CountryGuide({
           keys: [
             'place.nameRu',
             'place.nameEn',
+            'place.nameLocal',
             'place.description',
             'place.nameJa',
             'tagLabels',

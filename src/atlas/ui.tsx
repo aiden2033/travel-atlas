@@ -205,6 +205,10 @@ export function PlaceDetails({
   const mapsQuery = place.coords
     ? `${place.coords.lat},${place.coords.lng}`
     : place.mapsQuery || `${place.nameEn} ${city.nameEn} ${country.nameEn}`;
+  const alternativeNames = [
+    ...(place.nameEn !== place.nameRu ? [place.nameEn, place.nameJa] : []),
+    place.nameLocal,
+  ].filter(Boolean);
   return (
     <Modal title={place.nameRu} close={close} wide>
       <Photo
@@ -217,6 +221,9 @@ export function PlaceDetails({
         <p className="illustration-caption">
           Иллюстрация: {place.photoIllustration}
         </p>
+      )}
+      {place.photoCaption && (
+        <p className="photo-caption">{place.photoCaption}</p>
       )}
       {(place.photoCredit || place.photoLicense) && (
         <p className="photo-credit">
@@ -253,16 +260,15 @@ export function PlaceDetails({
           </span>
           <span>
             <Clock size={17} />
-            {place.timeEstimateHours.join('–')} ч · ориентир
+            {place.visitDuration
+              ? `На посещение · ${place.visitDuration}`
+              : `${place.timeEstimateHours.join('–')} ч · ориентир`}
           </span>
         </div>
         <Tags tags={place.tags} />
         <p className="prose">{place.description}</p>
-        {place.nameEn !== place.nameRu && (
-          <p className="muted">
-            {place.nameEn}
-            {place.nameJa && ` · ${place.nameJa}`}
-          </p>
+        {alternativeNames.length > 0 && (
+          <p className="muted">{alternativeNames.join(' · ')}</p>
         )}
         {[
           ['Когда идти', place.bestTime],

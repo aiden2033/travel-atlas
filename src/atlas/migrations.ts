@@ -3,6 +3,10 @@ import { malaysiaDining } from './malaysia-dining';
 import { malaysiaHighlights } from './penang-highlights';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { australia } from './australia';
+import { vietnam } from './vietnam';
+import { defaultSeed } from './seed';
+
+const addedCountries = [australia, vietnam];
 
 const appendMissing = <T>(
   existing: T[],
@@ -66,10 +70,11 @@ const expandCountry = (country: Country): Country => {
       ...country,
       cities: expandCities(country.cities, malaysiaAdditions),
     };
-  if (country.id === australia.id)
+  const added = addedCountries.find((entry) => entry.id === country.id);
+  if (added)
     return {
       ...country,
-      cities: expandCities(country.cities, {}, australia.cities),
+      cities: expandCities(country.cities, {}, added.cities),
     };
   if (country.id !== 'indonesia') return country;
   return {
@@ -82,11 +87,26 @@ const expandCountry = (country: Country): Country => {
   };
 };
 
-export const migrateCatalog = (catalog: Catalog): Catalog => ({
-  ...catalog,
-  countries: appendMissing(
+export const migrateCatalog = (catalog: Catalog): Catalog => {
+  const countries = appendMissing(
     catalog.countries,
-    [australia],
+    addedCountries,
     (country) => country.id,
-  ).map(expandCountry),
-});
+  ).map(expandCountry);
+  const usedTags = new Set(
+    countries.flatMap((country) =>
+      country.cities.flatMap((city) =>
+        city.places.flatMap((place) => place.tags),
+      ),
+    ),
+  );
+  return {
+    ...catalog,
+    countries,
+    tags: appendMissing(
+      catalog.tags,
+      defaultSeed.tags.filter((tag) => usedTags.has(tag.id)),
+      (tag) => tag.id,
+    ),
+  };
+};

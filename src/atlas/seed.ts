@@ -8,6 +8,7 @@ import { malaysiaDining } from './malaysia-dining';
 import { malaysiaHighlights } from './penang-highlights';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { australia } from './australia';
+import { vietnam } from './vietnam';
 import { withLicensedPhotos } from './photos';
 import gardensCredit from './credits/singapore-gardens-credit.json';
 import merlionCredit from './credits/singapore-merlion-credit.json';
@@ -971,6 +972,7 @@ const baseSeed = catalogSchema.parse({
     },
     japan,
     australia,
+    vietnam,
   ],
   tags: [
     ['food', 'Еда', 'sand'],

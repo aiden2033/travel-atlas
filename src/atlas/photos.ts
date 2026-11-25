@@ -20,6 +20,7 @@ export const photoManifestSchema = z.array(
       originalUrl: httpsUrl,
       width: z.number().int().positive(),
       height: z.number().int().positive(),
+      caption: z.string().trim().min(1).optional(),
       replaces: z.array(z.string()),
       illustrative: z.boolean().default(false),
       illustrationCaption: z.string().optional(),
@@ -64,6 +65,7 @@ export const withLicensedPhotos = (catalog: Catalog): Catalog => ({
           photoSourceUrl: photo.sourceUrl,
           photoLicense: photo.license,
           photoLicenseUrl: photo.licenseUrl,
+          photoCaption: photo.caption,
           photoIllustration: photo.illustrative
             ? photo.illustrationCaption
             : undefined,

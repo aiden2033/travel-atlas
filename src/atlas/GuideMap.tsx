@@ -39,6 +39,7 @@ export default function GuideMap({
       <MapContainer
         center={[points[0].coords!.lat, points[0].coords!.lng]}
         zoom={12}
+        zoomAnimation={false}
         scrollWheelZoom={false}
       >
         <TileLayer

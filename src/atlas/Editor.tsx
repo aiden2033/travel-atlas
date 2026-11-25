@@ -187,10 +187,12 @@ export default function Editor({
           ...common,
           slug: target.place?.slug ?? (get('id') || newId('place')),
           city: city.id,
+          nameLocal: get('nameLocal') || undefined,
           description: get('description'),
           summary: get('summary'),
           tags,
           timeEstimateHours: [number('min'), number('max')],
+          visitDuration: get('visitDuration') || undefined,
           mapsQuery:
             get('mapsQuery') ||
             `${common.nameEn || common.nameRu}, ${city.nameEn}, ${country.nameEn}`,
@@ -200,6 +202,7 @@ export default function Editor({
           photoLicense: get('photoLicense') || undefined,
           photoLicenseUrl: get('photoLicenseUrl') || undefined,
           photoIllustration: get('photoIllustration') || undefined,
+          photoCaption: get('photoCaption') || undefined,
           coords:
             get('lat') || get('lng')
               ? { lat: number('lat'), lng: number('lng') }
@@ -286,6 +289,10 @@ export default function Editor({
         {target.kind === 'place' ? (
           <>
             <label>
+              Название на местном языке
+              <input name="nameLocal" defaultValue={place?.nameLocal} />
+            </label>
+            <label>
               Описание
               <textarea
                 name="description"
@@ -343,7 +350,7 @@ export default function Editor({
                   type="number"
                   min="0"
                   max="1000"
-                  step="0.5"
+                  step="any"
                   required
                   defaultValue={place?.timeEstimateHours[0] ?? 1}
                 />
@@ -355,12 +362,16 @@ export default function Editor({
                   type="number"
                   min="0"
                   max="1000"
-                  step="0.5"
+                  step="any"
                   required
                   defaultValue={place?.timeEstimateHours[1] ?? 2}
                 />
               </label>
             </div>
+            <label>
+              На посещение
+              <input name="visitDuration" defaultValue={place?.visitDuration} />
+            </label>
             <label>
               Когда идти
               <input
@@ -411,6 +422,10 @@ export default function Editor({
             </label>
             <fieldset>
               <legend>Автор и лицензия фотографии</legend>
+              <label>
+                Подпись к фотографии
+                <input name="photoCaption" defaultValue={place?.photoCaption} />
+              </label>
               <label>
                 Автор и изменения снимка
                 <input name="photoCredit" defaultValue={place?.photoCredit} />

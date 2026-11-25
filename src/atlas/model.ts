@@ -37,6 +37,7 @@ export const placeSchema = z.object({
   city: id,
   nameRu: z.string().trim().min(1).max(200),
   nameEn: text,
+  nameLocal: text.optional(),
   description: text,
   summary: text.optional(),
   tags: z.array(id).max(50),
@@ -46,6 +47,7 @@ export const placeSchema = z.object({
       ([min, max]) => min <= max,
       'Минимальное время больше максимального',
     ),
+  visitDuration: text.optional(),
   mapsQuery: text,
   coords: z
     .object({
@@ -60,6 +62,7 @@ export const placeSchema = z.object({
   photoLicense: text.optional(),
   photoLicenseUrl: url.optional(),
   photoIllustration: text.optional(),
+  photoCaption: text.optional(),
   bestTime: text.optional(),
   note: text.optional(),
   transport: text.optional(),
