@@ -217,3 +217,143 @@ Researching the backend plan against official references → the old YooKassa se
 
 Запускал `npm test` после правок интеграции с atlas-api → vitest подхватил тесты из устаревшего воркдере `.claude/worktrees/kind-bohr-354f7b` и упал с `Cannot find package 'jsdom'`. Часть «проходящих» тестов тоже была дублями из worktree: в основном репозитории 2 файла / 17 тестов. Фикс: добавлен `vitest.config.ts` с exclude `**/.claude/**` — теперь discovery чистый, exit code 0.
 
+## 2026-11-26 00:31 — GPT-6
+
+Finding test files for the contributor guide → `search_graph` returned zero matches for `label: File` with a regex in `file_pattern`. A `name_pattern` matching `.test.ts` filenames found the indexed suites.
+
+## 2026-11-26 00:32 — GPT-6
+
+Checking the new contributor guide in Git → the global ignore file hides `AGENTS.md`. `git add --intent-to-add --force -- AGENTS.md` exposes the guide in the working-tree diff without staging its contents.
+
+## 2026-11-26 00:39 — GPT-6
+
+Extracting places from a single-file HTML guide → a line-based match printed the inline WebP data, and the overview object literal was not strict JSON. Parse the places as JSON, omit both photo data fields from inspection, and read only the bounded overview literal.
+
+## 2026-11-26 00:41 — GPT-6
+
+Checking formatting and photo references → the repository does not declare its single-quote convention in Prettier, Guide.tsx already fails a whole-file format check with that flag, and README links to a missing docs/photos.md. Match adjacent TypeScript and use the manifest schema and Commons importer for photo requirements.
+
+## 2026-11-26 00:41 — GPT-6
+
+Checking Commons metadata from the terminal → Python did not trust the local issuer, while Node inherited a TLS verification override. Run the import with `env -u NODE_TLS_REJECT_UNAUTHORIZED node --use-system-ca` to verify HTTPS with the system trust store.
+
+## 2026-11-26 00:45 — GPT-6
+
+Checking a fast Leaflet tab switch in Playwright → the animated map pane has no visible box, so waiting for visibility missed the zoom transition. Waiting for the animation class to be attached reproduced the error on every run.
+
+## 2026-11-26 00:53 — GPT-6
+
+Finding the Travel Atlas graph index → `list_projects` returned tens of thousands of tokens for every indexed checkout. Filter `projects` by `root_path` before printing the result.
+
+## 2026-11-26 00:54 — GPT-6
+
+Starting four independent Travel Atlas roles → the team limit includes the coordinator, so the fourth agent could start only after a read-only architect finished. Schedule the first short architecture pass ahead of the photo import.
+
+## 2026-11-26 00:55 — GPT-6
+
+Checking the Bayon photograph with the Commons importer → its license parser matches the `CC BY 3.0` prefix of the ported `CC BY 3.0 pl` label. Verify the exact license URL before import and use a compatible original when the license differs.
+
+## 2026-11-26 01:00 — GPT-6
+
+Opening a Cambodia card by deep link on mobile → the active country tab scrolled into view before the local font loaded and clipped after the links widened. Wait for `document.fonts.ready` before aligning the tab.
+
+## 2026-11-26 01:01 — GPT-6
+
+Capturing the production guide in Chrome → waiting for offscreen lazy images blocked the screenshot. Decode the entire asset set independently and wait for visible images before capture.
+
+## 2026-11-26 01:02 — GPT-6
+
+Checking the Google Maps button in headless Chrome → a DOM `.click()` did not produce a reliable new-tab signal. Dispatch a browser pointer click and check `Page.windowOpen` for the requested URL and user gesture.
+
+
+## 2026-11-26 01:18 — GPT-6
+
+Настройка сводки в Codex → вызов с полем `summary` был отклонён. Используйте `labels` с короткими однострочными заголовками и проверяйте `isError` в результате инструмента.
+
+## 2026-11-26 01:18 — GPT-6
+
+Применение точечных правок поверх рабочей Камбоджи → в ручном diff неверно посчитались строки блока, Git вернул `corrupt patch`. Для локальных вставок используйте `apply_patch` или уникальные проверенные якоря.
+
+## 2026-11-26 01:21 — GPT-6
+
+Проверка нескольких меток одним запросом к OpenStreetMap API → zsh принял `?` в URL за шаблон имени файла. Передавайте адрес с query-параметрами в одинарных кавычках.
+
+## 2026-11-26 01:21 — GPT-6
+
+Импорт кадра Тад-Фан → Commons включил служебный текст в поле Artist, и импортёр обрезал его как часть имени. Сверяйте отображаемый кредит со страницей файла и переносите точное имя автора.
+
+## 2026-11-26 01:21 — GPT-6
+
+Проверка JPEG на системном Python → в окружении нет Pillow. Запустите одноразовую проверку через `uv run --no-project --with pillow`.
+
+## 2026-11-26 01:22 — GPT-6
+
+Проверка прямых ссылок на карточки из HTML в Chrome → при объединении fixture одноимённое поле `region` источника заменило slug региона русским названием. Применяйте стабильные ключи после полей источника.
+
+## 2026-11-26 01:39 — GPT-6
+
+Поиск модулей Атласа в графе → запрос с составным шаблоном `.*(Guide|Catalog|Photo|Route).*` вернул пустой результат при наличии индекса. Запрос по простому имени `Guide` нашёл нужные символы.
+
+## 2026-11-26 01:41 — GPT-6
+
+Сбор результатов проверок из параллельного вызова → `store` отклонил `undefined` для уже завершившейся команды и оборвал вывод. Сохраняйте идентификатор только для продолжающегося процесса.
+
+## 2026-11-26 01:42 — GPT-6
+
+Сверка правил тайских нацпарков → прямые `open` и `find` для DNP временами отдают таймаут. Поиск по адресу показывает индексированный официальный текст, а даты открытия также дублирует TAT.
+
+## 2026-11-26 01:43 — GPT-6
+
+Проверка всех фото в production-сборке → локальный Python `http.server` пропустил часть запросов при одновременной загрузке картинок Chrome и кэша PWA. Раздача того же `dist` через HTTP/1.1 с увеличенной очередью соединений позволила декодировать все 21 JPEG.
+
+## 2026-11-26 09:43 — GPT-6
+
+Сверка массива `places` в HTML Вьетнама → `rg` вывел целую строку с фотографиями в base64. Используйте `JSONDecoder.raw_decode` для извлечения массива и исключайте поля изображений перед выводом.
+
+## 2026-11-26 09:46 — GPT-6
+
+Выборка фотографий Вьетнама → скрипт принял `photo-manifest.json` за словарь. Фильтруйте массив записей по полю `key` в формате `country/city/slug`.
+
+## 2026-11-26 09:46 — GPT-6
+
+Проверка официальных страниц Кантхо → сервер возвращал HTTP 404 на HEAD и HTTP 200 на GET для тех же адресов. Проверяйте статус и содержимое через GET.
+
+## 2026-11-26 09:46 — GPT-6
+
+Подсчёт загруженных тайлов OpenStreetMap при приёмке карты → проверка точного хоста пропустила поддомены `a`, `b` и `c`. Сопоставляйте `tile.openstreetmap.org` вместе с его поддоменами.
+
+## 2026-11-26 10:20 — GPT-6
+
+Сверка координат по публичным HTTPS-источникам → системный Python не нашёл доверенный CA bundle для urllib. Системный curl успешно проверил те же адреса.
+
+## 2026-11-26 10:21 — GPT-6
+
+Пакетная проверка объектов OpenStreetMap через Overpass → публичные инстансы отвечали таймаутами и HTTP 406. Для небольшой проверяемой выборки помогли поиск именованных объектов и их прямые страницы.
+
+## 2026-11-26 10:23 — GPT-6
+
+Проверка наведения из браузера во время интеграции → Vite error overlay перехватывал курсор, пока импортируемый lazy-компонент ещё создавался. Тест завершился после появления обоих модулей.
+
+## 2026-11-26 10:24 — GPT-6
+
+Подключение leaflet.markercluster 2.0 к Leaflet 1.9 → импорт старого MarkerCluster.css выдавал 500, а тип из пакета потерял унаследованные методы слоя. В v2 дополнительный CSS группировщика убран, тип слоя можно уточнить через Leaflet 1.9 L.Layer.
+
+## 2026-11-26 10:30 — GPT-6
+
+Проверка закрытия раскрытого меню по нажатию вне него → локатор заголовка находился под панелью, и Playwright ждал, пока панель перестанет перехватывать касание. Нажимайте по видимой области за границей панели.
+
+## 2026-11-26 11:53 — GPT-6
+
+Повторный запуск Vitest во время проверки интеграции агентом → запуск завершился с ENOTEMPTY в общем node_modules/.vitest-cache. Запускайте наборы тестов последовательно в одном checkout.
+
+## 2026-11-26 11:54 — GPT-6
+
+Параллельные проверки меню и Google Maps → обе запустились на порту 4188. Для второго Vite-сервера используйте отдельный порт с --strictPort.
+
+## 2026-11-26 11:54 — GPT-6
+
+Проверка клавиатурной навигации на тестовой подложке Google Maps → маркер из заглушки SDK не имел размеров, поэтому Playwright считал его скрытым. Устанавливайте минимальные размеры тестовых маркеров.
+
+## 2026-11-26 12:47 — GPT-6
+
+Поиск маршрутов карты через RTK → head закрыл поток раньше завершения поиска, и RTK вывел Broken pipe. Ограничивайте поиск точными путями или используйте sed для чтения всего потока.

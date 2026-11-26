@@ -38,7 +38,7 @@ const legacy = {
 const CityPage = lazy(() => import('./pages/CityPage'));
 const PlaceDetail = lazy(() => import('./pages/PlaceDetail'));
 const Purchases = lazy(() => import('./pages/Purchases'));
-const AtlasMapPage = lazy(() => import('./atlas/AtlasMapPage'));
+const AtlasMapAccess = lazy(() => import('./atlas/AtlasMapAccess'));
 
 export default function App() {
   return (
@@ -153,7 +153,7 @@ function Shell() {
               element={<Navigate to={guideUrl(catalog.countries[0])} replace />}
             />
             <Route path="/guide/:country/:city?/:slug?" element={<Guide />} />
-            <Route path="/map" element={<AtlasMapPage />} />
+            <Route path="/map" element={<AtlasMapAccess />} />
             <Route path="/notes/:country" element={<Notes />} />
             <Route path="/builder/:country?" element={<Builder />} />
             <Route path="/favorites" element={<Collection kind="favorite" />} />

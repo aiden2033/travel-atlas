@@ -107,6 +107,15 @@ npm run catalog -- export atlas-seed.json
 
 Старый опциональный backend синхронизации Японии сохранён в исходниках. Он не включён по умолчанию и не является облачной синхронизацией конструктора. Для его использования нужен отдельный сервер и `VITE_SYNC_API_URL` из `.env.example`. До настройки основное приложение не обращается к localhost-серверу.
 
+## Подложка Google Maps
+
+Общая карта `#/map` поддерживает русскую подложку Google Maps. Для подключения включите Maps JavaScript API и биллинг в Google Cloud, создайте JavaScript Map ID и браузерный ключ, ограниченный этим API и HTTP referrer вашего сайта. Для GitHub Pages используйте origin сайта без пути репозитория, например `https://aiden2033.github.io/*`. Значение ключа встраивается в клиентскую сборку, поэтому ограничение по сайту важнее способа передачи ключа сборке. [Настройка ключа](https://developers.google.com/maps/documentation/javascript/get-api-key) · [Создание Map ID](https://developers.google.com/maps/documentation/javascript/map-ids/mapid-over)
+
+- Для локальной разработки задайте `VITE_GOOGLE_MAPS_API_KEY` и `VITE_GOOGLE_MAPS_MAP_ID` в `.env.local`. В режиме разработки для проверки можно указать только ключ и использовать встроенный `DEMO_MAP_ID`. У ключа для разработки должен быть разрешён origin локального сервера.
+- Для GitHub Pages добавьте `VITE_GOOGLE_MAPS_API_KEY` в Actions secrets репозитория, а `VITE_GOOGLE_MAPS_MAP_ID` в Actions variables, затем запустите сборку `Deploy to GitHub Pages`.
+
+Сборка без параметров Google использует OpenStreetMap. При ошибке загрузки Google Maps страница автоматически возвращается на OpenStreetMap.
+
 ## GitHub Pages
 
 В `.github/workflows/deploy.yml` настроены проверки, сборка и публикация ветки main. Источник Pages: GitHub Actions. Новый сайт рассчитан на адрес `https://aiden2033.github.io/travel-atlas/`. Префикс репозитория не зашит в приложение.

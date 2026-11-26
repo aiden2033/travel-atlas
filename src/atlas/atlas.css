@@ -565,6 +565,24 @@ svg {
   max-width: 480px;
   margin: 0;
 }
+.map-pin-form {
+  display: grid;
+  gap: 12px;
+  width: min(100%, 240px);
+  text-align: left;
+  color: var(--ink);
+}
+.map-pin-form input {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+.map-pin-form [role='alert'] {
+  color: #733d2a;
+}
 .not-found {
   padding-top: 20vh;
 }

@@ -1,9 +1,23 @@
 import '../lib/leaflet-setup';
-import { useEffect, useMemo } from 'react';
+import {
+  lazy,
+  Suspense,
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+} from 'react';
 import L from 'leaflet';
 import { MarkerClusterGroup } from 'leaflet.markercluster';
 import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet';
+import { createMapPlacePopup } from './mapPlacePopup';
 import type { MapPoint } from './mapPlaces';
+
+const GoogleAtlasMap = lazy(() => import('./GoogleAtlasMap'));
+const googleApiKey = import.meta.env.VITE_GOOGLE_MAPS_API_KEY?.trim();
+const googleMapId =
+  import.meta.env.VITE_GOOGLE_MAPS_MAP_ID?.trim() ||
+  (import.meta.env.DEV ? 'DEMO_MAP_ID' : '');
 
 const overviewOptions: L.FitBoundsOptions = {
   padding: [24, 24],
@@ -30,14 +44,7 @@ function createMarker(place: MapPoint) {
 
   marker.bindPopup(
     () => {
-      const content = L.DomUtil.create('div', 'atlas-map-popup');
-      L.DomUtil.create('strong', '', content).textContent = place.name;
-      L.DomUtil.create('div', 'atlas-map-popup-location', content).textContent =
-        location;
-      const link = L.DomUtil.create('a', 'atlas-map-popup-link', content);
-      link.href = `#${place.path}`;
-      link.textContent =
-        place.kind === 'stay' ? 'Открыть на карте поездки' : 'Открыть карточку';
+      const { content, link } = createMapPlacePopup(place);
       link.addEventListener('keydown', (event) => {
         if (event.key !== 'Escape') return;
         event.preventDefault();
@@ -96,29 +103,65 @@ function ClusteredPlaces({
   return null;
 }
 
-export default function AtlasMap({ points }: { points: MapPoint[] }) {
+function LeafletAtlasMap({ points }: { points: MapPoint[] }) {
   const bounds = useMemo(
     () => L.latLngBounds(points.map(({ coords }) => coords)),
     [points],
   );
 
   return (
-    <section className="atlas-map-frame" aria-label="Карта мест">
-      <MapContainer
-        bounds={bounds}
-        boundsOptions={overviewOptions}
+    <MapContainer
+      bounds={bounds}
+      boundsOptions={overviewOptions}
+      maxZoom={19}
+      scrollWheelZoom={false}
+      zoomControl={false}
+    >
+      <ZoomControl zoomInTitle="Приблизить" zoomOutTitle="Отдалить" />
+      <TileLayer
+        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         maxZoom={19}
-        scrollWheelZoom={false}
-        zoomControl={false}
-      >
-        <ZoomControl zoomInTitle="Приблизить" zoomOutTitle="Отдалить" />
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
-          maxZoom={19}
-        />
-        <ClusteredPlaces points={points} bounds={bounds} />
-      </MapContainer>
+      />
+      <ClusteredPlaces points={points} bounds={bounds} />
+    </MapContainer>
+  );
+}
+
+export default function AtlasMap({ points }: { points: MapPoint[] }) {
+  const [googleUnavailable, setGoogleUnavailable] = useState(false);
+  const onUnavailable = useCallback(() => setGoogleUnavailable(true), []);
+
+  return (
+    <section className="atlas-map-frame" aria-label="Карта мест">
+      {googleApiKey && googleMapId && !googleUnavailable ? (
+        <Suspense
+          fallback={
+            <div
+              className="atlas-map-google atlas-map-google-loading"
+              role="status"
+            >
+              Загружаем Google Maps…
+            </div>
+          }
+        >
+          <GoogleAtlasMap
+            apiKey={googleApiKey}
+            mapId={googleMapId}
+            points={points}
+            onUnavailable={onUnavailable}
+          />
+        </Suspense>
+      ) : (
+        <>
+          {googleUnavailable && (
+            <p className="atlas-map-google-fallback" role="status">
+              Google Maps недоступна. Показана карта OpenStreetMap.
+            </p>
+          )}
+          <LeafletAtlasMap points={points} />
+        </>
+      )}
     </section>
   );
 }
