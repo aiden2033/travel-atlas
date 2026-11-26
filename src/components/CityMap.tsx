@@ -24,6 +24,7 @@ interface CityMapProps {
   friendsPlaces?: FriendsMapPlace[];
   showFriendsPlaces?: boolean;
   stays?: TripStay[];
+  activeStayId?: string;
   onOpen: (slug: string) => void;
   userPosition?: LatLng | null;
 }
@@ -40,6 +41,7 @@ interface AccessibleMarkerProps {
   icon: L.Icon | L.DivIcon;
   keyboard?: boolean;
   label: string;
+  open?: boolean;
   position: [number, number];
   zIndexOffset?: number;
 }
@@ -49,10 +51,19 @@ function AccessibleMarker({
   icon,
   keyboard,
   label,
+  open = false,
   position,
   zIndexOffset,
 }: AccessibleMarkerProps) {
   const markerRef = useRef<L.Marker>(null);
+  const map = useMap();
+
+  useEffect(() => {
+    const marker = markerRef.current;
+    if (!open || !marker) return;
+    map.setView(marker.getLatLng(), ACTIVE_PLACE_ZOOM);
+    marker.openPopup();
+  }, [map, open]);
 
   useEffect(() => {
     const element = markerRef.current?.getElement();
@@ -270,6 +281,7 @@ export default function CityMap({
   friendsPlaces = [],
   showFriendsPlaces = false,
   stays = [],
+  activeStayId,
   onOpen,
   userPosition,
 }: CityMapProps) {
@@ -374,6 +386,7 @@ export default function CityMap({
             position={[stay.coords.lat, stay.coords.lng]}
             icon={stayIcon()}
             label={`Наша хата: ${stay.name}`}
+            open={stay.id === activeStayId}
             keyboard
             zIndexOffset={1200}
           >

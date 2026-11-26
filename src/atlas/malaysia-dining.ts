@@ -57,6 +57,13 @@ const penang: DiningEntry[] = [
     note: 'Средний бюджет для кофе с выпечкой. Фильтр и ассортимент тортов меняются; конкретное зерно не гарантировано.',
     sourceLabel: 'Ome — официальный сайт и актуальный кофейный бар',
     sourceUrl: 'https://ome.coffee/',
+    coords: { lat: 5.4133845, lng: 100.3368211 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/6214950339',
+      },
+    ],
   },
   {
     slug: 'norm-micro-roastery',
@@ -72,6 +79,13 @@ const penang: DiningEntry[] = [
     sourceLabel: 'Cafe Culture Malaysia — Norm Micro Roastery',
     sourceUrl:
       'https://cafeculture.my/cafes/penang/george-town/norm-micro-roastery/',
+    coords: { lat: 5.4169788, lng: 100.3428186 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/way/585136335',
+      },
+    ],
   },
   {
     slug: 'narrow-marrow',
@@ -86,6 +100,13 @@ const penang: DiningEntry[] = [
     note: 'Средний бюджет. Действующий адрес — 312 Lebuh Pantai; в старых публикациях встречается прежнее помещение.',
     sourceLabel: 'Cafe Culture Malaysia — Narrow Marrow',
     sourceUrl: 'https://cafeculture.my/cafes/penang/george-town/narrow-marrow/',
+    coords: { lat: 5.4138304, lng: 100.337582 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/10542563009',
+      },
+    ],
   },
   {
     slug: 'black-kettle',
@@ -99,6 +120,13 @@ const penang: DiningEntry[] = [
     note: 'Средний бюджет. Это пекарня с кафе; доступный ассортимент выпечки смотрите на месте.',
     sourceLabel: 'Black Kettle — официальная пекарня и адрес',
     sourceUrl: 'https://blackkettle.com.my/our-bakery',
+    coords: { lat: 5.4154184, lng: 100.3397368 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/3876260553',
+      },
+    ],
   },
   {
     slug: 'chinahouse',
@@ -113,6 +141,13 @@ const penang: DiningEntry[] = [
     note: 'Средний бюджет. Комплекс имеет входы с Beach Street и Victoria Street; это одна карточка, а не два филиала.',
     sourceLabel: 'ChinaHouse — официальный адрес и устройство комплекса',
     sourceUrl: 'https://chinahouse.com.my/location.html',
+    coords: { lat: 5.414281, lng: 100.3391005 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/way/1078569926',
+      },
+    ],
   },
   {
     slug: 'au-jardin',
@@ -126,7 +161,12 @@ const penang: DiningEntry[] = [
     note: 'Высокий бюджет; уточните стоимость сета, депозит и ограничения питания при бронировании. Одна звезда в MICHELIN Guide Kuala Lumpur & Penang 2026.',
     sourceLabel: 'MICHELIN Guide — Au Jardin',
     sourceUrl: `${michelin}au-jardin`,
+    coords: { lat: 5.4119979, lng: 100.3275472 },
     extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/9843832039',
+      },
       {
         label: 'MICHELIN Guide 2026 — официальная подборка и звёзды',
         url: 'https://guide.michelin.com/my/en/article/michelin-guide-ceremony/full-list-michelin-guide-my-2026',
@@ -145,7 +185,12 @@ const penang: DiningEntry[] = [
     note: 'Средний–высокий бюджет, удобнее делить блюда на компанию. Одна звезда в MICHELIN Guide Kuala Lumpur & Penang 2026.',
     sourceLabel: 'MICHELIN Guide — Auntie Gaik Lean’s Old School Eatery',
     sourceUrl: `${michelin}auntie-gaik-lean-s-old-school-eatery`,
+    coords: { lat: 5.4179972, lng: 100.3423882 },
     extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/7242028886',
+      },
       {
         label: 'MICHELIN Guide 2026 — официальная подборка и звёзды',
         url: 'https://guide.michelin.com/my/en/article/michelin-guide-ceremony/full-list-michelin-guide-my-2026',
@@ -164,6 +209,13 @@ const penang: DiningEntry[] = [
     note: 'Средний бюджет. Бронирование полезно для компании; актуальное меню доступно у ресторана.',
     sourceLabel: 'Jawi House — официальное меню',
     sourceUrl: 'https://www.jawihouse.com/menu?menu=ala-carte-jawi-house',
+    coords: { lat: 5.4155815, lng: 100.3365994 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/4130219690',
+      },
+    ],
   },
   {
     slug: 'teksen',
@@ -177,6 +229,13 @@ const penang: DiningEntry[] = [
     note: 'Средний бюджет. В опубликованных графиках есть расхождения: уточните день работы напрямую, прежде чем строить вокруг ресторана маршрут.',
     sourceLabel: 'MICHELIN Guide — Teksen',
     sourceUrl: `${michelin}teksen`,
+    coords: { lat: 5.4174168, lng: 100.3359484 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/4336568093',
+      },
+    ],
   },
   {
     slug: 'deens-maju',
@@ -190,6 +249,13 @@ const penang: DiningEntry[] = [
     note: 'Низкий–средний бюджет в зависимости от добавок. Попросите небольшую порцию соусов, если плохо переносите острое; цену морепродуктов уточняйте до заказа.',
     sourceLabel: 'PenangTime — Deens Maju, курица и nasi kandar',
     sourceUrl: 'https://site.penangtime.com/detail/deens-maju-nasi-kandar',
+    coords: { lat: 5.409767, lng: 100.3281176 },
+    extraLinks: [
+      {
+        label: 'Координаты · Michelin',
+        url: 'https://guide.michelin.com/my/en/pulau-pinang/my-george-town/restaurant/deens-maju-jalan-gurdwara',
+      },
+    ],
   },
   {
     slug: 'penang-road-famous-laksa',
@@ -203,6 +269,13 @@ const penang: DiningEntry[] = [
     note: 'Низкий бюджет. Не путать с другим бизнесом в старом Joo Hooi Café; ориентир — дом 5 на Lebuh Keng Kwee.',
     sourceLabel: 'MICHELIN Guide — Penang Road Famous Laksa',
     sourceUrl: `${michelin}penang-road-famous-laksa`,
+    coords: { lat: 5.4166546, lng: 100.3311479 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/7236278085',
+      },
+    ],
   },
   {
     slug: 'moh-teng-pheow',
@@ -216,6 +289,13 @@ const penang: DiningEntry[] = [
     note: 'Низкий бюджет; популярные позиции могут закончиться. Вход ищите в переулке Jalan Masjid, отходящем от Chulia Street.',
     sourceLabel: 'MICHELIN Guide — Moh Teng Pheow Nyonya Koay',
     sourceUrl: `${michelin}moh-teng-pheow-nyonya-koay`,
+    coords: { lat: 5.4193512, lng: 100.3355335 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/6134979995',
+      },
+    ],
   },
 ];
 
@@ -291,6 +371,13 @@ const langkawi: DiningEntry[] = [
     note: 'Средний бюджет. Открытая прибрежная атмосфера зависит от погоды; режим работы и доступность столов смотрите у кафе.',
     sourceLabel: 'Sea You Langkawi — официальный сайт и меню',
     sourceUrl: 'https://seayoulangkawi.my/',
+    coords: { lat: 6.325529, lng: 99.83978 },
+    extraLinks: [
+      {
+        label: 'Координаты · карта кафе',
+        url: 'https://seayoulangkawi.my/contact',
+      },
+    ],
   },
   {
     slug: 'fatcupid',
@@ -318,6 +405,13 @@ const langkawi: DiningEntry[] = [
     note: 'Средний–высокий бюджет; подтвердите вес, цену и приготовление до заказа. Используйте новый адрес Lot 418, а не старый на Pantai Cenang.',
     sourceLabel: 'Orkid Ria — официальный сайт, новый адрес и заказ seafood',
     sourceUrl: 'https://orkidriaseafood.com/',
+    coords: { lat: 6.2790589, lng: 99.7327005 },
+    extraLinks: [
+      {
+        label: 'Координаты · карта ресторана',
+        url: 'https://orkidriaseafood.com/restaurant/',
+      },
+    ],
   },
   {
     slug: 'wonderland-food-store',
@@ -346,6 +440,13 @@ const langkawi: DiningEntry[] = [
     note: 'Высокий бюджет. Для гостей не из отеля согласуйте доступ и стол заранее; уточните дресс-код и актуальное меню. Дорогу до Datai учитывайте отдельно.',
     sourceLabel: 'The Datai — The Gulai House и официальные меню',
     sourceUrl: 'https://www.thedatai.com/dining/the-gulai-house/',
+    coords: { lat: 6.4240121, lng: 99.6725367 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/13326118480',
+      },
+    ],
   },
   {
     slug: 'kayuputi',
@@ -360,6 +461,13 @@ const langkawi: DiningEntry[] = [
     sourceLabel: 'Marriott — официальный Kayuputi, St. Regis Langkawi',
     sourceUrl:
       'https://www.marriott.com/en-us/hotels/lgkxr-the-st-regis-langkawi/dining/',
+    coords: { lat: 6.2964755, lng: 99.8595349 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/9455373978',
+      },
+    ],
   },
   {
     slug: 'nasi-dagang-pak-malau',
@@ -374,6 +482,13 @@ const langkawi: DiningEntry[] = [
     sourceLabel:
       'Nasi Dagang Pak Malau — официальный профиль, адрес и контакты',
     sourceUrl: 'https://linktr.ee/nasidagangpakmalau',
+    coords: { lat: 6.3372559, lng: 99.7778935 },
+    extraLinks: [
+      {
+        label: 'Координаты · OpenStreetMap',
+        url: 'https://www.openstreetmap.org/node/4720141993',
+      },
+    ],
   },
   {
     slug: 'yellow-beach-club',

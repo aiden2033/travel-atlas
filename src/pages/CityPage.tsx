@@ -1,5 +1,5 @@
 import { lazy, Suspense, useCallback, useEffect, useMemo, useState } from 'react';
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import type { CityId, Place, Tag } from '../data/types';
 import { cities } from '../data/cities';
 import { friendsMapPlaces } from '../data/friendsMapPlaces';
@@ -26,8 +26,11 @@ const isCityId = (value: string | undefined): value is CityId =>
 export default function CityPage() {
   const { city } = useParams();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const mapRequested = searchParams.get('view') === 'map';
   const [activeTags, setActiveTags] = useState<Tag[]>([]);
-  const [view, setView] = useState<'list' | 'map' | 'anime'>('list');
+  const [selectedView, setView] = useState<'list' | 'map' | 'anime'>('list');
+  const view = mapRequested ? 'map' : selectedView;
   const [sortByDistance, setSortByDistance] = useState(false);
   const [showFoodMapPlaces, setShowFoodMapPlaces] = useState(false);
   const [showFriendsMapPlaces, setShowFriendsMapPlaces] = useState(false);
@@ -223,7 +226,14 @@ export default function CityPage() {
               <button
                 key={v}
                 type="button"
-                onClick={() => setView(v)}
+                onClick={() => {
+                  setView(v);
+                  if (!mapRequested || v === 'map') return;
+                  const next = new URLSearchParams(searchParams);
+                  next.delete('view');
+                  next.delete('stay');
+                  setSearchParams(next, { replace: true });
+                }}
                 aria-pressed={view === v}
                 className={`inline-flex min-h-[44px] items-center rounded-full px-4 text-sm font-semibold transition focus:outline-none focus-visible:ring-2 focus-visible:ring-slate-400 ${
                   view === v ? 'bg-white text-slate-900 shadow' : 'text-slate-500 hover:text-slate-800'
@@ -331,6 +341,7 @@ export default function CityPage() {
             friendsPlaces={cityFriendsMapPlaces}
             showFriendsPlaces={showFriendsMapPlaces}
             stays={cityStays}
+            activeStayId={mapRequested ? (searchParams.get('stay') ?? undefined) : undefined}
             onOpen={openPlace}
             userPosition={position}
           />

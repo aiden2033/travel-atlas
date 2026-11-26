@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useRef } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import {
   HashRouter,
   Link,
@@ -6,10 +6,10 @@ import {
   Route,
   Routes,
   useLocation,
+  useMatch,
 } from 'react-router-dom';
 import {
   Compass,
-  GlobeHemisphereEast,
   MapTrifold,
   Heart,
   CheckCircle,
@@ -17,10 +17,11 @@ import {
   Wallet,
 } from '@phosphor-icons/react';
 import { CatalogProvider, useCatalog } from './atlas/store';
-import { assetUrl, guideUrl } from './atlas/model';
+import { guideUrl } from './atlas/model';
 import Guide, { Collection, Notes, NotFound } from './atlas/Guide';
 import Builder from './atlas/Builder';
 import './atlas/atlas.css';
+import MainNavigation from './atlas/MainNavigation';
 
 const legacy = {
   passport: lazy(() => import('./pages/Passport')),
@@ -37,6 +38,7 @@ const legacy = {
 const CityPage = lazy(() => import('./pages/CityPage'));
 const PlaceDetail = lazy(() => import('./pages/PlaceDetail'));
 const Purchases = lazy(() => import('./pages/Purchases'));
+const AtlasMapPage = lazy(() => import('./atlas/AtlasMapPage'));
 
 export default function App() {
   return (
@@ -51,30 +53,29 @@ export default function App() {
 function Shell() {
   const { catalog, warning } = useCatalog();
   const { pathname } = useLocation();
-  const countryNav = useRef<HTMLElement>(null);
+  const isMap = Boolean(useMatch('/map'));
   const activeId = /^\/(?:guide|notes|builder)\/([^/]+)/.exec(pathname)?.[1];
   const activeCountry = catalog.countries.find((c) => c.id === activeId);
   const isLegacy =
-    !['/guide', '/notes', '/builder', '/favorites', '/visited', '/purchases'].some((prefix) =>
-      pathname.startsWith(prefix),
-    ) && pathname !== '/';
+    !isMap &&
+    ![
+      '/guide',
+      '/notes',
+      '/builder',
+      '/favorites',
+      '/visited',
+      '/purchases',
+    ].some((prefix) => pathname.startsWith(prefix)) &&
+    pathname !== '/';
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    document.title = `${activeCountry?.nameRu ?? (pathname.startsWith('/builder') ? 'Конструктор' : 'Мой путеводитель')} · Атлас`;
-  }, [pathname, activeCountry?.nameRu]);
-
-  useEffect(() => {
-    void document.fonts.ready.then(() => {
-      const nav = countryNav.current;
-      if (nav && nav.scrollWidth > nav.clientWidth) {
-        nav.querySelector('.active')?.scrollIntoView({
-          block: 'nearest',
-          inline: 'nearest',
-        });
-      }
-    });
-  }, [activeCountry?.id, isLegacy]);
+    const title = isMap
+      ? 'Карта'
+      : (activeCountry?.nameRu ??
+        (pathname.startsWith('/builder') ? 'Конструктор' : 'Мой путеводитель'));
+    document.title = `${title} · Атлас`;
+  }, [pathname, activeCountry?.nameRu, isMap]);
 
   return (
     <div className="atlas-app">
@@ -93,30 +94,9 @@ function Shell() {
           <Compass size={38} weight="fill" />
           <span>Атлас</span>
         </Link>
-        <nav className="country-nav" aria-label="Страны" ref={countryNav}>
-          {catalog.countries.map((country) => (
-            <Link
-              key={country.id}
-              to={guideUrl(country)}
-              className={
-                country.id === activeId || (country.id === 'japan' && isLegacy)
-                  ? 'active'
-                  : ''
-              }
-              aria-current={country.id === activeId ? 'page' : undefined}
-            >
-              {country.cover || country.cities[0]?.cover ? (
-                <img
-                  src={assetUrl(country.cover || country.cities[0]?.cover)}
-                  alt=""
-                />
-              ) : (
-                <GlobeHemisphereEast size={36} />
-              )}
-              <span>{country.nameRu}</span>
-            </Link>
-          ))}
-        </nav>
+        <MainNavigation
+          activeCountryId={activeId ?? (isLegacy ? 'japan' : undefined)}
+        />
         <nav className="sidebar-bottom" aria-label="Мой Атлас">
           <Link
             className={pathname.startsWith('/builder') ? 'active' : ''}
@@ -173,6 +153,7 @@ function Shell() {
               element={<Navigate to={guideUrl(catalog.countries[0])} replace />}
             />
             <Route path="/guide/:country/:city?/:slug?" element={<Guide />} />
+            <Route path="/map" element={<AtlasMapPage />} />
             <Route path="/notes/:country" element={<Notes />} />
             <Route path="/builder/:country?" element={<Builder />} />
             <Route path="/favorites" element={<Collection kind="favorite" />} />

@@ -1,0 +1,113 @@
+.atlas-primary-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--ink);
+}
+
+.atlas-primary-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 46px;
+  padding: 7px 12px;
+  border-radius: 12px;
+  text-align: left;
+  font-weight: 500;
+}
+
+.atlas-primary-tab[data-active],
+.atlas-primary-tab[aria-current],
+.country-disclosure-list a[aria-current] {
+  background: var(--soft);
+}
+
+.atlas-primary-tab:hover,
+.atlas-primary-tab[aria-expanded='true'],
+.country-disclosure-list a:hover {
+  background: #edf0e9;
+}
+
+.atlas-primary-tab:focus-visible,
+.country-disclosure-list a:focus-visible {
+  outline-offset: -2px;
+}
+
+.country-caret {
+  margin-inline-start: auto;
+}
+
+.atlas-primary-tab[aria-expanded='true'] .country-caret {
+  transform: rotate(180deg);
+}
+
+.country-disclosure-list {
+  max-height: min(49vh, 28rem);
+  margin: 0;
+  padding: 4px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  list-style: none;
+}
+
+.country-disclosure-list a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 44px;
+  padding: 5px 8px;
+  border-radius: 9px;
+  font-size: 14px;
+}
+
+.country-disclosure-list a[aria-current] {
+  font-weight: 600;
+}
+
+.country-disclosure-list img,
+.country-disclosure-list svg {
+  width: 30px;
+  height: 30px;
+  flex: none;
+}
+
+.country-disclosure-list img {
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.country-disclosure-list span {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .atlas-primary-nav {
+    position: relative;
+    flex-direction: row;
+    gap: 7px;
+    padding: 10px 0 8px;
+  }
+
+  .atlas-primary-tab {
+    width: auto;
+    min-height: 44px;
+    padding-inline: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    gap: 7px;
+  }
+
+  .country-disclosure-list {
+    position: absolute;
+    inset-block-start: 100%;
+    inset-inline-start: 0;
+    width: min(100%, 19rem);
+    max-height: min(60dvh, 26rem);
+    padding: 5px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+    box-shadow: 0 8px 24px rgb(18 60 45 / 14%);
+  }
+}

@@ -141,7 +141,9 @@ function CountryGuide({
     navigate(
       `/guide/${country.id}/${cityId || 'all'}${params.size ? `?${params}` : ''}`,
     );
-  const selected = pairs.find((p) => p.place.slug === slug);
+  const selected = pairs.find(
+    (p) => p.place.slug === slug && (!city || p.city.id === city.id),
+  );
   const open = (city: GuideCity, place: GuidePlace) =>
     navigate(
       `/guide/${country.id}/${city.id}/${place.slug}${params.size ? `?${params}` : ''}`,

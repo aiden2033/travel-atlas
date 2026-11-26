@@ -18,6 +18,7 @@ export interface Place {
   description: string;
   mapsQuery: string;
   coords?: { lat: number; lng: number };
+  links?: { label: string; url: string }[];
   photo?: string;
   remotePhoto?: string;
   photoCredit?: string;

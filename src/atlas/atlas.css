@@ -99,35 +99,8 @@ svg {
   color: var(--ink);
   padding: 7px 14px 39px;
 }
-.country-nav {
-  display: flex;
-  flex-direction: column;
-  gap: 9px;
-}
-.country-nav a {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-height: 65px;
-  border-radius: 14px;
-  padding: 9px 13px;
-  font-size: 15px;
-  font-weight: 500;
-  transition: background 0.15s;
-}
-.country-nav a.active {
-  background: var(--soft);
-  color: var(--ink);
-}
-.country-nav a:hover,
 .sidebar-bottom a:hover {
   background: #edf0e9;
-}
-.country-nav img {
-  width: 47px;
-  height: 47px;
-  object-fit: cover;
-  border-radius: 12px;
 }
 .sidebar-bottom {
   margin-top: auto;
@@ -1166,10 +1139,6 @@ svg {
     grid-template-columns: 160px minmax(0, 1fr);
     gap: 20px;
   }
-  .country-nav a {
-    font-size: 13px;
-    gap: 10px;
-  }
 }
 @media (max-width: 1050px) {
   .country-hero {
@@ -1264,26 +1233,6 @@ svg {
   }
   .brand svg {
     width: 30px;
-  }
-  .country-nav {
-    flex-direction: row;
-    gap: 5px;
-    overflow: auto;
-    padding: 15px 0 12px;
-    scrollbar-width: none;
-  }
-  .country-nav a {
-    min-height: 46px;
-    padding: 5px 10px;
-    font-size: 12px;
-    flex-shrink: 0;
-    border-radius: 10px;
-    gap: 8px;
-  }
-  .country-nav img {
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
   }
   .sidebar-bottom {
     position: absolute;

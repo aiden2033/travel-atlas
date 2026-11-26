@@ -150,11 +150,26 @@ malaysiaCities[0].places = [
     (p) => !['pantai-cenang', 'sky-bridge', 'kilim'].includes(p.slug),
   ),
 ];
-for (const [slug, name] of [
-  ['pasir-hitam', 'Pantai Pasir Hitam'],
-  ['pantai-kok', 'Pantai Kok'],
-  ['lagenda-beach', 'Lagenda Beach'],
-]) {
+for (const [slug, name, coords, sourceUrl] of [
+  [
+    'pasir-hitam',
+    'Pantai Pasir Hitam',
+    [6.4278182, 99.7949738],
+    'https://www.openstreetmap.org/way/202285115',
+  ],
+  [
+    'pantai-kok',
+    'Pantai Kok',
+    [6.364685, 99.6834089],
+    'https://www.openstreetmap.org/way/202137027',
+  ],
+  [
+    'lagenda-beach',
+    'Lagenda Beach',
+    [6.3135711, 99.8519863],
+    'https://www.openstreetmap.org/way/542182843',
+  ],
+] satisfies [string, string, [number, number], string][]) {
   malaysiaCities[0].places.push(
     spot(
       'langkawi',
@@ -163,8 +178,11 @@ for (const [slug, name] of [
       `${name}, Langkawi`,
       'Запасная пляжная точка из исходного путеводителя. Перед купанием проверьте условия на месте.',
       ['beach'],
-      undefined,
-      { source: 'winter26' },
+      coords,
+      {
+        source: 'winter26',
+        links: [{ label: 'Координаты · OpenStreetMap', url: sourceUrl }],
+      },
     ),
   );
 }

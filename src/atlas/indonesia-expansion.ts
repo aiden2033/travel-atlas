@@ -107,11 +107,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/node/3487442212',
+        },
+        {
           label: 'Официальный сайт заведения',
           url: 'https://mrbykamil.com/',
         },
       ],
       foodSpot: true,
+      coords: { lat: -7.8185002, lng: 110.3645423 },
     },
     {
       city: 'java',
@@ -128,11 +133,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/node/12829988682',
+        },
+        {
           label: 'Официальный сайт заведения',
           url: 'https://tempogelato.com/prawirotaman.html',
         },
       ],
       foodSpot: true,
+      coords: { lat: -7.8196026, lng: 110.3725372 },
     },
     {
       city: 'java',
@@ -147,11 +157,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Городская администрация Маланга · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/node/6440455585',
+        },
+        {
           label: 'Городская администрация Маланга',
           url: 'https://malangkota.go.id/en/2024/03/27/menelusuri-jejak-kolonial-di-toko-oen-kota-malang/',
         },
       ],
       foodSpot: true,
+      coords: { lat: -7.980703, lng: 112.6302201 },
     },
   ],
   lombok: [
@@ -256,10 +271,15 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Indonesia Travel · 16.10.2026',
       links: [
         {
+          label: 'Координаты · Indonesia Travel',
+          url: 'https://maps.app.goo.gl/kTuLf6DZGamTFsoe6',
+        },
+        {
           label: 'Indonesia Travel',
           url: 'https://www.indonesia.travel/id/id/events/event-detail/festival-sukerare-begawe-jelo-nyesek-2026',
         },
       ],
+      coords: { lat: -8.693642, lng: 116.277689 },
     },
     {
       city: 'lombok',
@@ -274,11 +294,12 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
-          label: 'Официальный сайт заведения',
+          label: 'Официальный сайт заведения · координаты',
           url: 'https://elbazarlombok.com/',
         },
       ],
       foodSpot: true,
+      coords: { lat: -8.8823, lng: 116.281 },
     },
     {
       city: 'lombok',
@@ -295,11 +316,12 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
-          label: 'Официальный сайт заведения',
+          label: 'Официальный сайт заведения · координаты',
           url: 'https://www.ashtarilombok.com/restaurant',
         },
       ],
       foodSpot: true,
+      coords: { lat: -8.8826515, lng: 116.2646255 },
     },
   ],
   gili: [
@@ -378,11 +400,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/node/13334618052',
+        },
+        {
           label: 'Официальный сайт заведения',
           url: 'https://pituq.com/restaurant',
         },
       ],
       foodSpot: true,
+      coords: { lat: -8.3555099, lng: 116.0837424 },
     },
     {
       city: 'gili',
@@ -399,11 +426,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/node/2380050789',
+        },
+        {
           label: 'Официальный сайт заведения',
           url: 'https://scallywagsresort.com/dine-gili-trawangan/',
         },
       ],
       foodSpot: true,
+      coords: { lat: -8.3577576, lng: 116.0413317 },
     },
   ],
   flores: [
@@ -486,10 +518,15 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Indonesia Travel · 16.10.2026',
       links: [
         {
+          label: 'Координаты · Labuan Bajo Flores Tourism Authority',
+          url: 'https://bpolbf.sgp1.digitaloceanspaces.com/uploads/PpidPublicInformation/KoRonluqVF614Ac88fpQJcyjYFBGZjn7KRqIS3tj.pdf',
+        },
+        {
           label: 'Indonesia Travel',
           url: 'https://www.indonesia.travel/id/id/destination/bali-nusa-tenggara/east-nusa-tenggara/labuan-bajo',
         },
       ],
+      coords: { lat: -8.432444, lng: 119.963921 },
     },
     {
       city: 'flores',
@@ -505,11 +542,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Официальный сайт заведения · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/way/399575542',
+        },
+        {
           label: 'Официальный сайт заведения',
           url: 'https://lacucinakomodo.com/',
         },
       ],
       foodSpot: true,
+      coords: { lat: -8.4962568, lng: 119.8789144 },
     },
     {
       city: 'flores',
@@ -571,10 +613,15 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Indonesia Travel · 16.10.2026',
       links: [
         {
+          label: 'Координаты · пристань Керенг-Бангкирай',
+          url: 'https://www.indonesia.travel/id/id/destination/kalimantan/central-kalimantan/dermaga-kereng-bangkirai',
+        },
+        {
           label: 'Indonesia Travel',
           url: 'https://www.indonesia.travel/ph/en/destination/1/central-kalimantan/palangkaraya---sebangau-national-park',
         },
       ],
+      coords: { lat: -2.295196, lng: 113.901806 },
     },
     {
       city: 'kalimantan',
@@ -612,11 +659,16 @@ export const indonesiaAdditions: Record<string, GuidePlace[]> = {
       source: 'Туристическая служба Банджармасина · 16.10.2026',
       links: [
         {
+          label: 'Координаты · OpenStreetMap',
+          url: 'https://www.openstreetmap.org/node/4763211054',
+        },
+        {
           label: 'Туристическая служба Банджармасина',
           url: 'https://sikuntaw.banjarmasinkota.go.id/tempat-waiata-list/show/9cfcf4d5-fd34-4900-9ab8-984f3bfa1ff2',
         },
       ],
       foodSpot: true,
+      coords: { lat: -3.3043281, lng: 114.6132471 },
     },
     {
       city: 'kalimantan',
@@ -892,11 +944,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · карта заведения',
+            url: 'https://maps.app.goo.gl/gzvfecdzVaZYyVG56',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://locavorenxt.com/family/locavorenxt',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.5422043, lng: 115.2568075 },
       },
       {
         city: 'bali',
@@ -913,11 +970,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · карта заведения',
+            url: 'https://maps.app.goo.gl/sDLH4oj6ngqcUTpV9',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://locavorenxt.com/family/nusantara',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.5098001, lng: 115.2625056 },
       },
       {
         city: 'bali',
@@ -932,11 +994,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/node/5225493722',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://hujanlocale.com/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.5073491, lng: 115.2650775 },
       },
       {
         city: 'bali',
@@ -953,11 +1020,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · карта Milk & Madu Beach Road',
+            url: 'https://maps.app.goo.gl/HDVtSqNDtZutFUB59',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://milkandmadu.com/location/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.6555247, lng: 115.1320801 },
       },
       {
         city: 'bali',
@@ -972,11 +1044,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · карта KYND Canggu',
+            url: 'https://maps.app.goo.gl/QzZBC7hkH4uHj82i8',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://www.kyndcommunity.com/pages/kyndcafe',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.6575228, lng: 115.1344122 },
       },
       {
         city: 'bali',
@@ -993,11 +1070,12 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
-            label: 'Официальный сайт заведения',
+            label: 'Официальный сайт заведения · координаты',
             url: 'https://www.sukacollective.co/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.81635, lng: 115.0960262 },
       },
       {
         city: 'bali',
@@ -1013,11 +1091,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · карта заведения',
+            url: 'https://maps.app.goo.gl/M4mPmC8Kc836AowLA',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://sisterfieldsbali.com/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.6829819, lng: 115.1575097 },
       },
       {
         city: 'bali',
@@ -1034,11 +1117,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/node/3729596372',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://revolverbali.com/pages/location',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.6844476, lng: 115.1579659 },
       },
       {
         city: 'bali',
@@ -1055,11 +1143,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · карта заведения',
+            url: 'https://maps.app.goo.gl/azjFyU4D6meej7ag9',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://seminyak.potatohead.co/feast/kaum',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.6792024, lng: 115.1499884 },
       },
       {
         city: 'bali',
@@ -1076,11 +1169,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/node/6738085285',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://penidacolada.com/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.6757928, lng: 115.5120432 },
       },
     ],
   },
@@ -1181,11 +1279,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/node/3227825504',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://www.tiptop-medan.com/restaurant.html',
           },
         ],
         foodSpot: true,
+        coords: { lat: 3.5860671, lng: 98.6796301 },
       },
       {
         city: 'sumatra',
@@ -1200,11 +1303,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/node/6172520888',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://www.macehatcoffee.com/',
           },
         ],
         foodSpot: true,
+        coords: { lat: 3.5919943, lng: 98.6695869 },
       },
       {
         city: 'sumatra',
@@ -1219,11 +1327,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Dinas Pariwisata Medan · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/way/963796870',
+          },
+          {
             label: 'Dinas Pariwisata Medan',
             url: 'https://medantourism.medan.go.id/kuliner/public',
           },
         ],
         foodSpot: true,
+        coords: { lat: 3.5827617, lng: 98.6574956 },
       },
     ],
   },
@@ -1348,11 +1461,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Indonesia Travel · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/way/195577805',
+          },
+          {
             label: 'Indonesia Travel',
             url: 'https://www.indonesia.travel/id/id/travel-ideas/gastronomy/coto-makassar',
           },
         ],
         foodSpot: true,
+        coords: { lat: -5.1273498, lng: 119.408343 },
       },
       {
         city: 'sulawesi',
@@ -1369,11 +1487,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Indonesia Travel · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/node/1707538910',
+          },
+          {
             label: 'Indonesia Travel',
             url: 'https://www.indonesia.travel/us/en/travel-ideas/gastronomy/culinary-tour-at-5-restaurants-in-north-sulawesi',
           },
         ],
         foodSpot: true,
+        coords: { lat: 1.4809291, lng: 124.8351317 },
       },
     ],
   },
@@ -1448,10 +1571,15 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Indonesia Travel · 16.10.2026',
         links: [
           {
+            label: 'Координаты · OpenStreetMap',
+            url: 'https://www.openstreetmap.org/way/672703117',
+          },
+          {
             label: 'Indonesia Travel',
             url: 'https://www.indonesia.travel/uk/en/destination/maluku-papua/southwest-papua/raja-ampat',
           },
         ],
+        coords: { lat: -0.4774479, lng: 130.6960296 },
       },
       {
         city: 'raja-ampat',
@@ -1720,11 +1848,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · территория Cilu Bintang Estate',
+            url: 'https://www.openstreetmap.org/way/669170877',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://cilubintang.com/all-project-list/culinary-delights/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -4.5281441, lng: 129.8984457 },
       },
       {
         city: 'moluccas',
@@ -1820,10 +1953,15 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Amanwana · официальный путеводитель · 16.10.2026',
         links: [
           {
+            label: 'Координаты · администрация провинции Западная Нуса-Тенгара',
+            url: 'https://storage.ntbprov.go.id/jdih/produk-hukum/Perda%20No.%206%20Tahun%202025%20-%20RPJMD%20NTB%202025-2029.pdf',
+          },
+          {
             label: 'Amanwana · официальный путеводитель',
             url: 'https://www.aman.com/sites/default/files/2023-09/Amanwana-Factsheet.pdf',
           },
         ],
+        coords: { lat: -8.2115833, lng: 117.5210278 },
       },
       {
         city: 'sumbawa',
@@ -1838,11 +1976,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · территория Amanwana',
+            url: 'https://maps.app.goo.gl/RQwAd5XfFB4hgbMg8',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://www.aman.com/resorts/amanwana/dining',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.2630038, lng: 117.4986933 },
       },
       {
         city: 'sumbawa',
@@ -1859,11 +2002,16 @@ export const indonesiaNewCities: GuideCity[] = [
         source: 'Официальный сайт заведения · 16.10.2026',
         links: [
           {
+            label: 'Координаты · территория Tropical Beach Resort',
+            url: 'https://maps.app.goo.gl/dEXJ6Y3SE54pSf9Q7',
+          },
+          {
             label: 'Официальный сайт заведения',
             url: 'https://www.tropicalbeachresort.id/',
           },
         ],
         foodSpot: true,
+        coords: { lat: -8.9961187, lng: 116.7388218 },
       },
     ],
   },

@@ -21,9 +21,19 @@ const place = (
   timeEstimateHours,
   mapsQuery,
   source: 'Официальный сайт места или туристической организации · 16.10.2026',
-  links: [{ label: 'Официальный сайт', url }],
   foodSpot: tags.includes('food') || tags.includes('cafe'),
   ...extra,
+  links: [
+    ...(extra.links?.some((link) => link.url === url)
+      ? []
+      : [{ label: 'Официальный сайт', url }]),
+    ...(extra.links ?? []),
+  ],
+});
+
+const coordinates = (lat: number, lng: number, url: string) => ({
+  coords: { lat, lng },
+  links: [{ label: 'Координаты', url }],
 });
 
 const region = (
@@ -134,6 +144,11 @@ export const australia: Country = {
           [3, 3.5],
           'BridgeClimb 3 Cumberland Street The Rocks Sydney',
           'https://www.bridgeclimb.com/experiences/summit',
+          coordinates(
+            -33.857481,
+            151.2077184,
+            'https://www.sydney.com/things-to-do/tours/bridgeclimb-sydney/bridgeclimb-summit',
+          ),
         ),
         place(
           'sydney',
@@ -157,6 +172,11 @@ export const australia: Country = {
           [2.5, 4],
           'Saint Peter 161 Underwood Street Paddington NSW',
           'https://www.saintpeter.com.au/',
+          coordinates(
+            -33.8863741,
+            151.2318567,
+            'https://www.saintpeter.com.au/contact',
+          ),
         ),
         place(
           'sydney',
@@ -180,6 +200,11 @@ export const australia: Country = {
           [0.5, 1.5],
           'Single O 60-64 Reservoir Street Surry Hills Sydney',
           'https://singleo.com.au/pages/surry-hills',
+          coordinates(
+            -33.8810973,
+            151.2096465,
+            'https://singleo.com.au/pages/surry-hills',
+          ),
         ),
       ],
     ),
@@ -252,6 +277,11 @@ export const australia: Country = {
           [0.5, 1.5],
           'Lune Croissanterie 119 Rose Street Fitzroy Melbourne',
           'https://lunecroissanterie.com/',
+          coordinates(
+            -37.7959467,
+            144.9799556,
+            'https://lunecroissanterie.com/contact/',
+          ),
         ),
         place(
           'melbourne',
@@ -263,6 +293,11 @@ export const australia: Country = {
           [0.5, 1],
           'Patricia Coffee Brewers 493-495 Little Bourke Street Melbourne',
           'https://patriciacoffee.com.au/',
+          coordinates(
+            -37.8146708,
+            144.9582346,
+            'https://patriciacoffee.com.au/',
+          ),
         ),
         place(
           'melbourne',
@@ -274,6 +309,11 @@ export const australia: Country = {
           [1, 2],
           'Higher Ground 650 Little Bourke Street Melbourne',
           'https://highergroundmelbourne.com.au/',
+          coordinates(
+            -37.8158967,
+            144.9531574,
+            'https://www.openstreetmap.org/node/4957928429',
+          ),
         ),
         place(
           'melbourne',
@@ -285,6 +325,7 @@ export const australia: Country = {
           [3, 4],
           'Attica 74 Glen Eira Road Ripponlea Melbourne',
           'https://www.attica.com.au/',
+          coordinates(-37.8770094, 144.9973091, 'https://www.attica.com.au/'),
         ),
       ],
     ),
@@ -345,6 +386,11 @@ export const australia: Country = {
           [2, 3],
           'Agnes Restaurant 22 Agnes Street Fortitude Valley Brisbane',
           'https://agnesrestaurant.com.au/',
+          coordinates(
+            -27.4579396,
+            153.0308917,
+            'https://anyday.com.au/agnes-venue-page',
+          ),
         ),
         place(
           'east-coast',
@@ -356,6 +402,11 @@ export const australia: Country = {
           [0.5, 1],
           'Idle 84 Merthyr Road New Farm Brisbane Queensland',
           'https://anyday.com.au/idle-venue-page',
+          coordinates(
+            -27.467279,
+            153.0458707,
+            'https://www.openstreetmap.org/node/12972173749',
+          ),
         ),
         place(
           'east-coast',
@@ -367,6 +418,11 @@ export const australia: Country = {
           [1.5, 2.5],
           'Rick Shores 3/43 Goodwin Terrace Burleigh Heads Queensland',
           'https://www.friendsof.com.au/venues/rick-shores',
+          coordinates(
+            -28.0894342,
+            153.4546263,
+            'https://www.friendsof.com.au/venues/rick-shores',
+          ),
         ),
         place(
           'east-coast',
@@ -378,6 +434,11 @@ export const australia: Country = {
           [1.5, 3],
           'Three Blue Ducks The Farm 11 Ewingsdale Road Ewingsdale NSW',
           'https://www.threeblueducks.com/contact',
+          coordinates(
+            -28.6354654,
+            153.5535249,
+            'https://maps.app.goo.gl/TMSUNwZKFXnGZpRH9',
+          ),
         ),
       ],
     ),
@@ -427,7 +488,14 @@ export const australia: Country = {
           [5, 8],
           'Jindalba Boardwalk Tulip Oak Road Cow Bay Queensland',
           'https://parks.qld.gov.au/parks/daintree/journeys/jindalba-boardwalk',
-          { isDayTrip: true },
+          {
+            ...coordinates(
+              -16.2385621,
+              145.4324498,
+              'https://www.openstreetmap.org/node/286463614',
+            ),
+            isDayTrip: true,
+          },
         ),
         place(
           'tropical-queensland',
@@ -451,6 +519,7 @@ export const australia: Country = {
           [1.5, 2.5],
           'Nu Nu Restaurant 1 Veivers Road Palm Cove Queensland',
           'https://www.nunu.com.au/restaurant',
+          coordinates(-16.7493, 145.6709, 'https://www.nunu.com.au/restaurant'),
         ),
         place(
           'tropical-queensland',
@@ -462,6 +531,11 @@ export const australia: Country = {
           [1.5, 2.5],
           'Ochre Restaurant 6/1 Marlin Parade Cairns Queensland',
           'https://ochrerestaurant.com.au/',
+          coordinates(
+            -16.9219029,
+            145.7808019,
+            'https://www.openstreetmap.org/node/4821657553',
+          ),
         ),
         place(
           'tropical-queensland',
@@ -473,6 +547,11 @@ export const australia: Country = {
           [0.5, 1.5],
           'Caffiend 72 Grafton Street Cairns Queensland',
           'https://www.caffiend.com.au/',
+          coordinates(
+            -16.9235436,
+            145.7755585,
+            'https://www.openstreetmap.org/node/5724289421',
+          ),
         ),
       ],
     ),
@@ -545,6 +624,11 @@ export const australia: Country = {
           [2.5, 3.5],
           'Wildflower Level 4 COMO The Treasury 1 Cathedral Avenue Perth',
           'https://statebuildings.com/venues/wildflower',
+          coordinates(
+            -31.9557699,
+            115.8602658,
+            'https://statebuildings.com/venues/wildflower',
+          ),
         ),
         place(
           'perth',
@@ -556,6 +640,11 @@ export const australia: Country = {
           [1.5, 2.5],
           'Bread in Common 43 Pakenham Street Fremantle WA',
           'https://breadincommon.com.au/',
+          coordinates(
+            -32.0561763,
+            115.7454147,
+            'https://breadincommon.com.au/',
+          ),
         ),
         place(
           'perth',
@@ -567,6 +656,11 @@ export const australia: Country = {
           [0.5, 1],
           'La Veen Coffee Heritage 79B King Street Perth WA',
           'https://laveencoffee.com.au/',
+          coordinates(
+            -31.950563,
+            115.855688,
+            'https://laveencoffee.com.au/pages/ks',
+          ),
         ),
       ],
     ),
@@ -639,6 +733,11 @@ export const australia: Country = {
           [0.5, 1],
           'Pigeon Whole Bakers 24-32 Argyle Street Hobart Tasmania',
           'https://www.pigeonwholebakers.com.au/',
+          coordinates(
+            -42.8816221,
+            147.3303133,
+            'https://www.openstreetmap.org/node/10669174643',
+          ),
         ),
         place(
           'tasmania',
@@ -650,6 +749,7 @@ export const australia: Country = {
           [2, 3],
           'Templo 98 Patrick Street Hobart Tasmania',
           'https://templo.com.au/',
+          coordinates(-42.8804167, 147.3193611, 'https://templo.com.au/'),
         ),
         place(
           'tasmania',
@@ -661,6 +761,11 @@ export const australia: Country = {
           [0.5, 1.5],
           'Get Shucked 1735 Bruny Island Main Road Great Bay Tasmania',
           'https://www.getshucked.com.au/',
+          coordinates(
+            -43.1974658,
+            147.3870016,
+            'https://www.openstreetmap.org/node/4921678921',
+          ),
         ),
       ],
     ),
@@ -709,6 +814,11 @@ export const australia: Country = {
           [4, 6],
           'Flinders Chase Visitor Centre 8125 South Coast Road Karatta SA',
           'https://www.parks.sa.gov.au/parks/flinders-chase-national-park',
+          coordinates(
+            -35.9527561,
+            136.7886904,
+            'https://southaustralia.com/products/kangaroo-island/attraction/flinders-chase-national-park-visitor-centre',
+          ),
         ),
         place(
           'adelaide',
@@ -720,6 +830,11 @@ export const australia: Country = {
           [3.5, 4.5],
           'Restaurant Botanic Friends Gate Plane Tree Drive Adelaide',
           'https://restaurantbotanic.com.au/',
+          coordinates(
+            -34.9177898,
+            138.6099354,
+            'https://www.openstreetmap.org/node/2151472046',
+          ),
         ),
         place(
           'adelaide',
@@ -731,6 +846,11 @@ export const australia: Country = {
           [1.5, 2.5],
           'Fugazzi 27 Leigh Street Adelaide South Australia',
           'https://www.fugazzi.com.au/',
+          coordinates(
+            -34.9240271,
+            138.5975052,
+            'https://www.openstreetmap.org/node/13785752930',
+          ),
         ),
         place(
           'adelaide',
@@ -742,6 +862,11 @@ export const australia: Country = {
           [0.5, 1.5],
           'Exchange Coffee 12-18 Vardon Avenue Adelaide South Australia',
           'https://southaustralia.com/guides/best-coffee-adelaide',
+          coordinates(
+            -34.9228204,
+            138.609816,
+            'https://www.openstreetmap.org/node/4318901089',
+          ),
         ),
       ],
     ),
@@ -779,6 +904,11 @@ export const australia: Country = {
           [4, 5],
           'Valley of the Winds Car Park Kata Tjuta Northern Territory',
           'https://uluru.gov.au/do/walks/valley-of-the-winds/',
+          coordinates(
+            -25.276623,
+            130.73993,
+            'https://uluru.gov.au/do/walks/valley-of-the-winds/',
+          ),
         ),
         place(
           'red-centre',
@@ -790,6 +920,11 @@ export const australia: Country = {
           [1.5, 3],
           'Field of Light Uluru Ayers Rock Resort Yulara NT',
           'https://www.ayersrockresort.com.au/experiences/field-of-light',
+          coordinates(
+            -25.2548731,
+            130.9967705,
+            'https://www.google.com/maps?cid=9020533441026838966',
+          ),
         ),
         place(
           'red-centre',
@@ -801,6 +936,11 @@ export const australia: Country = {
           [3, 4],
           'Wintjiri Wiru Ayers Rock Resort Yulara Northern Territory',
           'https://www.ayersrockresort.com.au/wintjiri-wiru',
+          coordinates(
+            -25.261074,
+            130.9803413,
+            'https://www.google.com/maps?cid=8586470542984954663',
+          ),
         ),
       ],
     ),

@@ -23,7 +23,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Pantai Tanjung Rhu, langkawi, Malaysia",
         "remotePhoto": "https://lh5.googleusercontent.com/p/AF1QipPHMaAxjXFDEuxTuUXaMHCTnVByGJprD15GnE3k=s1600",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.4585107, "lng": 99.8254268 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/relation/4013309"
+          }
+        ]
       },
       {
         "slug": "langkawi-3",
@@ -35,7 +42,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Pantai Tengah (Тенгах), langkawi, Malaysia",
         "remotePhoto": "https://media1.thrillophilia.com/filestore/toerwell9gfpo9rpy9acbkcrcuyu_shutterstock_533553328.jpg?w=400&dpr=2",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.2824267, "lng": 99.7292982 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/206384273"
+          }
+        ]
       },
       {
         "slug": "langkawi-4",
@@ -47,7 +61,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Pantai Pasir Tengkorak, langkawi, Malaysia",
         "remotePhoto": "https://danroundtheworld.com/wp-content/uploads/2024/12/View-Sandy-Skulls-Beach-Langkawi-Malaysia-scaled.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.4307372, "lng": 99.7258225 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/729233917"
+          }
+        ]
       },
       {
         "slug": "langkawi-5",
@@ -71,7 +92,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Буддистский храм Ват Кох Ванарам, langkawi, Malaysia",
         "remotePhoto": "https://live.staticflickr.com/65535/54258063651_0a3eb5a5de_o.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.338133, "lng": 99.8741568 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/2609103897"
+          }
+        ]
       },
       {
         "slug": "langkawi-7",
@@ -83,7 +111,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Водопад 7 колодцев, langkawi, Malaysia",
         "remotePhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/e1/ee/b9/telaga-tujuh-waterfalls.jpg?w=1200&h=1200&s=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.3817717, "lng": 99.672878 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/2122515522"
+          }
+        ]
       },
       {
         "slug": "langkawi-8",
@@ -95,7 +130,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Лангкави Wildlife, langkawi, Malaysia",
         "remotePhoto": "https://langkawi-travel.ru/wp-content/uploads/2020/03/olen-wild-park.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.387289, "lng": 99.8619355 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/339063140"
+          }
+        ]
       },
       {
         "slug": "langkawi-9",
@@ -107,7 +149,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Город Куах, langkawi, Malaysia",
         "remotePhoto": "https://thumbs.dreamstime.com/b/старые-з-ания-в-центре-горо-а-куа-аа-лумпур-34586323.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.3224573, "lng": 99.8475021 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/585121072"
+          }
+        ]
       },
       {
         "slug": "langkawi-10",
@@ -119,7 +168,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Гора Гунунг Рая, langkawi, Malaysia",
         "remotePhoto": "https://langkawi-travel.ru/wp-content/uploads/2020/02/view-gunung-raya-min.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.3688195, "lng": 99.8183124 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/1275800978"
+          }
+        ]
       },
       {
         "slug": "langkawi-11",
@@ -131,7 +187,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Остров Беременной девы, langkawi, Malaysia",
         "remotePhoto": "https://media-cdn.tripadvisor.com/media/photo-s/09/66/bd/21/lake-of-the-pregnant.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.2317036, "lng": 99.8001863 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/relation/3446932"
+          }
+        ]
       },
       {
         "slug": "langkawi-12",
@@ -143,7 +206,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Пещера летучих мышей, langkawi, Malaysia",
         "remotePhoto": "https://tury.ru/turyclub.img.php?src=7786c37b1057e8daa197cb1d7cc8aec7%2FUgeV1IiC%2FzSo0Lgp9W6.jpg&img=18f274de76e7b33fa392b9f26e191d8d",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 6.4018462, "lng": 99.8592586 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/3454996363"
+          }
+        ]
       },
       {
         "slug": "langkawi-13",
@@ -181,7 +251,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Танджунг Бунга (Tanjung Bungah), penang, Malaysia",
         "remotePhoto": "https://beachsearcher.ru/images/beaches/458201082/MY201082.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.467996, "lng": 100.2889851 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/265914356"
+          }
+        ]
       },
       {
         "slug": "penang-3",
@@ -193,7 +270,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Монки Бич (Monkey Beach), penang, Malaysia",
         "remotePhoto": "https://www.penang-insider.com/livingpenang/wp-content/uploads/2021/05/Monkey_Beach_Penang_featured-1-of-1.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.471075, "lng": 100.1870593 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/165289469"
+          }
+        ]
       },
       {
         "slug": "penang-4",
@@ -205,7 +289,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Джорджтаун (ЮНЕСКО), penang, Malaysia",
         "remotePhoto": "https://advantiko.com/wp-content/uploads/2020/02/penang-georgetown.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.419776, "lng": 100.343257 },
+        "links": [
+          {
+            "label": "Координаты · UNESCO",
+            "url": "https://whc.unesco.org/en/list/1223/maps/"
+          }
+        ]
       },
       {
         "slug": "penang-5",
@@ -241,7 +332,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Пенанг Хилл, penang, Malaysia",
         "remotePhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/30/1b/3f/ac/caption.jpg?w=800&h=400&s=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.4228655, "lng": 100.2656972 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/1387210299"
+          }
+        ]
       },
       {
         "slug": "penang-8",
@@ -253,7 +351,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Храм Кек Лок Си, penang, Malaysia",
         "remotePhoto": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Kek_Lok_Si_at_dusk.jpg/1200px-Kek_Lok_Si_at_dusk.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.3988748, "lng": 100.2737956 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/768570111"
+          }
+        ]
       },
       {
         "slug": "penang-9",
@@ -265,7 +370,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Ботанический сад, penang, Malaysia",
         "remotePhoto": "https://cf.bstatic.com/xdata/images/hotel/max1024x768/482735779.jpg?k=18166132a6c7a943e112228977413840ac2fff64c4a6c82f9cfc44b1439c6ae4&o=&hp=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.4381483, "lng": 100.2910103 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/325187723"
+          }
+        ]
       },
       {
         "slug": "penang-10",
@@ -277,7 +389,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Армянская улица, penang, Malaysia",
         "remotePhoto": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Armenian_street-penang-095749145.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.4157748, "lng": 100.3364302 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/578868861"
+          }
+        ]
       },
       {
         "slug": "penang-11",
@@ -289,7 +408,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Гурней Плаза, penang, Malaysia",
         "remotePhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/fc/30/0e/gurney-paragon-shopping.jpg?w=1200&h=-1&s=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 5.437297, "lng": 100.3094027 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/261334959"
+          }
+        ]
       }
     ],
     "kuala-lumpur": [
@@ -303,7 +429,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Башни Петронас, kuala-lumpur, Malaysia",
         "remotePhoto": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn-b_huFx936KubEzJcctQnEFfQwMfsGC1yA&s",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1579679, "lng": 101.7112048 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/279944536"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-2",
@@ -315,7 +448,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Парк KLCC, kuala-lumpur, Malaysia",
         "remotePhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/05/1a/78/94/kuala-lumpur-city-centre.jpg?w=1200&h=-1&s=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1555803, "lng": 101.7147801 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/10590000"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-3",
@@ -327,7 +467,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Пещеры Бату, kuala-lumpur, Malaysia",
         "remotePhoto": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Batu_Caves_stairs_2022-05.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.2379, "lng": 101.684 },
+        "links": [
+          {
+            "label": "Координаты · исследование Universiti Putra Malaysia",
+            "url": "https://psasir.upm.edu.my/id/eprint/118889/2/118889.pdf"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-4",
@@ -339,7 +486,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Площадь Мердека, kuala-lumpur, Malaysia",
         "remotePhoto": "https://img.pac.ru/landmarks/493193/big/1515689B7F0001017412A9F65D6ACFAF.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1487691, "lng": 101.6936377 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/23069513"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-5",
@@ -351,7 +505,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Центральный рынок, kuala-lumpur, Malaysia",
         "remotePhoto": "https://media-cdn.tripadvisor.com/media/photo-s/1a/dc/8e/15/central-market-kuala.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1458402, "lng": 101.6955062 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/23768012"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-6",
@@ -363,7 +524,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Башня KL Tower, kuala-lumpur, Malaysia",
         "remotePhoto": "https://aws-tiqets-cdn.imgix.net/images/content/f3d411d57998475e9c9b23f950e4ff8e.jpg?auto=format%2Ccompress&fit=crop&ixlib=python-4.0.0&q=70",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.152859, "lng": 101.7037604 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/5839389988"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-7",
@@ -375,7 +543,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Парк птиц, kuala-lumpur, Malaysia",
         "remotePhoto": "https://byvali.ru/sites/default/files/pictures/malaysia/kuala-lumpur/park_ptic/mnoogo-ptic.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1436519, "lng": 101.6889297 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/relation/21406759"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-8",
@@ -387,7 +562,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Heli Lounge Bar, kuala-lumpur, Malaysia",
         "remotePhoto": "https://falcon-cdn-std-gqb6dgedd6asfqcc.z02.azurefd.net/falcon-blob-content-2/1983/293606845_5771643029532680_2108182281622263034_n.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.151353, "lng": 101.710061 },
+        "links": [
+          {
+            "label": "Координаты · Civil Aviation Authority of Malaysia",
+            "url": "https://www.caam.gov.my/wp-content/uploads/2024/01/COMBINED-AUGUST.pdf"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-9",
@@ -399,7 +581,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Sri Maha Mariamman Temple, kuala-lumpur, Malaysia",
         "remotePhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/10/01/ac/dd/bejarat.jpg?w=1000&h=-1&s=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1434383, "lng": 101.6962607 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/1248817862"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-10",
@@ -423,7 +612,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Чайнатаун, kuala-lumpur, Malaysia",
         "remotePhoto": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/79/13/1b/photo1jpg.jpg?w=900&h=500&s=1",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1434705, "lng": 101.6977375 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/446256442"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-12",
@@ -435,7 +631,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Маленькая Индия, kuala-lumpur, Malaysia",
         "remotePhoto": "https://img-fotki.yandex.ru/get/756497/3821868.254/0_cee3c_2884216_orig.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1290537, "lng": 101.6840403 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/4327707896"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-13",
@@ -447,7 +650,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Букит Бинтанг, kuala-lumpur, Malaysia",
         "remotePhoto": "https://media.istockphoto.com/id/673915790/ru/фото/монорельс-в-букит-бинтанг-куала-лумпур-малайзия.jpg?s=612x612&w=0&k=20&c=jLeBjmOBFxICeKZqtDswqrsJuHmnZrmmL-njC96XZlg=",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.1471068, "lng": 101.7086011 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/4417670148"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-14",
@@ -459,7 +669,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Бангсар, kuala-lumpur, Malaysia",
         "remotePhoto": "https://static2.mansionglobal.com/production/media/article-images/b6deb3e99ac4c4aae9d682fd4ac4cba5/large_GettyImages-509651305.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.13083, "lng": 101.66944 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/4420349189"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-15",
@@ -471,7 +688,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Малакка центр, kuala-lumpur, Malaysia",
         "remotePhoto": "https://youtravel.me/upload/medialibrary/0e7/mfwjt1ico1cnd9sr2hclvmhsx32hoj0l.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 2.1942311, "lng": 102.2493499 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/197933039"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-16",
@@ -483,7 +707,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Малакка Джонкер-стрит, kuala-lumpur, Malaysia",
         "remotePhoto": "https://youtravel.me/upload/medialibrary/1f4/qmshvl0csek8kbezws118s64iryo2ht8.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 2.1963648, "lng": 102.2468895 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/505422591"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-17",
@@ -495,7 +726,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Камерон Хайлендс, kuala-lumpur, Malaysia",
         "remotePhoto": "https://youtravel.me/upload/medialibrary/f1b/4s7plornc77812re27l74492ql9798qa.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 4.4710791, "lng": 101.3751732 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/relation/10744325"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-18",
@@ -507,7 +745,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "«Леголенд» в Джохор‑Бару, kuala-lumpur, Malaysia",
         "remotePhoto": "https://resize.tripster.ru/NFFaACtikm7X9HsZ2wfs4BtbJgY=/fit-in/1080x810/filters:no_upscale()/https://cdn.tripster.ru/photos/ad7ffbdc-4b75-4fa7-a0b2-056e73185c02.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 1.4277678, "lng": 103.6294754 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/192574776"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-19",
@@ -519,7 +764,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Bukit Tinggi, kuala-lumpur, Malaysia",
         "remotePhoto": "https://mediaim.expedia.com/destination/1/03a7fe271bbe088da8d16231d78051c7.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.4015133, "lng": 101.8394959 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/relation/20703579"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-20",
@@ -531,7 +783,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Kuala Selangor парк светлячков, kuala-lumpur, Malaysia",
         "remotePhoto": "https://extraguide.ru/images/sp/30518b8de9fcaf1d5385dca2d9263c55673e466d.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.3612245, "lng": 101.3015929 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/way/175452960"
+          }
+        ]
       },
       {
         "slug": "kuala-lumpur-21",
@@ -543,7 +802,14 @@
         "timeEstimateHours": [1, 2],
         "mapsQuery": "Гентинг Хайлендз, kuala-lumpur, Malaysia",
         "remotePhoto": "https://www.panteon.ru/upload/catalogcat/88899213/genting-highlands-resorts-aerial-view.jpg",
-        "source": "winter26"
+        "source": "winter26",
+        "coords": { "lat": 3.4236788, "lng": 101.7934008 },
+        "links": [
+          {
+            "label": "Координаты · OpenStreetMap",
+            "url": "https://www.openstreetmap.org/node/254072956"
+          }
+        ]
       }
     ]
   },
