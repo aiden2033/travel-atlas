@@ -59,19 +59,32 @@ describe('licensed photographs', () => {
     expect(withoutLicense).toEqual([]);
   });
 
-  it('provides a captioned local photograph for every Vietnam place', () => {
-    const vietnam = defaultSeed.countries.find(({ id }) => id === 'vietnam')!;
-    const places = vietnam.cities.flatMap(({ places }) => places);
+  it.each(['vietnam', 'laos', 'cambodia', 'thailand'])(
+    'provides a local cover and a captioned photograph for every %s place',
+    (countryId) => {
+      const country = defaultSeed.countries.find(({ id }) => id === countryId)!;
+      const places = country.cities.flatMap(({ places }) => places);
 
-    expect(places).toHaveLength(20);
-    for (const place of places) {
-      const photo = getLicensedPhoto(vietnam.id, place.city, place.slug);
-      expect(photo?.photo, place.slug).toMatch(/^photos\/licensed\/vietnam-/);
-      expect(photo?.caption, place.slug).toBeTruthy();
-      expect(place.photo, place.slug).toBe(photo?.photo);
-      expect(place.photoCaption, place.slug).toBe(photo?.caption);
-    }
-  });
+      expect(country.cover).toMatch(/^atlas\/.+\.jpg$/);
+      expect(
+        existsSync(new URL(`../../public/${country.cover}`, import.meta.url)),
+      ).toBe(true);
+      expect(places).toHaveLength(20);
+      for (const place of places) {
+        const photo = getLicensedPhoto(countryId, place.city, place.slug);
+        expect(photo?.photo, place.slug).toContain(
+          `photos/licensed/${countryId}-`,
+        );
+        expect(photo?.caption, place.slug).toBeTruthy();
+        expect(place.photo, place.slug).toBe(photo?.photo);
+        expect(place.photoCaption, place.slug).toBe(photo?.caption);
+        expect(place.photoCredit, place.slug).toContain(photo?.author);
+        expect(place.photoLicense, place.slug).toBe(photo?.license);
+        expect(place.photoLicenseUrl, place.slug).toBe(photo?.licenseUrl);
+        expect(place.photoSourceUrl, place.slug).toBe(photo?.sourceUrl);
+      }
+    },
+  );
 
   it('rejects restricted licenses, portrait images and insecure sources', () => {
     const photo = licensedPhotos[0];
@@ -111,17 +124,24 @@ describe('licensed photographs', () => {
     expect(saved).toEqual(place);
   });
 
-  it('keeps a custom photograph and caption on a place with a captioned bundled image', () => {
-    const catalog = structuredClone(defaultSeed);
-    const place = catalog.countries
-      .find(({ id }) => id === 'vietnam')!
-      .cities.find(({ id }) => id === 'can-tho')!
-      .places.find(({ slug }) => slug === 'cai-rang-floating-market')!;
-    place.photo = 'https://example.com/my-market-photo.jpg';
-    place.photoCaption = 'Лодки перед рассветом';
+  it.each([
+    ['vietnam', 'can-tho', 'cai-rang-floating-market'],
+    ['thailand', 'andaman', 'maya-bay'],
+  ])(
+    'keeps a custom photograph and caption for %s/%s/%s',
+    (country, city, slug) => {
+      const catalog = structuredClone(defaultSeed);
+      const place = catalog.countries
+        .find(({ id }) => id === country)!
+        .cities.find(({ id }) => id === city)!
+        .places.find((entry) => entry.slug === slug)!;
+      place.photo = 'https://example.com/my-travel-photo.jpg';
+      place.photoCredit = 'Автор поездки';
+      place.photoCaption = 'Лодки перед рассветом';
 
-    expect(withLicensedPhotos(catalog)).toEqual(catalog);
-  });
+      expect(withLicensedPhotos(catalog)).toEqual(catalog);
+    },
+  );
 
   it('preserves edited attribution and illustration captions for a bundled image', () => {
     const catalog = structuredClone(defaultSeed);

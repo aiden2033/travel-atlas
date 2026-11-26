@@ -3,10 +3,16 @@ import { malaysiaDining } from './malaysia-dining';
 import { malaysiaHighlights } from './penang-highlights';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { australia } from './australia';
-import { vietnam } from './vietnam';
-import { defaultSeed } from './seed';
+import {
+  canThoSourceUrls,
+  thienMuSourceUrl,
+  vietnam,
+  vietnamRouteSummary,
+} from './vietnam';
+import { defaultSeed, regionalGuides } from './seed';
 
-const addedCountries = [australia, vietnam];
+const addedCountries = [australia, ...regionalGuides];
+const regionalGuideIds = new Set(regionalGuides.map(({ id }) => id));
 
 const appendMissing = <T>(
   existing: T[],
@@ -57,6 +63,63 @@ const updateIslandLabels = (city: GuideCity): GuideCity => {
   };
 };
 
+const vietnamSourceReplacements = new Map([
+  [
+    'can-tho/cai-rang-floating-market',
+    {
+      previousUrl: 'https://canthotourism.vn/en/tourdetail/?tourid=2186',
+      currentUrl: canThoSourceUrls.caiRangFloatingMarket,
+    },
+  ],
+  [
+    'can-tho/binh-thuy-ancient-house',
+    {
+      previousUrl: 'https://canthotourism.vn/en/detailtravelplace/?id=535',
+      currentUrl: canThoSourceUrls.binhThuyAncientHouse,
+    },
+  ],
+  [
+    'hue/thien-mu-pagoda',
+    {
+      previousUrl: 'https://whc.unesco.org/en/list/678/multipleelements/',
+      currentUrl: thienMuSourceUrl,
+    },
+  ],
+]);
+
+const updateVietnamSources = (city: GuideCity): GuideCity => ({
+  ...city,
+  places: city.places.map((place) => {
+    const replacement = vietnamSourceReplacements.get(
+      `${city.id}/${place.slug}`,
+    );
+    if (!replacement || !place.links) return place;
+    return {
+      ...place,
+      links: place.links.map((link) =>
+        link.url === replacement.previousUrl
+          ? { ...link, url: replacement.currentUrl }
+          : link,
+      ),
+    };
+  }),
+});
+
+const previousVietnamRouteSummary =
+  'Выберите базы по погоде и интересам. На Севере в это время прохладно, в Центре возможны дожди, а за купанием лучше ехать на Юг. В карточках время на дорогу указано в одну сторону от выбранной базы. Заложите запас на праздничные очереди.';
+
+const expandVietnam = (country: Country): Country => ({
+  ...country,
+  cities: expandCities(country.cities, {}, vietnam.cities).map(
+    updateVietnamSources,
+  ),
+  sections: country.sections.map((section) =>
+    section.id === 'route' && section.body === previousVietnamRouteSummary
+      ? { ...section, body: vietnamRouteSummary }
+      : section,
+  ),
+});
+
 const malaysiaAdditions = Object.fromEntries(
   Object.keys({ ...malaysiaHighlights, ...malaysiaDining }).map((city) => [
     city,
@@ -70,6 +133,7 @@ const expandCountry = (country: Country): Country => {
       ...country,
       cities: expandCities(country.cities, malaysiaAdditions),
     };
+  if (country.id === vietnam.id) return expandVietnam(country);
   const added = addedCountries.find((entry) => entry.id === country.id);
   if (added)
     return {
@@ -87,11 +151,23 @@ const expandCountry = (country: Country): Country => {
   };
 };
 
+const withRegionalGuideOrder = (countries: Country[]): Country[] => {
+  const firstGuideIndex = countries.findIndex(({ id }) =>
+    regionalGuideIds.has(id),
+  );
+  const otherCountries = countries.filter(({ id }) => !regionalGuideIds.has(id));
+  const savedById = new Map(countries.map((country) => [country.id, country]));
+  otherCountries.splice(
+    firstGuideIndex < 0 ? otherCountries.length : firstGuideIndex,
+    0,
+    ...regionalGuides.map((guide) => savedById.get(guide.id) ?? guide),
+  );
+  return otherCountries;
+};
+
 export const migrateCatalog = (catalog: Catalog): Catalog => {
-  const countries = appendMissing(
-    catalog.countries,
-    addedCountries,
-    (country) => country.id,
+  const countries = withRegionalGuideOrder(
+    appendMissing(catalog.countries, [australia], ({ id }) => id),
   ).map(expandCountry);
   const usedTags = new Set(
     countries.flatMap((country) =>

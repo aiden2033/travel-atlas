@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react';
+import { lazy, Suspense, useEffect, useRef } from 'react';
 import {
   HashRouter,
   Link,
@@ -51,6 +51,7 @@ export default function App() {
 function Shell() {
   const { catalog, warning } = useCatalog();
   const { pathname } = useLocation();
+  const countryNav = useRef<HTMLElement>(null);
   const activeId = /^\/(?:guide|notes|builder)\/([^/]+)/.exec(pathname)?.[1];
   const activeCountry = catalog.countries.find((c) => c.id === activeId);
   const isLegacy =
@@ -62,6 +63,18 @@ function Shell() {
     window.scrollTo(0, 0);
     document.title = `${activeCountry?.nameRu ?? (pathname.startsWith('/builder') ? 'Конструктор' : 'Мой путеводитель')} · Атлас`;
   }, [pathname, activeCountry?.nameRu]);
+
+  useEffect(() => {
+    void document.fonts.ready.then(() => {
+      const nav = countryNav.current;
+      if (nav && nav.scrollWidth > nav.clientWidth) {
+        nav.querySelector('.active')?.scrollIntoView({
+          block: 'nearest',
+          inline: 'nearest',
+        });
+      }
+    });
+  }, [activeCountry?.id, isLegacy]);
 
   return (
     <div className="atlas-app">
@@ -80,7 +93,7 @@ function Shell() {
           <Compass size={38} weight="fill" />
           <span>Атлас</span>
         </Link>
-        <nav className="country-nav" aria-label="Страны">
+        <nav className="country-nav" aria-label="Страны" ref={countryNav}>
           {catalog.countries.map((country) => (
             <Link
               key={country.id}

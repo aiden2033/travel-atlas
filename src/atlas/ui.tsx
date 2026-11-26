@@ -171,7 +171,7 @@ export function PlaceCard({
         <footer>
           <span>
             <Clock size={16} />
-            {place.timeEstimateHours.join('–')} ч
+            {place.visitDuration || `${place.timeEstimateHours.join('–')} ч`}
           </span>
           <button
             className={visited.hasKey(key) ? 'visited active' : 'visited'}

@@ -34,14 +34,17 @@ describe('source consolidation', () => {
       ).toBe(place.description);
   });
 
-  it('includes all six countries and the winter city catalog', () => {
+  it('includes all nine countries and the winter city catalog', () => {
     expect(seed.countries.map((c) => c.id)).toEqual([
       'malaysia',
       'singapore',
       'indonesia',
       'japan',
       'australia',
+      'thailand',
       'vietnam',
+      'laos',
+      'cambodia',
     ]);
     const malaysia = seed.countries[0];
     expect(malaysia.cities.map((c) => c.id)).toEqual([
@@ -181,7 +184,7 @@ describe('source consolidation', () => {
 
 describe('Vietnam catalog', () => {
   it('includes nine bases with seven northern, six central and seven southern places', () => {
-    const vietnam = seed.countries[5];
+    const vietnam = seed.countries.find(({ id }) => id === 'vietnam')!;
     expect(vietnam.cities.map((city) => city.id)).toEqual([
       'hanoi',
       'ninh-binh',
@@ -207,15 +210,20 @@ describe('Vietnam catalog', () => {
     expect(migrateCatalog(seed)).toEqual(seed);
   });
 
-  it('appends Vietnam to a saved catalog without changing existing countries', () => {
+  it('restores Vietnam to a saved catalog without changing existing countries', () => {
     const catalog = structuredClone(seed);
-    catalog.countries.pop();
+    catalog.countries = catalog.countries.filter(
+      ({ id }) => id !== 'vietnam',
+    );
     catalog.countries[0].intro = 'Мой маршрут по Малайзии';
 
     const migrated = migrateCatalog(catalog);
-    expect(migrated.countries.slice(0, -1)).toEqual(catalog.countries);
-    expect(migrated.countries.at(-1)?.id).toBe('vietnam');
-    expect(migrated.countries.at(-1)?.cities).toHaveLength(9);
+    expect(migrated.countries.filter(({ id }) => id !== 'vietnam')).toEqual(
+      catalog.countries,
+    );
+    expect(
+      migrated.countries.find(({ id }) => id === 'vietnam')?.cities,
+    ).toHaveLength(9);
     expect(migrateCatalog(migrated)).toEqual(migrated);
   });
 
@@ -239,7 +247,7 @@ describe('Vietnam catalog', () => {
 
   it('fills a partial Vietnam guide while keeping user edits, links and marks', () => {
     const value = backup();
-    const vietnam = value.catalog.countries[5];
+    const vietnam = value.catalog.countries.find(({ id }) => id === 'vietnam')!;
     vietnam.nameRu = 'Мой Вьетнам';
     vietnam.sections = [
       { id: 'personal-plan', title: 'Мой план', body: 'Встреча' },
@@ -260,7 +268,7 @@ describe('Vietnam catalog', () => {
     value.booked = ['vietnam:hanoi:my-place'];
 
     const migrated = migrateCatalog(value.catalog);
-    const expanded = migrated.countries[5];
+    const expanded = migrated.countries.find(({ id }) => id === 'vietnam')!;
     expect(expanded.nameRu).toBe(vietnam.nameRu);
     expect(expanded.sections).toEqual(vietnam.sections);
     expect(expanded.cities[0]).toEqual(customCity);
@@ -283,6 +291,213 @@ describe('Vietnam catalog', () => {
     expect(restored.favorites[0]).toBe(
       stateKey(expanded.id, hanoi.id, halong.slug),
     );
+  });
+});
+
+describe('Laos catalog', () => {
+  const country = seed.countries.find(({ id }) => id === 'laos')!;
+
+  it('preserves the twenty place slugs in the ten travel regions', () => {
+    expect(country.nameRu).toBe('Лаос');
+    expect(country.nameEn).toBe('Laos');
+    expect(guideUrl(country)).toBe('/guide/laos/nong-khiaw');
+    expect(
+      country.cities.map(({ id, places }) => [
+        id,
+        places.map(({ slug }) => slug),
+      ]),
+    ).toEqual([
+      ['nong-khiaw', ['phadeng-peak']],
+      [
+        'luang-prabang',
+        [
+          'pak-ou-tham-ting',
+          'wat-xieng-thong',
+          'mount-phousi',
+          'kuang-si-waterfall',
+        ],
+      ],
+      ['phonsavan', ['plain-of-jars-site-1']],
+      ['vang-vieng', ['nam-xay-viewpoint', 'blue-lagoon-1', 'tham-chang-cave']],
+      [
+        'vientiane',
+        ['pha-that-luang', 'wat-sisaket', 'cope-visitor-centre', 'buddha-park'],
+      ],
+      ['khammouane', ['kong-lor-cave', 'tham-pa-fa']],
+      ['bolaven-plateau', ['tad-fane']],
+      ['champasak', ['vat-phou']],
+      ['pakse', ['wat-phou-salao']],
+      ['si-phan-don', ['don-det-don-khon-bridge', 'khone-phapheng-falls']],
+    ]);
+  });
+
+  it('keeps mapped places, sources and visit details across the guide', () => {
+    const places = country.cities.flatMap((city) => city.places);
+    for (const place of places) {
+      expect(place.nameRu).toBeTruthy();
+      expect(place.nameEn).toBeTruthy();
+      expect(place.coords).toBeDefined();
+      expect(place.links?.length).toBeGreaterThan(0);
+      expect(place.transport).toBeTruthy();
+      expect(place.visitDuration).toBeTruthy();
+      expect(place.timeEstimateHours[0]).toBeGreaterThan(0);
+      expect(place.bestTime).toBeTruthy();
+    }
+    const landmarks = [
+      ['pak-ou-tham-ting', 20.04931, 102.21077],
+      ['kong-lor-cave', 17.95609, 104.76161],
+      ['vat-phou', 14.84866, 105.81446],
+    ] as const;
+    for (const [slug, lat, lng] of landmarks) {
+      expect(places.find((place) => place.slug === slug)?.coords).toEqual({
+        lat,
+        lng,
+      });
+    }
+  });
+});
+
+describe('Cambodia catalog', () => {
+  const cambodia = seed.countries.find(({ id }) => id === 'cambodia')!;
+
+  it('includes twenty places with valid details in the seven travel bases', () => {
+    expect(catalogSchema.parse(seed)).toEqual(seed);
+    expect(guideUrl(cambodia)).toBe('/guide/cambodia/siem-reap');
+    expect(
+      cambodia.cities.map(({ id, places }) => [id, places.length]),
+    ).toEqual([
+      ['siem-reap', 8],
+      ['battambang', 2],
+      ['kampong-thom', 1],
+      ['phnom-penh', 2],
+      ['kratie', 2],
+      ['kampot-kep', 4],
+      ['koh-rong-sanloem', 1],
+    ]);
+    for (const place of cambodia.cities.flatMap((city) => city.places)) {
+      expect(place.nameEn).toBeTruthy();
+      expect(place.coords).toBeDefined();
+      expect(place.mapsQuery).toBeTruthy();
+      expect(place.sections).toContainEqual({
+        id: 'map-pin',
+        title: 'Ориентир',
+        body: expect.stringContaining(place.mapsQuery),
+      });
+      expect(place.visitDuration).toBeTruthy();
+      expect(place.timeEstimateHours[0]).toBeGreaterThan(0);
+      expect(place.transport).toBeTruthy();
+      expect(place.note).toBeTruthy();
+      expect(place.links?.length).toBeGreaterThanOrEqual(2);
+    }
+    const saracen = cambodia.cities.at(-1)?.places[0];
+    expect(saracen?.visitDuration).toBe('2–3 ночи');
+    expect(saracen?.timeEstimateHours).toEqual([48, 72]);
+  });
+
+  it('keeps arrival coordinates and named landmarks at the five access points', () => {
+    const places = cambodia.cities.flatMap((city) => city.places);
+    const checkpoints = [
+      ['kampong-phluk', 'Ticket Office', 13.28779, 103.996591],
+      ['kampi-dolphins', 'Mekong Dolphin Pleasance', 12.606057, 106.022677],
+      ['koh-trong', 'Ferry to Koh Trong', 12.49396, 106.01528],
+      ['kep-national-park', 'Entrance · Veranda', 10.486971, 104.295438],
+      ['saracen-bay', 'Orchid Pier', 10.58056, 103.30769],
+    ] as const;
+    for (const [slug, landmark, lat, lng] of checkpoints) {
+      const place = places.find((place) => place.slug === slug);
+      expect(place?.coords).toEqual({ lat, lng });
+      expect(place?.mapsQuery).toContain(landmark);
+    }
+  });
+
+  it('keeps the three itineraries and dated logistics in the country notes', () => {
+    const notes = Object.fromEntries(
+      cambodia.sections.map(({ id, body }) => [id, body]),
+    );
+    expect(notes.route).toContain('Ангкор-Ват, Байон и Та-Пром');
+    expect(notes['one-week']).toContain('5,5–7 ч');
+    expect(notes['ten-to-fourteen-days']).toContain(
+      '2–3 ночи в бухте Сарасен',
+    );
+    expect(notes['angkor-pass']).toContain('Angkor Pass');
+    expect(notes['season-and-airport']).toContain('SAI');
+    expect(notes.transfers).toContain('26.11.2026');
+  });
+});
+
+describe('Thailand catalog', () => {
+  const country = seed.countries.find(({ id }) => id === 'thailand')!;
+  const places = country.cities.flatMap((city) => city.places);
+
+  it('includes twenty distinct places across the seven source regions', () => {
+    expect(catalogSchema.parse(seed)).toEqual(seed);
+    expect(guideUrl(country)).toBe('/guide/thailand/andaman');
+    expect(
+      country.cities.map(({ id, places }) => [id, places.length]),
+    ).toEqual([
+      ['andaman', 7],
+      ['central', 4],
+      ['north', 4],
+      ['gulf', 2],
+      ['south', 1],
+      ['isan', 1],
+      ['east', 1],
+    ]);
+    expect(new Set(places.map(({ slug }) => slug)).size).toBe(20);
+    expect(places.find(({ slug }) => slug === 'maya-bay')?.nameEn).toBe(
+      'Maya Bay',
+    );
+    expect(places.find(({ slug }) => slug === 'wat-arun')?.nameEn).toContain(
+      'Wat Arun',
+    );
+  });
+
+  it('has searchable names, travel details, a map pin and sources for every place', () => {
+    for (const place of places) {
+      expect(place.nameEn).toBeTruthy();
+      expect(place.coords).toBeDefined();
+      expect(place.mapsQuery).toBeTruthy();
+      expect(place.visitDuration).toBeTruthy();
+      expect(place.timeEstimateHours[0]).toBeGreaterThan(0);
+      expect(place.transport).toBeTruthy();
+      expect(place.bestTime).toBeTruthy();
+      expect(place.links?.length).toBeGreaterThan(0);
+      expect(place.sections?.map(({ id }) => id)).toEqual([
+        'base',
+        'difficulty',
+        'map-pin',
+      ]);
+    }
+  });
+
+  it('keeps the map pins on the requested trails, beaches and viewpoints', () => {
+    const pins = [
+      ['phra-nang-beach', 8.00489, 98.83979],
+      ['tiger-cave-temple', 8.12625, 98.92277],
+      ['maya-bay', 7.67663, 98.76612],
+      ['donald-duck-bay', 8.66565, 97.64775],
+      ['khao-phing-kan', 8.27468, 98.50041],
+      ['erawan-waterfall', 14.37449, 99.14533],
+      ['tanote-bay', 10.08475, 99.848],
+      ['wat-rong-khun', 19.82373, 99.7634],
+      ['white-sand-beach', 12.10303, 102.27389],
+    ] as const;
+    for (const [slug, lat, lng] of pins) {
+      expect(places.find((place) => place.slug === slug)?.coords).toEqual({
+        lat,
+        lng,
+      });
+    }
+  });
+
+  it('dates the route and links the climate and access notes to official sources', () => {
+    const notes = Object.fromEntries(
+      country.sections.map(({ id, body }) => [id, body]),
+    );
+    expect(notes.route).toContain('20 декабря 2026 — 6–10 января 2027');
+    expect(notes.climate).toContain('https://www.tmd.go.th/en');
+    expect(notes.access).toContain('https://news.dnp.go.th/news/48996');
+    expect(notes.access).toContain('https://news.dnp.go.th/news/50049');
   });
 });
 

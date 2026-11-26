@@ -1027,6 +1027,10 @@ svg {
   font-size: 14px;
   color: #626b60;
 }
+.notes-page .prose a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .city-notes {
   margin-top: 37px;
 }

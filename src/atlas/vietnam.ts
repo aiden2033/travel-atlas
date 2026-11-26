@@ -31,6 +31,16 @@ const base = (
   })),
 });
 
+export const canThoSourceUrls = {
+  caiRangFloatingMarket: 'https://canthotourism.vn/en/chocairang',
+  binhThuyAncientHouse: 'https://canthotourism.vn/en/nhacobinhthuy',
+};
+
+export const thienMuSourceUrl = 'https://whc.unesco.org/en/list/678/maps/';
+
+export const vietnamRouteSummary =
+  'Выберите базы по погоде и интересам. В конце декабря и начале января на Севере прохладно, в Центре возможны дожди, а за купанием лучше ехать на Юг. В карточках время на дорогу указано в одну сторону от выбранной базы. Заложите запас на праздничные очереди.';
+
 export const vietnam: Country = {
   id: 'vietnam',
   nameRu: 'Вьетнам',
@@ -42,7 +52,7 @@ export const vietnam: Country = {
     {
       id: 'route',
       title: 'Как собрать поездку',
-      body: 'Выберите базы по погоде и интересам. На Севере в это время прохладно, в Центре возможны дожди, а за купанием лучше ехать на Юг. В карточках время на дорогу указано в одну сторону от выбранной базы. Заложите запас на праздничные очереди.',
+      body: vietnamRouteSummary,
     },
     {
       id: 'north',
@@ -314,7 +324,7 @@ Wikimedia Commons — https://commons.wikimedia.org/wiki/File%3ATour_boats_at_Tr
           transport: 'Такси из центра Хюэ, 15–25 мин.',
           coords: { lat: 16.45315, lng: 107.54483 },
           pin: 'Семиярусная башня, вход со стороны Nguyễn Phúc Nguyên.',
-          sourceUrl: 'https://whc.unesco.org/en/list/678/multipleelements/',
+          sourceUrl: thienMuSourceUrl,
         },
       ],
     ),
@@ -445,7 +455,7 @@ Wikimedia Commons — https://commons.wikimedia.org/wiki/File%3ATour_boats_at_Tr
             'Пешком 5–15 мин из центра Кантхо до причала, затем 30–45 мин на лодке до рынка.',
           coords: { lat: 10.03358, lng: 105.78847 },
           pin: 'Туристические лодки отправляются от Bến Ninh Kiều на набережной Hai Bà Trưng.',
-          sourceUrl: 'https://canthotourism.vn/en/tourdetail/?tourid=2186',
+          sourceUrl: canThoSourceUrls.caiRangFloatingMarket,
         },
         {
           slug: 'binh-thuy-ancient-house',
@@ -460,7 +470,7 @@ Wikimedia Commons — https://commons.wikimedia.org/wiki/File%3ATour_boats_at_Tr
           transport: 'Такси от набережной Кантхо, 15–25 мин.',
           coords: { lat: 10.06702, lng: 105.74959 },
           pin: 'Вход по адресу 144 Bùi Hữu Nghĩa.',
-          sourceUrl: 'https://canthotourism.vn/en/detailtravelplace/?id=535',
+          sourceUrl: canThoSourceUrls.binhThuyAncientHouse,
           googleMapsUrl: 'https://goo.gl/maps/LotqVzcjmg1sWkN4A',
         },
       ],

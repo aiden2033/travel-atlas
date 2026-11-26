@@ -9,6 +9,9 @@ import { malaysiaHighlights } from './penang-highlights';
 import { indonesiaAdditions, indonesiaNewCities } from './indonesia-expansion';
 import { australia } from './australia';
 import { vietnam } from './vietnam';
+import { laos } from './laos';
+import { cambodia } from './cambodia';
+import { thailand } from './thailand';
 import { withLicensedPhotos } from './photos';
 import gardensCredit from './credits/singapore-gardens-credit.json';
 import merlionCredit from './credits/singapore-merlion-credit.json';
@@ -911,6 +914,8 @@ const japan: Country = {
   })),
 };
 
+export const regionalGuides = [thailand, vietnam, laos, cambodia];
+
 const baseSeed = catalogSchema.parse({
   version: 1,
   countries: [
@@ -972,7 +977,7 @@ const baseSeed = catalogSchema.parse({
     },
     japan,
     australia,
-    vietnam,
+    ...regionalGuides,
   ],
   tags: [
     ['food', 'Еда', 'sand'],

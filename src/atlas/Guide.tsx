@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo, useState } from 'react';
+import { Fragment, lazy, Suspense, useMemo, useState } from 'react';
 import {
   Link,
   useNavigate,
@@ -410,6 +410,30 @@ function CountryGuide({
   );
 }
 
+function NoteBody({ body }: { body: string }) {
+  return (
+    <p className="prose">
+      {body.split('\n').map((line, index) => {
+        const link = line.match(
+          /^(?:(.+?)(?:\s+—|:)\s+)?(https?:\/\/\S+)\s*$/,
+        );
+        return (
+          <Fragment key={index}>
+            {index > 0 && '\n'}
+            {link ? (
+              <a href={link[2]} target="_blank" rel="noreferrer">
+                {link[1] || link[2]}
+              </a>
+            ) : (
+              line
+            )}
+          </Fragment>
+        );
+      })}
+    </p>
+  );
+}
+
 export function Notes() {
   const { country: countryId } = useParams();
   const { catalog } = useCatalog();
@@ -469,7 +493,7 @@ export function Notes() {
             open={section.id === 'route' || section.id === 'trip'}
           >
             <summary>{section.title}</summary>
-            <p className="prose">{section.body}</p>
+            <NoteBody body={section.body} />
           </details>
         ))}
       </div>
@@ -501,7 +525,7 @@ export function Notes() {
           {city.sections.map((section) => (
             <details key={section.id}>
               <summary>{section.title}</summary>
-              <p className="prose">{section.body}</p>
+              <NoteBody body={section.body} />
             </details>
           ))}
         </section>
