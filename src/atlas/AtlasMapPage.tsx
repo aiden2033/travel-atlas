@@ -2,6 +2,7 @@ import { useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AtlasMap from './AtlasMap';
 import { getMapPlaces, type MapPoint } from './mapPlaces';
+import { getMapCountryColor } from './mapCountryColors';
 import { useCatalog } from './store';
 import './AtlasMap.css';
 
@@ -29,6 +30,9 @@ export default function AtlasMapPage() {
     [visiblePlaces],
   );
   const unlocated = visiblePlaces.filter((place) => !place.coords);
+  const visibleCountries = new Map(
+    points.map(({ countryId, countryName }) => [countryId, countryName]),
+  );
 
   return (
     <div className="workspace-page atlas-map-page">
@@ -56,7 +60,28 @@ export default function AtlasMapPage() {
         </div>
       </header>
       {points.length > 0 ? (
-        <AtlasMap points={points} />
+        <>
+          <AtlasMap points={points} />
+          <div className="atlas-map-legend">
+            <ul aria-label="Цвета стран на карте">
+              {Array.from(visibleCountries, ([id, name]) => (
+                <li key={id}>
+                  <span
+                    className="atlas-map-country-swatch"
+                    style={{ background: getMapCountryColor(id) }}
+                    aria-hidden="true"
+                  />
+                  {name}
+                </li>
+              ))}
+            </ul>
+            <p>
+              Число в круге — места рядом.
+              {visibleCountries.size > 1 &&
+                ' Разноцветное кольцо — места из нескольких стран.'}
+            </p>
+          </div>
+        </>
       ) : (
         <div className="empty-state">
           <p>

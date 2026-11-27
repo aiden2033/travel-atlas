@@ -5,6 +5,11 @@ import {
 import { useEffect, useRef, useState } from 'react';
 import { googleMapsFailureEvent, loadGoogleMaps } from './googleMapsLoader';
 import { createMapPlacePopup } from './mapPlacePopup';
+import {
+  createMapClusterBadge,
+  getMapClusterLabel,
+  getMapCountryColor,
+} from './mapCountryColors';
 import type { MapPoint } from './mapPlaces';
 
 const maxZoom = 19;
@@ -117,7 +122,11 @@ export default function GoogleAtlasMap({
           gmpClickable: true,
         });
         marker.append(
-          new PinElement({ background: '#153d30', borderColor: '#fff' }),
+          new PinElement({
+            background: getMapCountryColor(place.countryId),
+            borderColor: '#fff',
+            glyphColor: '#fff',
+          }),
         );
         marker.addEventListener('gmp-click', () =>
           openPopup(createMapPlacePopup(place).content, marker),
@@ -132,15 +141,16 @@ export default function GoogleAtlasMap({
       algorithm: new SuperClusterAlgorithm({ radius: 45, maxZoom }),
       renderer: {
         render(cluster) {
+          const groupPlaces = cluster.markers
+            .filter((marker) => marker instanceof AdvancedMarkerElement)
+            .map((marker) => placesByMarker.get(marker))
+            .filter((place): place is MapPoint => place !== undefined);
           const group = new AdvancedMarkerElement({
             position: cluster.position,
-            title: `Группа мест (${cluster.count})`,
+            title: getMapClusterLabel(groupPlaces),
             gmpClickable: true,
           });
-          const badge = document.createElement('div');
-          badge.className = 'atlas-map-cluster atlas-map-google-cluster';
-          badge.textContent = String(cluster.count);
-          group.append(badge);
+          group.append(createMapClusterBadge(groupPlaces));
           return group;
         },
       },

@@ -8,9 +8,14 @@ import {
   useState,
 } from 'react';
 import L from 'leaflet';
-import { MarkerClusterGroup } from 'leaflet.markercluster';
+import { MarkerClusterGroup, type MarkerCluster } from 'leaflet.markercluster';
 import { MapContainer, TileLayer, useMap, ZoomControl } from 'react-leaflet';
 import { createMapPlacePopup } from './mapPlacePopup';
+import {
+  createMapClusterBadge,
+  getMapClusterLabel,
+  getMapCountryColor,
+} from './mapCountryColors';
 import type { MapPoint } from './mapPlaces';
 
 const GoogleAtlasMap = lazy(() => import('./GoogleAtlasMap'));
@@ -25,15 +30,23 @@ const overviewOptions: L.FitBoundsOptions = {
   animate: false,
 };
 
-const placeIcon = L.divIcon({
-  className: 'atlas-map-pin',
-  iconSize: [30, 32],
-  iconAnchor: [15, 32],
-  popupAnchor: [0, -28],
-});
-
 function createMarker(place: MapPoint) {
-  const marker = L.marker(place.coords, { icon: placeIcon, title: place.name });
+  const pin = document.createElement('span');
+  pin.className = 'atlas-map-pin-shape';
+  pin.style.setProperty(
+    '--atlas-country-color',
+    getMapCountryColor(place.countryId),
+  );
+  const marker = L.marker(place.coords, {
+    icon: L.divIcon({
+      className: 'atlas-map-pin',
+      html: pin,
+      iconSize: [30, 32],
+      iconAnchor: [15, 32],
+      popupAnchor: [0, -28],
+    }),
+    title: `${place.name} · ${place.countryName}`,
+  });
   const location = `${place.cityName} · ${place.countryName}`;
 
   marker.on('add', () => {
@@ -79,20 +92,25 @@ function ClusteredPlaces({
   const map = useMap();
 
   useEffect(() => {
+    const placesByMarker = new Map(
+      points.map((place) => [createMarker(place), place] as const),
+    );
+    const clusterPlaces = (cluster: MarkerCluster) =>
+      cluster.getAllChildMarkers().map((marker) => placesByMarker.get(marker)!);
     const group = new MarkerClusterGroup({
       showCoverageOnHover: false,
       maxClusterRadius: 45,
-      clusterLabel: (cluster) => `Группа мест (${cluster.getChildCount()})`,
+      clusterLabel: (cluster) => getMapClusterLabel(clusterPlaces(cluster)),
       iconCreateFunction: (cluster) =>
         L.divIcon({
-          className: 'atlas-map-cluster',
-          html: String(cluster.getChildCount()),
+          className: 'atlas-map-cluster-marker',
+          html: createMapClusterBadge(clusterPlaces(cluster)),
           iconSize: [44, 44],
         }),
     }) as MarkerClusterGroup & L.Layer;
 
     map.fitBounds(bounds, overviewOptions);
-    group.addLayers(points.map(createMarker));
+    group.addLayers([...placesByMarker.keys()]);
     group.addTo(map);
 
     return () => {
